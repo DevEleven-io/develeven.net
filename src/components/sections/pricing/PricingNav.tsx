@@ -10,7 +10,7 @@ const links = [
 
 export default function PricingNav() {
   return (
-    <nav className="w-full border-t border-b border-[#343A33] bg-[#101211]">
+    <nav className="w-full border-t border-b border-[#2A3029] bg-[#101211]">
       <div className="w-full max-w-screen-2xl mx-auto h-[72px] px-6 sm:px-8 lg:px-16 flex justify-between items-center overflow-x-auto gap-6">
         {links.map((link) => (
           <a

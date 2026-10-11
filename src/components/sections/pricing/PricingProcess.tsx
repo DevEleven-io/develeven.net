@@ -45,10 +45,10 @@ export default function PricingProcess() {
               Not the other way around.
             </h2>
           </div>
-          <div className="max-w-sm flex flex-col items-start overflow-hidden">
+          <div className="lg:max-w-md flex flex-col items-start overflow-hidden">
             <p className="w-full text-[#384031] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
-              Complexity, integrations, content readiness and delivery constraints
-              shape your investment. We make those trade-offs visible.
+              Complexity, integrations, and delivery constraints shape your
+              investment. We make those trade-offs visible.
             </p>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function PricingProcess() {
                 <span className="text-[#2D3427] text-base sm:text-lg font-bold font-sans tracking-wide">
                   {step.number}
                 </span>
-                <div className="flex-1 h-[1px] bg-[#BCC5B3]" />
+                <div className="flex-1 h-[1px] bg-[#BCC5B3]/60" />
               </div>
               <h3 className="w-full text-[#11150E] text-2xl font-bold font-sans tracking-tight">
                 {step.title}
@@ -80,7 +80,7 @@ export default function PricingProcess() {
         </div>
 
         {/* Checklist Footer */}
-        <div className="w-full pt-7 border-t border-[#BCC5B3] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 overflow-hidden">
+        <div className="w-full pt-7 border-t border-[#BCC5B3]/60 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 overflow-hidden">
           <span className="text-[#384031] text-xs sm:text-sm font-bold font-sans tracking-wider">
             Every proposal should make clear
           </span>

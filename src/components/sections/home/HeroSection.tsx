@@ -36,12 +36,10 @@ export default function HeroSection() {
               Explore our services
             </Button>
           </div>
-
-          <StatusDot label="Open for new collaborations" theme="lime" />
         </div>
 
         {/* Right Column (Fig. 11 Card) */}
-        <div className="w-full lg:w-[480px] xl:w-[540px] h-[480px] lg:h-[548px] relative bg-[#191C19] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col items-start overflow-hidden shrink-0">
+        <div className="w-full lg:w-[480px] xl:w-[540px] h-[480px] lg:h-[548px] relative bg-[#191C19] rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex flex-col items-start overflow-hidden shrink-0">
           <img
             src="/images/eleven-sculpture.png"
             alt="Built with intent"

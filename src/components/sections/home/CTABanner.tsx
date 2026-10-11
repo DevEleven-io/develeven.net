@@ -69,7 +69,7 @@ export default function CTABanner({
 
             <a
               href={ctaHref}
-              className={`w-full rounded-[4px] bg-[#11150E] flex items-center justify-between overflow-hidden hover:bg-[#1a1f16] transition-colors group cursor-pointer ${
+              className={`w-full rounded-lg bg-[#11150E] flex items-center justify-between overflow-hidden hover:bg-[#1a1f16] transition-colors group cursor-pointer ${
                 buttonHeight === "62px" ? "h-[62px] px-[24px]" : "h-[54px] px-[22px]"
               }`}
             >

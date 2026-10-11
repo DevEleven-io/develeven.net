@@ -86,7 +86,7 @@ export default function WebsitePricing() {
               A website that earns its place.
             </h2>
           </div>
-          <div className="max-w-sm flex flex-col items-start overflow-hidden">
+          <div className="lg:max-w-md flex flex-col items-start overflow-hidden">
             <p className="w-full text-[#C5CDC1] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
               Three example scopes. One standard of engineering. Choose the closest
               fit; we’ll tailor the details together.
@@ -99,10 +99,10 @@ export default function WebsitePricing() {
           {tiers.map((tier) => (
             <div
               key={tier.name}
-              className={`p-7 bg-[#191C19] rounded-[4px] outline outline-1 flex flex-col justify-between items-start gap-6 overflow-hidden ${
+              className={`p-7 bg-[#191C19] rounded-lg outline outline-1 flex flex-col justify-between items-start gap-6 overflow-hidden ${
                 tier.featured
                   ? "outline-[#CEFF69] -outline-offset-1"
-                  : "outline-[#343A33] -outline-offset-1"
+                  : "outline-[#2A3029] -outline-offset-1"
               }`}
             >
               <div className="w-full flex flex-col items-start gap-5">
@@ -111,7 +111,7 @@ export default function WebsitePricing() {
                     {tier.name}
                   </h3>
                   {tier.badge && (
-                    <div className="px-[10px] py-[6px] bg-[#CEFF69] rounded-[4px] overflow-hidden flex items-start">
+                    <div className="px-[10px] py-[6px] bg-[#CEFF69] rounded-md overflow-hidden flex items-start">
                       <span className="text-[#11150E] text-xs sm:text-sm font-bold font-sans tracking-wider">
                         {tier.badge}
                       </span>
@@ -136,7 +136,7 @@ export default function WebsitePricing() {
                   </span>
                 </div>
 
-                <div className="w-full h-[1px] bg-[#343A33]" />
+                <div className="w-full h-[1px] bg-[#2A3029]" />
 
                 <span className="w-full text-[#F2F4EC] text-sm sm:text-base font-bold font-sans">
                   {tier.scope}
@@ -157,10 +157,10 @@ export default function WebsitePricing() {
                 {/* CTA Button */}
                 <Link
                   href="/#contact"
-                  className={`w-full h-[54px] px-[22px] rounded-[4px] flex items-center justify-between overflow-hidden transition-colors group cursor-pointer ${
+                  className={`w-full h-[54px] px-[22px] rounded-lg flex items-center justify-between overflow-hidden transition-colors group cursor-pointer ${
                     tier.featured
                       ? "bg-[#CEFF69] text-[#11150E] hover:bg-[#b8f050]"
-                      : "bg-[#101211] outline outline-1 outline-[#343A33] -outline-offset-1 text-[#F2F4EC] hover:outline-[#A4ADA0]"
+                      : "bg-[#101211] outline outline-1 outline-[#2A3029] -outline-offset-1 text-[#F2F4EC] hover:outline-[#A4ADA0]"
                   }`}
                 >
                   <span className="text-sm font-semibold font-sans">

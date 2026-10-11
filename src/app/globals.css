@@ -12,7 +12,7 @@
   --color-dv-dark:      #101211;   /* button / deep dark bg (same as page bg) */
 
   /* Borders */
-  --color-dv-border:    #343A33;   /* all outlines and dividers */
+  --color-dv-border:    #2A3029;   /* all outlines and dividers (subtle) */
 
   /* Accent */
   --color-dv-lime:      #CEFF69;   /* primary accent green */
@@ -34,7 +34,7 @@
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 html {

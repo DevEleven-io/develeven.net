@@ -32,11 +32,21 @@ export default function EngagementSection() {
     <section id="engagement" className="w-full bg-[#191C19]">
       <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col items-start gap-12 overflow-hidden">
         {/* Header */}
-        <div className="w-full flex flex-col items-start gap-6 overflow-hidden">
-          <SectionLabel>06 / A partnership that fits</SectionLabel>
-          <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.08]">
-            Your ambition. Our way in.
-          </h2>
+        <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 overflow-hidden">
+          <div className="flex-1 max-w-2xl flex flex-col items-start gap-6 overflow-hidden">
+            <SectionLabel>06 / A partnership that fits</SectionLabel>
+            <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.08]">
+              Your ambition.
+              <br />
+              Our way in.
+            </h2>
+          </div>
+          <div className="lg:max-w-md flex flex-col items-start overflow-hidden">
+            <p className="w-full text-[#C5CDC1] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
+              Three flexible ways to work together. Choose the model that fits
+              your team, timeline, and goals.
+            </p>
+          </div>
         </div>
 
         {/* Cards Row */}
@@ -44,7 +54,7 @@ export default function EngagementSection() {
           {engagements.map((eng) => (
             <div
               key={eng.type}
-              className="p-7 bg-[#101211] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col justify-between items-start gap-6 overflow-hidden"
+              className="p-7 bg-[#101211] rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex flex-col justify-between items-start gap-6 overflow-hidden"
             >
               <div className="w-full flex flex-col items-start gap-5">
                 <span className="text-[#CEFF69] text-sm font-bold font-sans tracking-wider">
@@ -60,7 +70,7 @@ export default function EngagementSection() {
 
               <div className="w-full flex flex-col items-start gap-6">
                 {/* Best For Box */}
-                <div className="w-full pt-5 border-t border-[#343A33] flex flex-col items-start gap-2 overflow-hidden">
+                <div className="w-full pt-5 border-t border-[#2A3029] flex flex-col items-start gap-2 overflow-hidden">
                   <span className="text-[#A4ADA0] text-xs sm:text-sm font-bold font-sans tracking-wider">
                     Best for
                   </span>

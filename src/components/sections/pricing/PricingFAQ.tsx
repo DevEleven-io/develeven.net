@@ -61,7 +61,7 @@ export default function PricingFAQ() {
         {faqs.map((faq) => (
           <div
             key={faq.question}
-            className="w-full py-[24px] border-t border-[#343A33] flex flex-col items-start gap-[12px] overflow-hidden"
+            className="w-full py-[24px] border-t border-[#2A3029] flex flex-col items-start gap-[12px] overflow-hidden"
           >
             <h3 className="w-full text-[#F2F4EC] text-lg sm:text-xl font-bold font-sans">
               {faq.question}

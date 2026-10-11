@@ -99,7 +99,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="w-full h-[1px] bg-[#343A33]" />
+        <div className="w-full h-[1px] bg-[#2A3029]" />
 
         {/* Bottom Legal Bar */}
         <div className="w-full flex flex-col sm:flex-row justify-between items-center gap-4 overflow-hidden">

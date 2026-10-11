@@ -52,7 +52,7 @@ export default function MaintenancePricing() {
               Launch is only the beginning.
             </h2>
           </div>
-          <div className="max-w-sm flex flex-col items-start overflow-hidden">
+          <div className="lg:max-w-md flex flex-col items-start overflow-hidden">
             <p className="w-full text-[#C5CDC1] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
               Keep your website secure, current and moving forward. Example care plans
               for different levels of change.
@@ -65,7 +65,7 @@ export default function MaintenancePricing() {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className="p-7 bg-[#101211] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col justify-between items-start gap-6 overflow-hidden"
+              className="p-7 bg-[#101211] rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex flex-col justify-between items-start gap-6 overflow-hidden"
             >
               <div className="w-full flex flex-col items-start gap-5">
                 <h3 className="w-full text-[#F2F4EC] text-2xl font-bold font-sans tracking-tight">
@@ -84,7 +84,7 @@ export default function MaintenancePricing() {
                   </span>
                 </div>
 
-                <div className="w-full h-[1px] bg-[#343A33]" />
+                <div className="w-full h-[1px] bg-[#2A3029]" />
 
                 <span className="w-full text-[#F2F4EC] text-sm sm:text-base font-bold font-sans">
                   {plan.scope}
@@ -101,7 +101,7 @@ export default function MaintenancePricing() {
                 {/* CTA Button */}
                 <Link
                   href="/#contact"
-                  className="w-full h-[54px] px-[22px] bg-[#101211] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex items-center justify-between overflow-hidden hover:outline-[#A4ADA0] transition-colors group cursor-pointer"
+                  className="w-full h-[54px] px-[22px] bg-[#101211] rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex items-center justify-between overflow-hidden hover:outline-[#A4ADA0] transition-colors group cursor-pointer"
                 >
                   <span className="text-[#F2F4EC] text-sm font-semibold font-sans">
                     Discuss a care plan

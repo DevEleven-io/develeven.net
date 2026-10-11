@@ -51,7 +51,7 @@ This file serves as the persistent source of truth for all AI agents working on 
 Every section must follow this two-tier container structure:
 ```tsx
 {/* 1. Outer Viewport Container: stretches 100vw, full-bleed background & border */}
-<section className="w-full bg-[#101211] border-b border-[#343A33]">
+<section className="w-full bg-[#101211] border-b border-[#2A3029]">
   {/* 2. Inner Content Wrapper: standard Tailwind max-width with generous padding */}
   <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24">
     {/* Page content */}
@@ -92,7 +92,7 @@ Every section must follow this two-tier container structure:
 Defined in `src/app/globals.css`:
 - **Page Background**: `--color-dv-bg: #101211`
 - **Card Background**: `--color-dv-card: #191C19`
-- **Borders & Dividers**: `--color-dv-border: #343A33`
+- **Subtle Borders & Dividers**: `--color-dv-border: #2A3029` (soft, restrained contrast on dark surfaces)
 - **Primary Lime Accent**: `--color-dv-lime: #CEFF69`
 - **Primary Text**: `--color-dv-text: #F2F4EC`
 - **Secondary / Muted Text**: `--color-dv-muted: #A4ADA0` (and `#C5CDC1` for high-contrast leads)
@@ -101,19 +101,29 @@ Defined in `src/app/globals.css`:
   - Dark Headings: `#11150E`
   - Dark Labels: `#2D3427`
   - Body Text: `#384031` / `#353D2F`
-  - Light Border: `#BCC5B3`
+  - Light Subtle Border: `#BCC5B3/60`
 - **Lime Banner (`CTABanner`)**:
   - Background: `#CEFF69`
   - Dark Text: `#11150E`
+
+### Corner Radius Standards
+- **Cards, Buttons & Media Boxes**: Use `rounded-lg` (8px / 0.5rem). Never leave corners aggressively sharp (`rounded-none`, `rounded-[4px]`) or overly round (`rounded-2xl`, `rounded-full`). `rounded-lg` provides a modern, refined curvature without compromising the architectural look.
+- **Badges, Tags & Tech Pills**: Use `rounded-md` (6px) or `rounded-lg` (8px).
+- **Circular Indicators**: Status dots use `rounded-full`.
 
 ---
 
 ## 6. Navbar & Navigation UX
 
-- **Fluid Header Height**: `h-[72px] sm:h-[84px] lg:h-[100px]`, sticky at top (`z-50`).
+- **Standard Header Height & Positioning**: `fixed top-0 left-0 right-0 w-full z-50` with matching layout spacer `h-20 lg:h-24` (`80px` / `96px`) to maintain layout flow while ensuring reliable reveal anywhere on the page.
+- **Scroll-Direction Reveal**:
+  - Automatically hides when scrolling down past 80px (`-translate-y-full`).
+  - Smoothly reveals when scrolling back up anywhere on the page using accumulated delta or when at the top of the page (`translate-y-0`).
+  - Remains visible whenever the mobile menu drawer is open.
+  - Backdrop blur with subtle border: `bg-[#101211]/95 backdrop-blur-md border-b border-[#2A3029]`.
 - **Mobile Menu Drawer**:
-  - Full-featured mobile drawer on `<lg` screens (`fixed inset-x-0 top-[72px] sm:top-[84px] bottom-0`).
-  - Backdrop blur: `bg-[#101211]/98 backdrop-blur-md`.
+  - Full-featured mobile drawer on `<lg` screens (`fixed inset-x-0 top-20 bottom-0`).
+  - Backdrop blur: `bg-[#101211]/98 backdrop-blur-md border-t border-[#2A3029]`.
   - Automatic body scroll lock (`overflow: hidden`) when open.
   - Automatic close on route navigation (`usePathname`), Escape key, or link click.
   - Touch targets minimum 44px with accessible padding.

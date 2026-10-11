@@ -27,9 +27,9 @@ export default function Button({
     primary:
       "bg-[#CEFF69] outline outline-1 outline-[#CEFF69] -outline-offset-1 text-[#11150E] hover:bg-[#b8f050] transition-colors group",
     secondary:
-      "bg-transparent outline outline-1 outline-[#343A33] -outline-offset-1 text-[#F2F4EC] hover:outline-[#A4ADA0] transition-colors group",
+      "bg-transparent outline outline-1 outline-[#2A3029] -outline-offset-1 text-[#F2F4EC] hover:outline-[#A4ADA0] transition-colors group",
     dark:
-      "bg-[#101211] outline outline-1 outline-[#343A33] -outline-offset-1 text-[#F2F4EC] hover:outline-[#A4ADA0] transition-colors group",
+      "bg-[#101211] outline outline-1 outline-[#2A3029] -outline-offset-1 text-[#F2F4EC] hover:outline-[#A4ADA0] transition-colors group",
   };
 
   const arrowColor =
@@ -42,7 +42,7 @@ export default function Button({
       ? "#F2F4EC"
       : "#CEFF69";
 
-  const baseClasses = `h-[54px] px-[22px] rounded-[4px] overflow-hidden justify-start items-center gap-[28px] inline-flex font-sans text-sm font-semibold cursor-pointer shrink-0 ${
+  const baseClasses = `h-[54px] px-[22px] rounded-lg overflow-hidden justify-start items-center gap-[28px] inline-flex font-sans text-sm font-semibold cursor-pointer shrink-0 ${
     fullWidth ? "w-full justify-between" : ""
   } ${variantStyles[variant]} ${className}`;
 

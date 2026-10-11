@@ -26,7 +26,7 @@ function ServiceCard({
   icon,
 }: ServiceCardProps) {
   return (
-    <div className="h-[274px] p-[28px] bg-[#191C19] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col justify-start items-start gap-[24px] overflow-hidden">
+    <div className="h-[274px] p-[28px] bg-[#191C19] rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex flex-col justify-start items-start gap-[24px] overflow-hidden">
       <div className="w-full flex justify-between items-center overflow-hidden">
         <div className="w-[26px] h-[26px] flex items-center justify-center shrink-0">
           {icon}
@@ -64,10 +64,10 @@ export default function ServicesGrid() {
               From the ground up.
             </h2>
           </div>
-          <div className="lg:w-[390px] flex flex-col items-start overflow-hidden">
+          <div className="lg:max-w-md flex flex-col items-start overflow-hidden">
             <p className="w-full text-[#C5CDC1] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
-              One engineering partner for your entire digital ecosystem. Start with a
-              single challenge. Stay for the bigger picture.
+              One engineering partner for your digital ecosystem. Start with a
+              single challenge, stay for the bigger picture.
             </p>
           </div>
         </div>
@@ -111,7 +111,7 @@ export default function ServicesGrid() {
           />
 
           {/* CTA Card */}
-          <div className="h-[274px] p-[28px] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col justify-between items-start overflow-hidden">
+          <div className="h-[274px] p-[28px] rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex flex-col justify-between items-start overflow-hidden">
             <span className="text-[#A4ADA0] text-xs sm:text-sm font-bold font-sans tracking-wider">
               Not sure where to start?
             </span>

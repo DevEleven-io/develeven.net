@@ -46,7 +46,7 @@ export default function ProcessSection() {
               No disappearing acts.
             </h2>
           </div>
-          <div className="max-w-sm flex flex-col items-start overflow-hidden">
+          <div className="lg:max-w-md flex flex-col items-start overflow-hidden">
             <p className="w-full text-[#C5CDC1] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
               Direct conversations. Visible progress. Shared decisions. You always know
               what we’re building, and why.
@@ -65,7 +65,7 @@ export default function ProcessSection() {
                 <span className="text-[#CEFF69] text-base sm:text-lg font-bold font-sans tracking-wide">
                   {step.number}
                 </span>
-                <div className="flex-1 h-[1px] bg-[#343A33]" />
+                <div className="flex-1 h-[1px] bg-[#2A3029]" />
               </div>
               <h3 className="w-full text-[#F2F4EC] text-2xl font-bold font-sans tracking-tight">
                 {step.title}

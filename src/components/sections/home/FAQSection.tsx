@@ -62,13 +62,13 @@ export default function FAQSection() {
         </div>
 
         {/* Right Accordion List */}
-        <div className="flex-1 w-full flex flex-col items-start overflow-hidden border-t border-[#343A33]">
+        <div className="flex-1 w-full flex flex-col items-start overflow-hidden border-t border-[#2A3029]">
         {faqs.map((faq, index) => {
           const isOpen = openIndex === index;
           return (
             <div
               key={faq.question}
-              className={`w-full overflow-hidden border-b border-[#343A33] transition-all ${
+              className={`w-full overflow-hidden border-b border-[#2A3029] transition-all ${
                 isOpen ? "pt-[24px] pb-[28px]" : "py-[26px]"
               }`}
             >

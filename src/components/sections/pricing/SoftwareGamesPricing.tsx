@@ -90,10 +90,10 @@ export default function SoftwareGamesPricing() {
               fits in a package.
             </h2>
           </div>
-          <div className="max-w-sm flex flex-col items-start overflow-hidden">
+          <div className="lg:max-w-md flex flex-col items-start overflow-hidden">
             <p className="w-full text-[#C5CDC1] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
-              Start with a useful, bounded outcome. These example budgets help
-              frame the conversation, not define your final quote.
+              Start with a useful, bounded outcome. These example budgets frame
+              the conversation, not your final quote.
             </p>
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function SoftwareGamesPricing() {
           {services.map((svc) => (
             <div
               key={svc.code}
-              className="p-7 bg-[#191C19] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col justify-between items-start gap-6 overflow-hidden"
+              className="p-7 bg-[#191C19] rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex flex-col justify-between items-start gap-6 overflow-hidden"
             >
               <div className="w-full flex flex-col items-start gap-5">
                 <div className="w-full flex justify-between items-start overflow-hidden">
@@ -132,7 +132,7 @@ export default function SoftwareGamesPricing() {
                   </span>
                 </div>
 
-                <div className="w-full h-[1px] bg-[#343A33]" />
+                <div className="w-full h-[1px] bg-[#2A3029]" />
 
                 <p className="w-full min-h-[50px] text-[#F2F4EC] text-sm sm:text-base font-semibold font-sans leading-relaxed">
                   {svc.scope}
@@ -153,7 +153,7 @@ export default function SoftwareGamesPricing() {
                 {/* CTA Button */}
                 <Link
                   href="/#contact"
-                  className="w-full h-[54px] px-[22px] bg-[#101211] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex items-center justify-between overflow-hidden hover:outline-[#A4ADA0] transition-colors group cursor-pointer"
+                  className="w-full h-[54px] px-[22px] bg-[#101211] rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex items-center justify-between overflow-hidden hover:outline-[#A4ADA0] transition-colors group cursor-pointer"
                 >
                   <span className="text-[#F2F4EC] text-sm font-semibold font-sans">
                     {svc.buttonText}
@@ -166,7 +166,7 @@ export default function SoftwareGamesPricing() {
         </div>
 
         {/* Partnership Banner */}
-        <div className="w-full p-6 sm:p-7 rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 overflow-hidden">
+        <div className="w-full p-6 sm:p-7 rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 overflow-hidden">
           <div className="max-w-3xl flex flex-col items-start gap-2 overflow-hidden">
             <h4 className="text-[#F2F4EC] text-lg sm:text-xl font-medium font-sans">
               Need engineering capacity, not a standalone project?

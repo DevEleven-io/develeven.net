@@ -59,7 +59,7 @@ export default function ApproachSection() {
         {/* Right Column */}
         <div className="flex-1 w-full flex flex-col items-start gap-[28px] overflow-hidden">
           {/* Quality Gate Bar */}
-          <div className="w-full p-[16px] bg-[#191C19] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex justify-between items-center overflow-hidden">
+          <div className="w-full p-[16px] bg-[#191C19] rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex justify-between items-center overflow-hidden">
             <span className="text-[#A4ADA0] text-xs sm:text-sm font-bold font-sans tracking-wider">
               DevEleven / Quality gate
             </span>
@@ -75,7 +75,7 @@ export default function ApproachSection() {
           {principles.map((p) => (
             <div
               key={p.title}
-              className="w-full pb-[24px] border-b border-[#343A33] flex items-start gap-[20px] overflow-hidden"
+              className="w-full pb-[24px] border-b border-[#2A3029] flex items-start gap-[20px] overflow-hidden"
             >
               <div className="w-[26px] h-[26px] flex items-center justify-center shrink-0 mt-[2px]">
                 {p.icon}
