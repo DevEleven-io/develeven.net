@@ -21,10 +21,10 @@ interface Tier {
 const tiers: Tier[] = [
   {
     name: "Launch",
-    tag: "A FOCUSED FIRST IMPRESSION",
+    tag: "A focused first impression",
     description:
       "For a new business, campaign or focused service that needs a confident presence.",
-    priceTag: "EXAMPLE USD / ONE-TIME PROJECT",
+    priceTag: "Example USD / One-time project",
     price: "$3,000–5,000",
     scope: "Up to 5 core pages",
     features: [
@@ -38,12 +38,12 @@ const tiers: Tier[] = [
   },
   {
     name: "Growth",
-    tag: "BUILT TO EVOLVE",
-    badge: "CMS INCLUDED",
+    tag: "Built to evolve",
+    badge: "CMS included",
     featured: true,
     description:
       "For teams publishing content and building a richer, more flexible brand experience.",
-    priceTag: "EXAMPLE USD / ONE-TIME PROJECT",
+    priceTag: "Example USD / One-time project",
     price: "$6,000–10,000",
     scope: "Up to 12 pages + CMS",
     features: [
@@ -57,10 +57,10 @@ const tiers: Tier[] = [
   },
   {
     name: "Commerce",
-    tag: "TURN VISITS INTO BUSINESS",
+    tag: "Turn visits into business",
     description:
       "For brands that need a considered storefront and a smooth buying journey.",
-    priceTag: "EXAMPLE USD / ONE-TIME PROJECT",
+    priceTag: "Example USD / One-time project",
     price: "$10,000–18,000",
     scope: "Storefront + up to 50 products",
     features: [
@@ -76,114 +76,117 @@ const tiers: Tier[] = [
 
 export default function WebsitePricing() {
   return (
-    <section
-      id="websites"
-      className="w-full max-w-[1440px] mx-auto px-[64px] py-[88px] flex flex-col items-start gap-[40px] overflow-hidden"
-    >
-      {/* Header */}
-      <div className="w-full flex justify-between items-end overflow-hidden">
-        <div className="w-[760px] flex flex-col items-start gap-[20px] overflow-hidden">
-          <SectionLabel>01 / WEBSITE DEVELOPMENT</SectionLabel>
-          <h2 className="w-full text-[#F2F4EC] text-[52px] font-normal font-sans leading-[56.16px]">
-            A website that earns its place.
-          </h2>
-        </div>
-        <div className="w-[380px] flex flex-col items-start overflow-hidden">
-          <p className="w-full text-[#A4ADA0] text-[16px] font-normal font-sans leading-[26.40px]">
-            Three example scopes. One standard of engineering. Choose the closest
-            fit; we’ll tailor the details together.
-          </p>
-        </div>
-      </div>
-
-      {/* Cards Row */}
-      <div className="w-full flex items-start gap-[16px] overflow-hidden">
-        {tiers.map((tier) => (
-          <div
-            key={tier.name}
-            className={`flex-1 p-[28px] bg-[#191C19] rounded-[4px] outline outline-1 flex flex-col items-start gap-[22px] overflow-hidden ${
-              tier.featured
-                ? "outline-[#CEFF69] -outline-offset-1"
-                : "outline-[#343A33] -outline-offset-1"
-            }`}
-          >
-            <div className="w-full flex justify-between items-center overflow-hidden">
-              <h3 className="text-[#F2F4EC] text-[28px] font-normal font-sans">
-                {tier.name}
-              </h3>
-              {tier.badge && (
-                <div className="px-[10px] py-[6px] bg-[#CEFF69] rounded-[4px] overflow-hidden flex items-start">
-                  <span className="text-[#11150E] text-[10px] font-normal font-mono">
-                    {tier.badge}
-                  </span>
-                </div>
-              )}
-            </div>
-
-            <span className="text-[#CEFF69] text-[10px] font-normal font-mono">
-              {tier.tag}
-            </span>
-
-            <p className="w-full h-[66px] text-[#A4ADA0] text-[15px] font-normal font-sans leading-[23.25px]">
-              {tier.description}
+    <section id="websites" className="w-full bg-[#101211]">
+      <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col items-start gap-12 overflow-hidden">
+        {/* Header */}
+        <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 overflow-hidden">
+          <div className="max-w-2xl flex flex-col items-start gap-5 overflow-hidden">
+            <SectionLabel>01 / Website development</SectionLabel>
+            <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.08]">
+              A website that earns its place.
+            </h2>
+          </div>
+          <div className="max-w-sm flex flex-col items-start overflow-hidden">
+            <p className="w-full text-[#C5CDC1] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
+              Three example scopes. One standard of engineering. Choose the closest
+              fit; we’ll tailor the details together.
             </p>
+          </div>
+        </div>
 
-            <div className="w-full flex flex-col items-start gap-[8px] overflow-hidden">
-              <span className="text-[#A4ADA0] text-[10px] font-normal font-mono">
-                {tier.priceTag}
-              </span>
-              <span className="text-[#F2F4EC] text-[38px] font-normal font-sans">
-                {tier.price}
-              </span>
-            </div>
-
-            <div className="w-full h-[1px] bg-[#343A33]" />
-
-            <span className="w-full text-[#F2F4EC] text-[16px] font-semibold font-sans">
-              {tier.scope}
-            </span>
-
-            <div className="w-full flex flex-col items-start gap-[12px] overflow-hidden">
-              {tier.features.map((feature) => (
-                <CheckItem key={feature}>{feature}</CheckItem>
-              ))}
-            </div>
-
-            <p className="w-full h-[40px] text-[#A4ADA0] text-[10px] font-normal font-mono leading-[16px]">
-              {tier.note}
-            </p>
-
-            {/* CTA Button */}
-            <Link
-              href="/#contact"
-              className={`w-full h-[54px] px-[22px] rounded-[4px] flex items-center justify-between overflow-hidden transition-colors group cursor-pointer ${
+        {/* Cards Row */}
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-hidden">
+          {tiers.map((tier) => (
+            <div
+              key={tier.name}
+              className={`p-7 bg-[#191C19] rounded-[4px] outline outline-1 flex flex-col justify-between items-start gap-6 overflow-hidden ${
                 tier.featured
-                  ? "bg-[#CEFF69] text-[#11150E] hover:bg-[#b8f050]"
-                  : "bg-[#101211] outline outline-1 outline-[#343A33] -outline-offset-1 text-[#F2F4EC] hover:outline-[#A4ADA0]"
+                  ? "outline-[#CEFF69] -outline-offset-1"
+                  : "outline-[#343A33] -outline-offset-1"
               }`}
             >
-              <span className="text-[14px] font-semibold font-sans">
-                {tier.buttonText}
-              </span>
-              <ArrowIcon color={tier.featured ? "dark" : "lime"} />
-            </Link>
-          </div>
-        ))}
-      </div>
+              <div className="w-full flex flex-col items-start gap-5">
+                <div className="w-full flex justify-between items-center overflow-hidden">
+                  <h3 className="text-[#F2F4EC] text-2xl sm:text-3xl font-bold font-sans tracking-tight">
+                    {tier.name}
+                  </h3>
+                  {tier.badge && (
+                    <div className="px-[10px] py-[6px] bg-[#CEFF69] rounded-[4px] overflow-hidden flex items-start">
+                      <span className="text-[#11150E] text-xs sm:text-sm font-bold font-sans tracking-wider">
+                        {tier.badge}
+                      </span>
+                    </div>
+                  )}
+                </div>
 
-      {/* Bottom Note */}
-      <div className="w-full flex justify-between items-center overflow-hidden">
-        <p className="w-[900px] text-[#A4ADA0] text-[13px] font-normal font-sans leading-[20.80px]">
-          Example budgets assume supplied copy and brand assets. Copywriting,
-          photography, advanced integrations and ongoing hosting are scoped
-          separately. Final pricing follows discovery.
-        </p>
-        <Link
-          href="/#contact"
-          className="text-[#CEFF69] text-[14px] font-normal font-sans hover:underline whitespace-nowrap"
-        >
-          Need a web app? Let’s scope it ↗
-        </Link>
+                <span className="text-[#CEFF69] text-sm font-bold font-sans tracking-wide">
+                  {tier.tag}
+                </span>
+
+                <p className="w-full min-h-[48px] text-[#A4ADA0] text-sm sm:text-base font-normal font-sans leading-relaxed">
+                  {tier.description}
+                </p>
+
+                <div className="w-full flex flex-col items-start gap-2 overflow-hidden">
+                  <span className="text-[#A4ADA0] text-xs sm:text-sm font-bold font-sans tracking-wide">
+                    {tier.priceTag}
+                  </span>
+                  <span className="text-[#F2F4EC] text-3xl sm:text-4xl lg:text-5xl font-bold font-sans tracking-tight">
+                    {tier.price}
+                  </span>
+                </div>
+
+                <div className="w-full h-[1px] bg-[#343A33]" />
+
+                <span className="w-full text-[#F2F4EC] text-sm sm:text-base font-bold font-sans">
+                  {tier.scope}
+                </span>
+
+                <div className="w-full flex flex-col items-start gap-3 overflow-hidden">
+                  {tier.features.map((feature) => (
+                    <CheckItem key={feature}>{feature}</CheckItem>
+                  ))}
+                </div>
+              </div>
+
+              <div className="w-full flex flex-col items-start gap-5 pt-2">
+                <p className="w-full min-h-[32px] text-[#A4ADA0] text-xs sm:text-sm font-medium font-sans tracking-wide">
+                  {tier.note}
+                </p>
+
+                {/* CTA Button */}
+                <Link
+                  href="/#contact"
+                  className={`w-full h-[54px] px-[22px] rounded-[4px] flex items-center justify-between overflow-hidden transition-colors group cursor-pointer ${
+                    tier.featured
+                      ? "bg-[#CEFF69] text-[#11150E] hover:bg-[#b8f050]"
+                      : "bg-[#101211] outline outline-1 outline-[#343A33] -outline-offset-1 text-[#F2F4EC] hover:outline-[#A4ADA0]"
+                  }`}
+                >
+                  <span className="text-sm font-semibold font-sans">
+                    {tier.buttonText}
+                  </span>
+                  <ArrowIcon color={tier.featured ? "dark" : "lime"} />
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom Note */}
+        <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 overflow-hidden pt-2">
+          <p className="max-w-3xl text-[#A4ADA0] text-xs sm:text-sm font-normal font-sans leading-relaxed">
+            Example budgets assume supplied copy and brand assets. Copywriting,
+            photography, advanced integrations and ongoing hosting are scoped
+            separately. Final pricing follows discovery.
+          </p>
+          <Link
+            href="/#contact"
+            className="text-[#CEFF69] text-sm font-medium font-sans hover:underline whitespace-nowrap"
+          >
+            Need a web app? Let’s scope it ↗
+          </Link>
+        </div>
       </div>
     </section>
   );

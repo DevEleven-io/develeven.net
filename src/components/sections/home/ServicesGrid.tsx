@@ -26,24 +26,24 @@ function ServiceCard({
   icon,
 }: ServiceCardProps) {
   return (
-    <div className="flex-1 h-[274px] p-[28px] bg-[#191C19] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col justify-start items-start gap-[24px] overflow-hidden">
+    <div className="h-[274px] p-[28px] bg-[#191C19] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col justify-start items-start gap-[24px] overflow-hidden">
       <div className="w-full flex justify-between items-center overflow-hidden">
         <div className="w-[26px] h-[26px] flex items-center justify-center shrink-0">
           {icon}
         </div>
-        <span className="text-[#A4ADA0] text-[11px] font-normal font-mono">
+        <span className="text-[#A4ADA0] text-xs sm:text-sm font-bold font-sans tracking-wider">
           {number}
         </span>
       </div>
       <div className="w-full flex flex-col items-start gap-[12px] overflow-hidden">
-        <h3 className="w-full text-[#F2F4EC] text-[26px] font-normal font-sans">
+        <h3 className="w-full text-[#F2F4EC] text-2xl font-bold font-sans tracking-tight">
           {title}
         </h3>
-        <p className="w-full text-[#A4ADA0] text-[15px] font-normal font-sans leading-[24px]">
+        <p className="w-full text-[#A4ADA0] text-sm sm:text-base font-normal font-sans leading-relaxed">
           {description}
         </p>
       </div>
-      <span className="w-full text-[#CEFF69] text-[10px] font-normal font-mono leading-[15px]">
+      <span className="w-full text-[#CEFF69] text-xs sm:text-sm font-semibold font-sans tracking-wide leading-relaxed">
         {tags}
       </span>
     </div>
@@ -52,85 +52,77 @@ function ServiceCard({
 
 export default function ServicesGrid() {
   return (
-    <section
-      id="services"
-      className="w-full max-w-[1440px] mx-auto px-[64px] py-[96px] flex flex-col items-start gap-[48px] overflow-hidden"
-    >
-      {/* Header */}
-      <div className="w-full flex justify-between items-end overflow-hidden">
-        <div className="w-[730px] flex flex-col items-start gap-[24px] overflow-hidden">
-          <SectionLabel>01 / WHAT WE BUILD</SectionLabel>
-          <h2 className="w-full text-[#F2F4EC] text-[56px] font-normal font-sans leading-[59.36px]">
-            The right expertise.
-            <br />
-            From the ground up.
-          </h2>
+    <section id="services" className="w-full bg-[#101211]">
+      <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col items-start gap-12 overflow-hidden">
+        {/* Header */}
+        <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 overflow-hidden">
+          <div className="flex-1 max-w-2xl flex flex-col items-start gap-[24px] overflow-hidden">
+            <SectionLabel>01 / What we build</SectionLabel>
+            <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.08]">
+              The right expertise.
+              <br />
+              From the ground up.
+            </h2>
+          </div>
+          <div className="lg:w-[390px] flex flex-col items-start overflow-hidden">
+            <p className="w-full text-[#C5CDC1] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
+              One engineering partner for your entire digital ecosystem. Start with a
+              single challenge. Stay for the bigger picture.
+            </p>
+          </div>
         </div>
-        <div className="w-[390px] flex flex-col items-start overflow-hidden">
-          <p className="w-full text-[#A4ADA0] text-[17px] font-normal font-sans leading-[28.05px]">
-            One engineering partner for your entire digital ecosystem. Start with a
-            single challenge. Stay for the bigger picture.
-          </p>
-        </div>
-      </div>
 
-      {/* Grid Rows */}
-      <div className="w-full flex flex-col items-start gap-[16px] overflow-hidden">
-        {/* Row 1 */}
-        <div className="w-full flex items-start gap-[16px] overflow-hidden">
+        {/* 6 Cards Grid (3 cols on desktop) */}
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <ServiceCard
             number="SVC / 01"
             title="Website development"
             description="Fast, accessible websites that turn your brand into a better digital experience. Built for people, search, and scale."
-            tags="MARKETING SITES / E-COMMERCE / WEB APPS"
+            tags="Marketing sites / E-commerce / Web apps"
             icon={<WebDevIcon size={24} color="#CEFF69" />}
           />
           <ServiceCard
             number="SVC / 02"
             title="Website maintenance"
             description="Keep your website secure, current, and performing at its best. Proactive care, without the technical overhead."
-            tags="UPDATES / SECURITY / PERFORMANCE"
+            tags="Updates / Security / Performance"
             icon={<MaintenanceIcon size={24} color="#CEFF69" />}
           />
           <ServiceCard
             number="SVC / 03"
             title="Custom software"
             description="Purpose-built tools for the way your business actually works. From customer platforms to complex internal systems."
-            tags="SAAS / BUSINESS TOOLS / INTEGRATIONS"
+            tags="SaaS / Business tools / Integrations"
             icon={<CustomSoftwareIcon size={24} color="#CEFF69" />}
           />
-        </div>
-
-        {/* Row 2 */}
-        <div className="w-full flex items-start gap-[16px] overflow-hidden">
           <ServiceCard
             number="SVC / 04"
             title="Game development"
             description="Compelling worlds, responsive mechanics, and solid technical foundations. From playable prototype to polished release."
-            tags="UNITY / UNREAL / INTERACTIVE EXPERIENCES"
+            tags="Unity / Unreal / Interactive experiences"
             icon={<GameDevIcon size={24} color="#CEFF69" />}
           />
           <ServiceCard
             number="SVC / 05"
             title="Engineering & infrastructure"
             description="Connect systems, modernize your stack, and make your infrastructure ready for what comes next."
-            tags="APIS / CLOUD / DEVOPS / MODERNIZATION"
+            tags="APIs / Cloud / DevOps / Modernization"
             icon={<EngineeringIcon size={24} color="#CEFF69" />}
           />
 
           {/* CTA Card */}
-          <div className="flex-1 h-[274px] p-[28px] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col justify-between items-start overflow-hidden">
-            <span className="text-[#A4ADA0] text-[11px] font-normal font-mono">
-              NOT SURE WHERE TO START?
+          <div className="h-[274px] p-[28px] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col justify-between items-start overflow-hidden">
+            <span className="text-[#A4ADA0] text-xs sm:text-sm font-bold font-sans tracking-wider">
+              Not sure where to start?
             </span>
-            <p className="w-full text-[#F2F4EC] text-[30px] font-normal font-sans leading-[34.80px]">
+            <p className="w-full text-[#F2F4EC] text-2xl sm:text-3xl font-bold font-sans tracking-tight leading-snug">
               Bring the challenge. We’ll find the right approach.
             </p>
             <Link
               href="/#contact"
               className="flex items-center gap-[16px] overflow-hidden group cursor-pointer"
             >
-              <span className="text-[#CEFF69] text-[14px] font-semibold font-sans group-hover:underline">
+              <span className="text-[#CEFF69] text-sm font-semibold font-sans group-hover:underline">
                 Let’s figure it out
               </span>
               <ArrowIcon color="lime" size="md" />

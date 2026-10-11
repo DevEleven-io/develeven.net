@@ -28,8 +28,8 @@ export default function PricingPage() {
       <PricingProcess />
       <PricingFAQ />
       <CTABanner
-        sectionTag="07 / YOUR PROJECT, CLEARLY SCOPED"
-        topRightText="LET’S FIND THE RIGHT STARTING POINT"
+        sectionTag="07 / Your project, clearly scoped"
+        topRightText="Let’s find the right starting point"
         hasDot={false}
         headline={
           <>
@@ -42,7 +42,7 @@ export default function PricingPage() {
         description="Tell us your goals, the service you need, your budget range and your ideal launch date. We’ll work out a practical next step."
         buttonHeight="54px"
         buttonText="Discuss your project"
-        note="NO SALES SCRIPT. JUST A GOOD CONVERSATION."
+        note="No sales script. Just a good conversation."
       />
     </div>
   );

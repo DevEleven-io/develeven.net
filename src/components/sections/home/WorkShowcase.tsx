@@ -6,27 +6,25 @@ export default function WorkShowcase() {
   const chartHeights = [28, 42, 34, 54, 44, 61, 53, 68, 64, 74, 70, 83];
 
   return (
-    <section
-      id="work"
-      className="w-full max-w-[1440px] mx-auto px-[64px] py-[96px] bg-[#E8EDE1] flex flex-col items-start gap-[48px] overflow-hidden"
-    >
-      {/* Header */}
-      <div className="w-full flex justify-between items-end overflow-hidden">
-        <div className="w-[820px] flex flex-col items-start gap-[24px] overflow-hidden">
-          <SectionLabel theme="light">02 / ENGINEERING IN PRACTICE</SectionLabel>
-          <h2 className="w-full text-[#11150E] text-[56px] font-normal font-sans leading-[59.36px]">
+    <section id="work" className="w-full bg-[#E8EDE1]">
+      <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col items-start gap-12 overflow-hidden">
+        {/* Header */}
+        <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 overflow-hidden">
+          <div className="flex-1 max-w-2xl flex flex-col items-start gap-[24px] overflow-hidden">
+          <SectionLabel theme="light">02 / Engineering in practice</SectionLabel>
+          <h2 className="w-full text-[#11150E] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.08]">
             Different challenges. Same rigor.
           </h2>
         </div>
-        <div className="w-[300px] text-[#596151] text-[11px] font-normal font-mono leading-[17.60px]">
-          ILLUSTRATIVE BUILD CONCEPTS
+        <div className="w-[300px] text-[#384031] text-xs sm:text-sm font-semibold font-sans leading-relaxed tracking-wider">
+          Illustrative build concepts
           <br />
-          A LOOK AT WHAT WE CAN CREATE
+          A look at what we can create
         </div>
       </div>
 
       {/* Projects Row */}
-      <div className="w-full flex items-start gap-[24px] overflow-hidden">
+      <div className="w-full flex flex-col lg:flex-row items-start gap-8">
         {/* Project 1 — Orbit Platform */}
         <div className="flex-1 flex flex-col items-start gap-[20px] overflow-hidden">
           <div className="w-full h-[382px] p-[32px] bg-[#B8C8A2] flex flex-col justify-center items-start overflow-hidden">
@@ -38,10 +36,10 @@ export default function WorkShowcase() {
                   <div className="w-[5px] h-[5px] bg-[#A1AD95] rounded-full" />
                   <div className="w-[5px] h-[5px] bg-[#A1AD95] rounded-full" />
                 </div>
-                <span className="text-[#596151] text-[8px] font-normal font-mono">
+                <span className="text-[#596151] text-xs font-normal font-sans">
                   console.orbit / overview
                 </span>
-                <span className="text-[#596151] text-[8px] font-normal font-sans">
+                <span className="text-[#596151] text-xs font-normal font-sans">
                   ↗
                 </span>
               </div>
@@ -50,16 +48,16 @@ export default function WorkShowcase() {
               <div className="w-full flex-1 flex items-start overflow-hidden">
                 {/* Sidebar */}
                 <div className="w-[108px] h-full p-[14px] bg-[#11150E] flex flex-col items-start gap-[17px] overflow-hidden shrink-0">
-                  <span className="text-[#F2F4EC] text-[15px] font-bold font-sans">
+                  <span className="text-[#F2F4EC] text-sm font-bold font-sans">
                     orbit.
                   </span>
-                  <span className="text-[#CEFF69] text-[9px] font-normal font-sans">
+                  <span className="text-[#CEFF69] text-xs font-normal font-sans">
                     Overview
                   </span>
                   {["Projects", "Resources", "Reports", "Settings"].map((item) => (
                     <span
                       key={item}
-                      className="text-[#A4ADA0] text-[9px] font-normal font-sans"
+                      className="text-[#A4ADA0] text-xs font-normal font-sans"
                     >
                       {item}
                     </span>
@@ -69,11 +67,11 @@ export default function WorkShowcase() {
                 {/* Dashboard Content */}
                 <div className="flex-1 h-full p-[16px] flex flex-col items-start gap-[12px] overflow-hidden">
                   <div className="w-full flex justify-between items-start overflow-hidden">
-                    <span className="text-[#11150E] text-[18px] font-semibold font-sans">
+                    <span className="text-[#11150E] text-base sm:text-lg font-semibold font-sans">
                       Operations overview
                     </span>
-                    <span className="text-[#596151] text-[8px] font-normal font-mono">
-                      THIS MONTH ↓
+                    <span className="text-[#596151] text-xs font-normal font-sans">
+                      This month ↓
                     </span>
                   </div>
 
@@ -88,10 +86,10 @@ export default function WorkShowcase() {
                         key={stat.label}
                         className="flex-1 p-[12px] bg-[#E9EEDF] rounded-[3px] flex flex-col items-start gap-[6px] overflow-hidden"
                       >
-                        <span className="text-[#596151] text-[8px] font-normal font-sans">
+                        <span className="text-[#596151] text-xs font-normal font-sans">
                           {stat.label}
                         </span>
-                        <span className="text-[#11150E] text-[22px] font-semibold font-sans">
+                        <span className="text-[#11150E] text-xl sm:text-2xl font-semibold font-sans">
                           {stat.value}
                         </span>
                       </div>
@@ -100,7 +98,7 @@ export default function WorkShowcase() {
 
                   {/* Delivery Velocity Chart */}
                   <div className="w-full flex flex-col items-start gap-[9px] overflow-hidden">
-                    <span className="text-[#11150E] text-[10px] font-semibold font-sans">
+                    <span className="text-[#11150E] text-xs font-semibold font-sans">
                       Delivery velocity
                     </span>
                     <div className="w-full h-[84px] flex items-end gap-[9px] overflow-hidden">
@@ -114,7 +112,7 @@ export default function WorkShowcase() {
                         />
                       ))}
                     </div>
-                    <div className="w-full flex justify-between items-center text-[#596151] text-[7px] font-normal font-mono">
+                    <div className="w-full flex justify-between items-center text-[#596151] text-xs font-normal font-sans">
                       <span>W01</span>
                       <span>W04</span>
                       <span>W08</span>
@@ -129,10 +127,10 @@ export default function WorkShowcase() {
           {/* Title Row */}
           <div className="w-full flex justify-between items-center overflow-hidden group cursor-pointer">
             <div className="flex flex-col items-start gap-[8px] overflow-hidden">
-              <span className="text-[#596151] text-[10px] font-normal font-mono">
-                CUSTOM SOFTWARE / OPERATIONS
+              <span className="text-[#384031] text-xs sm:text-sm font-bold font-sans tracking-wider">
+                Custom software / Operations
               </span>
-              <h3 className="text-[#11150E] text-[28px] font-normal font-sans group-hover:underline">
+              <h3 className="text-[#11150E] text-2xl sm:text-3xl font-bold font-sans tracking-tight group-hover:underline">
                 Complex workflows. One clear view.
               </h3>
             </div>
@@ -140,7 +138,7 @@ export default function WorkShowcase() {
               <ArrowUpRight size={14} color="#11150E" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </div>
           </div>
-          <p className="w-full text-[#596151] text-[15px] font-normal font-sans leading-[24px]">
+          <p className="w-full text-[#353D2F] text-sm sm:text-base font-medium font-sans leading-relaxed">
             A connected operations platform with real-time reporting, role-based
             access, and fewer manual handoffs.
           </p>
@@ -155,13 +153,13 @@ export default function WorkShowcase() {
               className="w-full flex-1 object-cover"
             />
             <div className="w-full h-full left-0 top-0 absolute bg-gradient-to-b from-[#101211]/[0.38] via-transparent to-[#101211]/[0.50] pointer-events-none" />
-            <span className="left-[26px] top-[24px] absolute text-[#F2F4EC] text-[20px] font-medium font-sans">
-              AFTERLIGHT
+            <span className="left-[26px] top-[24px] absolute text-[#F2F4EC] text-lg sm:text-xl font-bold font-sans">
+              Afterlight
             </span>
             <div className="left-[26px] top-[346px] absolute flex items-center gap-[10px] overflow-hidden">
               <div className="w-[5px] h-[5px] bg-[#CEFF69] rounded-full" />
-              <span className="text-[#F2F4EC] text-[9px] font-normal font-mono">
-                WORLD EXPLORATION / CONCEPT 01
+              <span className="text-[#F2F4EC] text-xs sm:text-sm font-semibold font-sans tracking-wide">
+                World exploration / Concept 01
               </span>
             </div>
           </div>
@@ -169,10 +167,10 @@ export default function WorkShowcase() {
           {/* Title Row */}
           <div className="w-full flex justify-between items-center overflow-hidden group cursor-pointer">
             <div className="flex flex-col items-start gap-[8px] overflow-hidden">
-              <span className="text-[#596151] text-[10px] font-normal font-mono">
-                GAME DEVELOPMENT / INTERACTIVE
+              <span className="text-[#384031] text-xs sm:text-sm font-bold font-sans tracking-wider">
+                Game development / Interactive
               </span>
-              <h3 className="text-[#11150E] text-[28px] font-normal font-sans group-hover:underline">
+              <h3 className="text-[#11150E] text-2xl sm:text-3xl font-bold font-sans tracking-tight group-hover:underline">
                 A world worth getting lost in.
               </h3>
             </div>
@@ -180,12 +178,13 @@ export default function WorkShowcase() {
               <ArrowUpRight size={14} color="#11150E" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </div>
           </div>
-          <p className="w-full text-[#596151] text-[15px] font-normal font-sans leading-[24px]">
+          <p className="w-full text-[#353D2F] text-sm sm:text-base font-medium font-sans leading-relaxed">
             An atmospheric exploration experience combining immersive
             environments, responsive gameplay, and scalable systems.
           </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
   );
 }

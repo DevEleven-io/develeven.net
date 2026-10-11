@@ -28,7 +28,7 @@ const services: ServiceTier[] = [
     title: "Custom software",
     subtitle: "SaaS, internal tools and connected systems.",
     price: "$15,000–30,000",
-    priceTag: "EXAMPLE USD / FOCUSED MVP",
+    priceTag: "Example USD / Focused MVP",
     scope: "Example scope: one core workflow, two user roles and one integration.",
     features: [
       "Discovery + system architecture",
@@ -45,7 +45,7 @@ const services: ServiceTier[] = [
     title: "Game development",
     subtitle: "Validate the experience before a full production.",
     price: "$8,000–15,000",
-    priceTag: "EXAMPLE USD / PLAYABLE PROTOTYPE",
+    priceTag: "Example USD / Playable prototype",
     scope: "Example scope: one core mechanic, one level and one target platform.",
     features: [
       "Gameplay systems & interaction design",
@@ -62,7 +62,7 @@ const services: ServiceTier[] = [
     title: "Engineering services",
     subtitle: "Specialist expertise for a specific challenge.",
     price: "$2,000–5,000",
-    priceTag: "EXAMPLE USD / FOCUSED SPRINT",
+    priceTag: "Example USD / Focused sprint",
     scope: "Example scope: one bounded technical problem with agreed deliverables.",
     features: [
       "Architecture or codebase assessment",
@@ -78,109 +78,112 @@ const services: ServiceTier[] = [
 
 export default function SoftwareGamesPricing() {
   return (
-    <section
-      id="software"
-      className="w-full max-w-[1440px] mx-auto px-[64px] py-[88px] flex flex-col items-start gap-[40px] overflow-hidden"
-    >
-      {/* Header */}
-      <div className="w-full flex justify-between items-end overflow-hidden">
-        <div className="w-[740px] flex flex-col items-start gap-[20px] overflow-hidden">
-          <SectionLabel>03–04 / SOFTWARE, GAMES & ENGINEERING</SectionLabel>
-          <h2 className="w-full text-[#F2F4EC] text-[52px] font-normal font-sans leading-[56.16px]">
-            Not every build
-            <br />
-            fits in a package.
-          </h2>
-        </div>
-        <div className="w-[380px] flex flex-col items-start overflow-hidden">
-          <p className="w-full text-[#A4ADA0] text-[16px] font-normal font-sans leading-[26.40px]">
-            Start with a useful, bounded outcome. These example budgets help
-            frame the conversation, not define your final quote.
-          </p>
-        </div>
-      </div>
-
-      {/* Cards Row */}
-      <div className="w-full flex items-start gap-[16px] overflow-hidden">
-        {services.map((svc) => (
-          <div
-            key={svc.code}
-            className="flex-1 p-[28px] bg-[#191C19] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col items-start gap-[22px] overflow-hidden"
-          >
-            <div className="w-full flex justify-between items-start overflow-hidden">
-              <div className="w-[26px] h-[26px] flex items-center justify-center shrink-0">
-                {svc.icon}
-              </div>
-              <span className="text-[#A4ADA0] text-[10px] font-normal font-mono">
-                {svc.code}
-              </span>
-            </div>
-
-            <h3 className="w-full text-[#F2F4EC] text-[28px] font-normal font-sans">
-              {svc.title}
-            </h3>
-
-            <p className="w-full h-[46px] text-[#A4ADA0] text-[15px] font-normal font-sans leading-[22.50px]">
-              {svc.subtitle}
-            </p>
-
-            <div className="w-full flex flex-col items-start gap-[10px] overflow-hidden">
-              <span className="text-[#F2F4EC] text-[36px] font-normal font-sans">
-                {svc.price}
-              </span>
-              <span className="text-[#CEFF69] text-[10px] font-normal font-mono">
-                {svc.priceTag}
-              </span>
-            </div>
-
-            <div className="w-full h-[1px] bg-[#343A33]" />
-
-            <p className="w-full h-[70px] text-[#A4ADA0] text-[14px] font-normal font-sans leading-[22.40px]">
-              {svc.scope}
-            </p>
-
-            <div className="w-full flex flex-col items-start gap-[12px] overflow-hidden">
-              {svc.features.map((feature) => (
-                <CheckItem key={feature}>{feature}</CheckItem>
-              ))}
-            </div>
-
-            <p className="w-full h-[72px] text-[#A4ADA0] text-[10px] font-normal font-mono leading-[16.50px]">
-              {svc.note}
-            </p>
-
-            {/* CTA Button */}
-            <Link
-              href="/#contact"
-              className="w-full h-[54px] px-[22px] bg-[#101211] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex items-center justify-between overflow-hidden hover:outline-[#A4ADA0] transition-colors group cursor-pointer"
-            >
-              <span className="text-[#F2F4EC] text-[14px] font-semibold font-sans">
-                {svc.buttonText}
-              </span>
-              <ArrowIcon color="lime" />
-            </Link>
+    <section id="software" className="w-full bg-[#101211]">
+      <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col items-start gap-12 overflow-hidden">
+        {/* Header */}
+        <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 overflow-hidden">
+          <div className="max-w-2xl flex flex-col items-start gap-5 overflow-hidden">
+            <SectionLabel>03–04 / Software, games & engineering</SectionLabel>
+            <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.08]">
+              Not every build
+              <br />
+              fits in a package.
+            </h2>
           </div>
-        ))}
-      </div>
-
-      {/* Partnership Banner */}
-      <div className="w-full p-[24px] outline outline-1 outline-[#343A33] -outline-offset-1 flex justify-between items-center overflow-hidden">
-        <div className="w-[920px] flex flex-col items-start gap-[8px] overflow-hidden">
-          <h4 className="text-[#F2F4EC] text-[20px] font-normal font-sans">
-            Need engineering capacity, not a standalone project?
-          </h4>
-          <p className="w-full text-[#A4ADA0] text-[14px] font-normal font-sans leading-[22.40px]">
-            A dedicated partnership can flex around your roadmap. Team size,
-            allocation and monthly budget are agreed after discovery.
-          </p>
+          <div className="max-w-sm flex flex-col items-start overflow-hidden">
+            <p className="w-full text-[#C5CDC1] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
+              Start with a useful, bounded outcome. These example budgets help
+              frame the conversation, not define your final quote.
+            </p>
+          </div>
         </div>
-        <Link
-          href="/#contact"
-          className="text-[#CEFF69] text-[14px] font-normal font-sans hover:underline whitespace-nowrap flex items-center gap-[8px] group"
-        >
-          <span>Discuss a partnership</span>
-          <ArrowIcon color="lime" size="md" />
-        </Link>
+
+        {/* Cards Row */}
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-hidden">
+          {services.map((svc) => (
+            <div
+              key={svc.code}
+              className="p-7 bg-[#191C19] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col justify-between items-start gap-6 overflow-hidden"
+            >
+              <div className="w-full flex flex-col items-start gap-5">
+                <div className="w-full flex justify-between items-start overflow-hidden">
+                  <div className="w-[26px] h-[26px] flex items-center justify-center shrink-0">
+                    {svc.icon}
+                  </div>
+                  <span className="text-[#A4ADA0] text-xs sm:text-sm font-bold font-sans tracking-wider">
+                    {svc.code}
+                  </span>
+                </div>
+
+                <h3 className="w-full text-[#F2F4EC] text-2xl font-bold font-sans tracking-tight">
+                  {svc.title}
+                </h3>
+
+                <p className="w-full min-h-[44px] text-[#A4ADA0] text-sm sm:text-base font-normal font-sans leading-relaxed">
+                  {svc.subtitle}
+                </p>
+
+                <div className="w-full flex flex-col items-start gap-2 overflow-hidden">
+                  <span className="text-[#F2F4EC] text-3xl sm:text-4xl lg:text-5xl font-bold font-sans tracking-tight">
+                    {svc.price}
+                  </span>
+                  <span className="text-[#CEFF69] text-xs sm:text-sm font-bold font-sans tracking-wide">
+                    {svc.priceTag}
+                  </span>
+                </div>
+
+                <div className="w-full h-[1px] bg-[#343A33]" />
+
+                <p className="w-full min-h-[50px] text-[#F2F4EC] text-sm sm:text-base font-semibold font-sans leading-relaxed">
+                  {svc.scope}
+                </p>
+
+                <div className="w-full flex flex-col items-start gap-3 overflow-hidden">
+                  {svc.features.map((feature) => (
+                    <CheckItem key={feature}>{feature}</CheckItem>
+                  ))}
+                </div>
+              </div>
+
+              <div className="w-full flex flex-col items-start gap-5 pt-2">
+                <p className="w-full min-h-[50px] text-[#A4ADA0] text-xs sm:text-sm font-medium font-sans tracking-wide">
+                  {svc.note}
+                </p>
+
+                {/* CTA Button */}
+                <Link
+                  href="/#contact"
+                  className="w-full h-[54px] px-[22px] bg-[#101211] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex items-center justify-between overflow-hidden hover:outline-[#A4ADA0] transition-colors group cursor-pointer"
+                >
+                  <span className="text-[#F2F4EC] text-sm font-semibold font-sans">
+                    {svc.buttonText}
+                  </span>
+                  <ArrowIcon color="lime" />
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Partnership Banner */}
+        <div className="w-full p-6 sm:p-7 rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 overflow-hidden">
+          <div className="max-w-3xl flex flex-col items-start gap-2 overflow-hidden">
+            <h4 className="text-[#F2F4EC] text-lg sm:text-xl font-medium font-sans">
+              Need engineering capacity, not a standalone project?
+            </h4>
+            <p className="w-full text-[#A4ADA0] text-sm font-normal font-sans leading-relaxed">
+              A dedicated partnership can flex around your roadmap. Team size,
+              allocation and monthly budget are agreed after discovery.
+            </p>
+          </div>
+          <Link
+            href="/#contact"
+            className="text-[#CEFF69] text-sm font-medium font-sans hover:underline whitespace-nowrap flex items-center gap-2 group shrink-0"
+          >
+            <span>Discuss a partnership</span>
+            <ArrowIcon color="lime" size="md" />
+          </Link>
+        </div>
       </div>
     </section>
   );

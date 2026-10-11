@@ -7,7 +7,7 @@ export default function CheckItem({ children }: { children: React.ReactNode }) {
       <div className="w-[16px] h-[20px] flex items-center justify-center shrink-0">
         <CheckIcon size={14} color="#CEFF69" />
       </div>
-      <span className="flex-1 text-[#F2F4EC] text-[14px] font-normal font-sans leading-[21px] break-words">
+      <span className="flex-1 text-[#F2F4EC] text-sm sm:text-base font-medium font-sans leading-relaxed break-words">
         {children}
       </span>
     </div>

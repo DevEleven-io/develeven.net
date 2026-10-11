@@ -11,10 +11,10 @@ export default function SectionLabel({
   theme = "dark",
   className = "",
 }: SectionLabelProps) {
-  const textColor = theme === "dark" ? "text-[#CEFF69]" : "text-[#596151]";
+  const textColor = theme === "dark" ? "text-[#CEFF69]" : "text-[#2D3427]";
   return (
     <div
-      className={`font-mono text-[11px] font-normal leading-normal tracking-normal ${textColor} ${className}`}
+      className={`font-sans text-xs sm:text-sm font-bold leading-normal tracking-wider ${textColor} ${className}`}
     >
       {children}
     </div>

@@ -15,6 +15,8 @@ import {
   Braces,
   Plus as LucidePlus,
   Minus as LucideMinus,
+  Menu as LucideMenu,
+  X as LucideX,
 } from "lucide-react";
 
 interface IconProps {
@@ -278,3 +280,38 @@ export function MinusIcon({
     />
   );
 }
+
+/** Hamburger menu icon for mobile navigation */
+export function MenuIcon({
+  className = "",
+  size = 22,
+  color = "#F2F4EC",
+  strokeWidth = 1.5,
+}: IconProps) {
+  return (
+    <LucideMenu
+      size={size}
+      color={color}
+      strokeWidth={strokeWidth}
+      className={`shrink-0 ${className}`}
+    />
+  );
+}
+
+/** Close / X icon for mobile navigation */
+export function CloseIcon({
+  className = "",
+  size = 22,
+  color = "#F2F4EC",
+  strokeWidth = 1.5,
+}: IconProps) {
+  return (
+    <LucideX
+      size={size}
+      color={color}
+      strokeWidth={strokeWidth}
+      className={`shrink-0 ${className}`}
+    />
+  );
+}
+

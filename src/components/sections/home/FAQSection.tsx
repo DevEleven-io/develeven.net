@@ -38,33 +38,31 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section
-      id="faq"
-      className="w-full max-w-[1440px] mx-auto px-[64px] py-[96px] flex justify-start items-start gap-[96px] overflow-hidden"
-    >
-      {/* Left Column */}
-      <div className="w-[430px] flex flex-col items-start gap-[24px] overflow-hidden shrink-0">
-        <SectionLabel>07 / A FEW GOOD QUESTIONS</SectionLabel>
-        <h2 className="w-full text-[#F2F4EC] text-[56px] font-normal font-sans leading-[59.36px]">
-          Before we
-          <br />
-          write a line.
-        </h2>
-        <p className="w-full text-[#A4ADA0] text-[17px] font-normal font-sans leading-[28.05px]">
-          A little clarity before a big decision. Have something else in mind? Just
-          ask.
-        </p>
-        <Link
-          href="/#contact"
-          className="text-[#CEFF69] text-[15px] font-normal font-sans hover:underline flex items-center gap-[6px] group"
-        >
-          <span>Talk to our team</span>
-          <ArrowIcon color="lime" size="md" />
-        </Link>
-      </div>
+    <section id="faq" className="w-full bg-[#101211]">
+      <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col lg:flex-row justify-start items-start gap-12 lg:gap-20 overflow-hidden">
+        {/* Left Column */}
+        <div className="w-full lg:w-[400px] xl:w-[430px] flex flex-col items-start gap-6 overflow-hidden shrink-0">
+          <SectionLabel>07 / A few good questions</SectionLabel>
+          <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.08]">
+            Before we
+            <br />
+            write a line.
+          </h2>
+          <p className="w-full text-[#C5CDC1] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
+            A little clarity before a big decision. Have something else in mind? Just
+            ask.
+          </p>
+          <Link
+            href="/#contact"
+            className="text-[#CEFF69] text-sm sm:text-base font-semibold font-sans hover:underline flex items-center gap-[6px] group"
+          >
+            <span>Talk to our team</span>
+            <ArrowIcon color="lime" size="md" />
+          </Link>
+        </div>
 
-      {/* Right Accordion List */}
-      <div className="flex-1 flex flex-col items-start overflow-hidden border-t border-[#343A33]">
+        {/* Right Accordion List */}
+        <div className="flex-1 w-full flex flex-col items-start overflow-hidden border-t border-[#343A33]">
         {faqs.map((faq, index) => {
           const isOpen = openIndex === index;
           return (
@@ -78,7 +76,7 @@ export default function FAQSection() {
                 onClick={() => setOpenIndex(isOpen ? null : index)}
                 className="w-full flex justify-between items-center gap-[24px] text-left cursor-pointer group overflow-hidden"
               >
-                <span className="flex-1 text-[#F2F4EC] text-[20px] font-medium font-sans">
+                <span className="flex-1 text-[#F2F4EC] text-lg sm:text-xl font-bold font-sans">
                   {faq.question}
                 </span>
 
@@ -94,7 +92,7 @@ export default function FAQSection() {
 
               {isOpen && (
                 <div className="w-full pt-[20px]">
-                  <p className="w-full text-[#A4ADA0] text-[16px] font-normal font-sans leading-[26.40px]">
+                  <p className="w-full text-[#A4ADA0] text-sm sm:text-base font-normal font-sans leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -102,6 +100,7 @@ export default function FAQSection() {
             </div>
           );
         })}
+        </div>
       </div>
     </section>
   );

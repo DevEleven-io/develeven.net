@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowUpRight } from "./Icons";
 
 interface ArrowIconProps {
-  color?: "dark" | "lime" | "light";
+  color?: "dark" | "lime" | "light" | "dim";
   size?: "md" | "lg";
   className?: string;
 }
@@ -17,6 +17,8 @@ export default function ArrowIcon({
       ? "#11150E"
       : color === "light"
       ? "#F2F4EC"
+      : color === "dim"
+      ? "#A4ADA0"
       : "#CEFF69";
 
   const dimension = size === "lg" ? 22 : 18;

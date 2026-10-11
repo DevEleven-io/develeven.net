@@ -33,46 +33,45 @@ const faqs = [
 
 export default function PricingFAQ() {
   return (
-    <section
-      id="pricing-faq"
-      className="w-full max-w-[1440px] mx-auto px-[64px] py-[88px] flex justify-start items-start gap-[96px] overflow-hidden"
-    >
-      {/* Left Column */}
-      <div className="w-[430px] flex flex-col items-start gap-[24px] overflow-hidden shrink-0">
-        <SectionLabel>06 / PRICING FAQ</SectionLabel>
-        <h2 className="w-full text-[#F2F4EC] text-[52px] font-normal font-sans leading-[56.16px]">
-          A little clarity.
-          <br />
-          Before you commit.
-        </h2>
-        <p className="w-full text-[#A4ADA0] text-[16px] font-normal font-sans leading-[26.40px]">
-          Budget questions are good questions. Here’s what to know before we put a
-          proposal together.
-        </p>
-        <Link
-          href="/#contact"
-          className="text-[#CEFF69] text-[15px] font-normal font-sans hover:underline flex items-center gap-[6px] group"
-        >
-          <span>Talk to our team</span>
-          <ArrowIcon color="lime" size="md" />
-        </Link>
-      </div>
+    <section id="pricing-faq" className="w-full bg-[#101211]">
+      <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col lg:flex-row justify-start items-start gap-12 lg:gap-20 overflow-hidden">
+        {/* Left Column */}
+        <div className="w-full lg:w-[400px] xl:w-[430px] flex flex-col items-start gap-6 overflow-hidden shrink-0">
+          <SectionLabel>06 / Pricing FAQ</SectionLabel>
+          <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.08]">
+            A little clarity.
+            <br />
+            Before you commit.
+          </h2>
+          <p className="w-full text-[#C5CDC1] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
+            Budget questions are good questions. Here’s what to know before we put a
+            proposal together.
+          </p>
+          <Link
+            href="/#contact"
+            className="text-[#CEFF69] text-sm sm:text-base font-semibold font-sans hover:underline flex items-center gap-[6px] group"
+          >
+            <span>Talk to our team</span>
+            <ArrowIcon color="lime" size="md" />
+          </Link>
+        </div>
 
-      {/* Right List */}
-      <div className="flex-1 flex flex-col items-start overflow-hidden">
+        {/* Right List */}
+        <div className="flex-1 w-full flex flex-col items-start overflow-hidden">
         {faqs.map((faq) => (
           <div
             key={faq.question}
             className="w-full py-[24px] border-t border-[#343A33] flex flex-col items-start gap-[12px] overflow-hidden"
           >
-            <h3 className="w-full text-[#F2F4EC] text-[20px] font-medium font-sans">
+            <h3 className="w-full text-[#F2F4EC] text-lg sm:text-xl font-bold font-sans">
               {faq.question}
             </h3>
-            <p className="w-full text-[#A4ADA0] text-[15px] font-normal font-sans leading-[24.75px]">
+            <p className="w-full text-[#A4ADA0] text-sm sm:text-base font-normal font-sans leading-relaxed">
               {faq.answer}
             </p>
           </div>
         ))}
+        </div>
       </div>
     </section>
   );

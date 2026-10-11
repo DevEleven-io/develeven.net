@@ -42,7 +42,7 @@ export default function Button({
       ? "#F2F4EC"
       : "#CEFF69";
 
-  const baseClasses = `h-[54px] px-[22px] rounded-[4px] overflow-hidden justify-start items-center gap-[28px] inline-flex font-sans text-[14px] font-semibold cursor-pointer shrink-0 ${
+  const baseClasses = `h-[54px] px-[22px] rounded-[4px] overflow-hidden justify-start items-center gap-[28px] inline-flex font-sans text-sm font-semibold cursor-pointer shrink-0 ${
     fullWidth ? "w-full justify-between" : ""
   } ${variantStyles[variant]} ${className}`;
 

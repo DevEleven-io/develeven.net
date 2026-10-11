@@ -23,8 +23,8 @@ export default function HomePage() {
       <EngagementSection />
       <FAQSection />
       <CTABanner
-        sectionTag="08 / YOUR NEXT CHAPTER"
-        topRightText="LET’S BUILD SOMETHING THAT MATTERS"
+        sectionTag="08 / Your next chapter"
+        topRightText="Let’s build something that matters"
         hasDot={true}
         headline={
           <>
@@ -37,7 +37,7 @@ export default function HomePage() {
         description="Tell us what you’re thinking. We’ll bring the questions, the expertise, and a clear way forward."
         buttonHeight="62px"
         buttonText="Discuss your project"
-        note="NO SALES SCRIPT. JUST A GOOD CONVERSATION."
+        note="No sales script. Just a good conversation."
       />
     </div>
   );
