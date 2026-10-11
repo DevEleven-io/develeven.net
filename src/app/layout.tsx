@@ -31,11 +31,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${ibmPlexMono.variable}`}
+      className={`${inter.variable} ${ibmPlexMono.variable} scroll-smooth`}
     >
-      <body className="bg-neutral-900 text-stone-100 antialiased min-h-screen flex flex-col">
+      <body className="bg-[#101211] text-[#F2F4EC] antialiased min-h-screen flex flex-col font-sans">
         <Navbar />
-        <main className="flex-1 flex flex-col items-center">
+        <main className="flex-1 flex flex-col items-center w-full">
           {children}
         </main>
         <Footer />

@@ -1,63 +1,97 @@
+import React from "react";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 
 interface CTABannerProps {
-  /** Section label shown top-left */
   sectionTag: string;
-  /** The large headline — accepts JSX for line breaks */
+  topRightText: string;
+  hasDot?: boolean;
   headline: React.ReactNode;
-  /** Supporting note below the CTA button */
+  headlineSize?: "88px" | "80px";
+  description: string;
+  buttonHeight?: "62px" | "54px";
+  buttonText?: string;
   note?: string;
-  /** CTA button label */
-  ctaLabel?: string;
   ctaHref?: string;
 }
 
-function CTABanner({
+export default function CTABanner({
   sectionTag,
+  topRightText,
+  hasDot = false,
   headline,
-  note,
-  ctaLabel = "Discuss your project",
+  headlineSize = "88px",
+  description,
+  buttonHeight = "62px",
+  buttonText = "Discuss your project",
+  note = "NO SALES SCRIPT. JUST A GOOD CONVERSATION.",
   ctaHref = "/#contact",
 }: CTABannerProps) {
+  const isLarge = headlineSize === "88px";
+
   return (
     <section
       id="contact"
-      className="w-full max-w-[1440px] mx-auto px-16 py-20 bg-lime-300 flex flex-col gap-12"
+      className="w-full max-w-[1440px] mx-auto px-[64px] py-[80px] bg-[#CEFF69] flex flex-col items-start gap-[48px] overflow-hidden"
     >
-      {/* Top row */}
-      <div className="flex justify-between items-start">
-        <span className="font-mono text-xs text-neutral-900">
+      {/* Top Row */}
+      <div className="w-full flex justify-between items-start overflow-hidden">
+        <span className="text-[#11150E] text-[11px] font-normal font-mono">
           {sectionTag}
         </span>
-        <div className="flex items-center gap-2">
-          <div className="size-1.5 bg-neutral-900 rounded-full" />
-          <span className="font-mono text-xs text-neutral-900">
-            LET&apos;S BUILD SOMETHING THAT MATTERS
+        <div className="flex items-center gap-[8px] overflow-hidden">
+          {hasDot && (
+            <div className="w-[6px] h-[6px] bg-[#11150E] rounded-full shrink-0" />
+          )}
+          <span className="text-[#11150E] text-[11px] font-normal font-mono">
+            {topRightText}
           </span>
         </div>
       </div>
 
-      {/* Bottom row */}
-      <div className="flex justify-start items-end gap-16">
-        <h2 className="w-[820px] text-neutral-900 text-8xl font-sans leading-[1.02]">
+      {/* Bottom Row */}
+      <div className="w-full flex justify-start items-end gap-[72px] overflow-hidden">
+        <h2
+          className={`text-[#11150E] font-normal font-sans tracking-tight shrink-0 ${
+            isLarge
+              ? "w-[820px] text-[88px] leading-[89.76px]"
+              : "w-[800px] text-[80px] leading-[81.60px]"
+          }`}
+        >
           {headline}
         </h2>
-        <div className="flex-1 flex flex-col gap-7">
-          <p className="text-neutral-900 text-base leading-7 font-sans">
-            Tell us what you&apos;re thinking. We&apos;ll bring the questions, the
-            expertise, and a clear way forward.
+
+        <div className="flex-1 flex flex-col items-start gap-[28px] overflow-hidden">
+          <p
+            className={`w-full text-[#11150E] font-normal font-sans ${
+              isLarge
+                ? "text-[17px] leading-[27.20px]"
+                : "text-[16px] leading-[25.60px]"
+            }`}
+          >
+            {description}
           </p>
+
           <a
             href={ctaHref}
-            className="h-16 px-6 bg-neutral-900 rounded-sm flex items-center justify-between gap-4 hover:bg-neutral-800 transition-colors"
+            className={`w-full rounded-[4px] bg-[#11150E] flex items-center justify-between overflow-hidden hover:bg-[#1a1f16] transition-colors ${
+              buttonHeight === "62px" ? "h-[62px] px-[24px]" : "h-[54px] px-[22px]"
+            }`}
           >
-            <span className="text-stone-100 text-base font-semibold font-sans">
-              {ctaLabel}
+            <span
+              className={`text-[#F2F4EC] font-semibold font-sans ${
+                buttonHeight === "62px" ? "text-[15px]" : "text-[14px]"
+              }`}
+            >
+              {buttonText}
             </span>
-            <ArrowIcon className="text-lime-300" />
+            <ArrowIcon
+              color="lime"
+              size={buttonHeight === "62px" ? "lg" : "md"}
+            />
           </a>
+
           {note && (
-            <span className="font-mono text-[10px] text-neutral-900">
+            <span className="text-[#11150E] text-[10px] font-normal font-mono">
               {note}
             </span>
           )}
@@ -66,5 +100,3 @@ function CTABanner({
     </section>
   );
 }
-
-export default CTABanner;

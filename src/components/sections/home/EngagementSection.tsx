@@ -1,5 +1,6 @@
+import React from "react";
+import Link from "next/link";
 import SectionLabel from "@/components/ui/SectionLabel";
-import ArrowIcon from "@/components/ui/ArrowIcon";
 
 const engagements = [
   {
@@ -25,47 +26,62 @@ const engagements = [
   },
 ];
 
-function EngagementSection() {
+export default function EngagementSection() {
   return (
-    <section id="engagement" className="w-full max-w-[1440px] mx-auto px-16 py-24 bg-zinc-900 flex flex-col gap-12">
+    <section
+      id="engagement"
+      className="w-full max-w-[1440px] mx-auto px-[64px] py-[96px] bg-[#191C19] flex flex-col items-start gap-[48px] overflow-hidden"
+    >
       {/* Header */}
-      <div className="flex flex-col gap-6">
+      <div className="w-full flex flex-col items-start gap-[24px] overflow-hidden">
         <SectionLabel>06 / A PARTNERSHIP THAT FITS</SectionLabel>
-        <h2 className="text-stone-100 text-6xl font-sans leading-[1.02]">
+        <h2 className="w-full text-[#F2F4EC] text-[56px] font-normal font-sans leading-[59.36px]">
           Your ambition. Our way in.
         </h2>
       </div>
 
-      {/* Cards */}
-      <div className="flex gap-4">
+      {/* Cards Row */}
+      <div className="w-full flex items-start gap-[16px] overflow-hidden">
         {engagements.map((eng) => (
           <div
             key={eng.type}
-            className="flex-1 p-7 bg-neutral-900 rounded-sm outline outline-1 outline-neutral-700 flex flex-col gap-6"
+            className="flex-1 p-[28px] bg-[#101211] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col items-start gap-[24px] overflow-hidden"
           >
-            <span className="font-mono text-xs text-lime-300">{eng.type}</span>
-            <h3 className="text-stone-100 text-3xl font-sans">{eng.title}</h3>
-            <p className="text-neutral-400 text-base leading-6 font-sans">
+            <span className="text-[#CEFF69] text-[11px] font-normal font-mono">
+              {eng.type}
+            </span>
+            <h3 className="w-full text-[#F2F4EC] text-[28px] font-normal font-sans">
+              {eng.title}
+            </h3>
+            <p className="w-full text-[#A4ADA0] text-[15px] font-normal font-sans leading-[24.75px]">
               {eng.description}
             </p>
-            <div className="pt-5 border-t border-neutral-700 flex flex-col gap-2">
-              <span className="font-mono text-[10px] text-neutral-400">BEST FOR</span>
-              <p className="text-stone-100 text-xs font-sans">{eng.bestFor}</p>
-            </div>
-            <a
-              href="/#contact"
-              className="flex justify-between items-center group"
-            >
-              <span className="text-lime-300 text-sm font-sans group-hover:text-lime-200 transition-colors">
-                Let&apos;s talk about it
+
+            {/* Best For Box */}
+            <div className="w-full pt-[20px] border-t border-[#343A33] flex flex-col items-start gap-[8px] overflow-hidden">
+              <span className="text-[#A4ADA0] text-[10px] font-normal font-mono">
+                BEST FOR
               </span>
-              <ArrowIcon className="text-lime-300" />
-            </a>
+              <p className="w-full text-[#F2F4EC] text-[13px] font-normal font-sans">
+                {eng.bestFor}
+              </p>
+            </div>
+
+            {/* CTA Link */}
+            <Link
+              href="/#contact"
+              className="w-full flex justify-between items-center overflow-hidden group"
+            >
+              <span className="text-[#CEFF69] text-[14px] font-normal font-sans group-hover:underline">
+                Let’s talk about it
+              </span>
+              <div className="w-[20px] h-[20px] relative overflow-hidden shrink-0">
+                <div className="w-[8.33px] h-[8.33px] left-[5.83px] top-[5.83px] absolute outline outline-1 outline-[#CEFF69] -outline-offset-[0.5px]" />
+              </div>
+            </Link>
           </div>
         ))}
       </div>
     </section>
   );
 }
-
-export default EngagementSection;

@@ -1,18 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
+import Link from "next/link";
 import SectionLabel from "@/components/ui/SectionLabel";
 
-interface FAQItemData {
-  question: string;
-  answer: string;
-}
-
-const faqs: FAQItemData[] = [
+const faqs = [
   {
     question: "What do you need to get started?",
     answer:
-      "You don't need a perfect brief. Bring your idea, the problem you want to solve, and any goals or constraints you already know. We'll help define the scope, explore the options, and agree on a practical next step.",
+      "You don’t need a perfect brief. Bring your idea, the problem you want to solve, and any goals or constraints you already know. We’ll help define the scope, explore the options, and agree on a practical next step.",
   },
   {
     question: "Can you work with our existing website or codebase?",
@@ -22,7 +18,7 @@ const faqs: FAQItemData[] = [
   {
     question: "How do you estimate cost and timelines?",
     answer:
-      "We base estimates on scope, complexity, and your delivery constraints. After an initial conversation we'll give you a clear proposal with milestones, deliverables, and transparent pricing.",
+      "We base estimates on scope, complexity, and your delivery constraints. After an initial conversation we’ll give you a clear proposal with milestones, deliverables, and transparent pricing.",
   },
   {
     question: "Will we own the code and source files?",
@@ -36,77 +32,74 @@ const faqs: FAQItemData[] = [
   },
 ];
 
-function FAQItem({ question, answer, isOpen, onToggle }: FAQItemData & { isOpen: boolean; onToggle: () => void }) {
-  return (
-    <div className="border-b border-neutral-700">
-      <button
-        onClick={onToggle}
-        className="w-full flex justify-between items-center gap-6 py-6 text-left group"
-      >
-        <span className="flex-1 text-stone-100 text-xl font-medium font-sans">
-          {question}
-        </span>
-        {/* Toggle icon */}
-        <div className="size-5 relative shrink-0 overflow-hidden">
-          <div
-            className={`absolute left-[4.17px] top-[10px] w-3 h-0 outline outline-1 ${
-              isOpen ? "outline-lime-300" : "outline-neutral-400"
-            }`}
-          />
-          {!isOpen && (
-            <div className="absolute top-[4.17px] left-[10px] w-0 h-3 outline outline-1 outline-neutral-400" />
-          )}
-        </div>
-      </button>
-      {isOpen && (
-        <div className="pb-7">
-          <p className="text-neutral-400 text-base leading-7 font-sans">
-            {answer}
-          </p>
-        </div>
-      )}
-    </div>
-  );
-}
-
-function FAQSection() {
+export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="w-full max-w-[1440px] mx-auto px-16 py-24 flex gap-24">
-      {/* Left sidebar */}
-      <div className="w-96 flex flex-col gap-6">
+    <section
+      id="faq"
+      className="w-full max-w-[1440px] mx-auto px-[64px] py-[96px] flex justify-start items-start gap-[96px] overflow-hidden"
+    >
+      {/* Left Column */}
+      <div className="w-[430px] flex flex-col items-start gap-[24px] overflow-hidden shrink-0">
         <SectionLabel>07 / A FEW GOOD QUESTIONS</SectionLabel>
-        <h2 className="text-stone-100 text-6xl font-sans leading-[1.02]">
+        <h2 className="w-full text-[#F2F4EC] text-[56px] font-normal font-sans leading-[59.36px]">
           Before we
           <br />
           write a line.
         </h2>
-        <p className="text-neutral-400 text-base leading-7 font-sans">
-          A little clarity before a big decision. Have something else in mind?
-          Just ask.
+        <p className="w-full text-[#A4ADA0] text-[17px] font-normal font-sans leading-[28.05px]">
+          A little clarity before a big decision. Have something else in mind? Just
+          ask.
         </p>
-        <a
+        <Link
           href="/#contact"
-          className="text-lime-300 text-base font-sans hover:text-lime-200 transition-colors"
+          className="text-[#CEFF69] text-[15px] font-normal font-sans hover:underline"
         >
           Talk to our team ↗
-        </a>
+        </Link>
       </div>
 
-      {/* FAQ list */}
-      <div className="flex-1 flex flex-col border-t border-neutral-700">
-        {faqs.map((faq, i) => (
-          <FAQItem
-            key={faq.question}
-            {...faq}
-            isOpen={openIndex === i}
-            onToggle={() => setOpenIndex(openIndex === i ? null : i)}
-          />
-        ))}
+      {/* Right Accordion List */}
+      <div className="flex-1 flex flex-col items-start overflow-hidden border-t border-[#343A33]">
+        {faqs.map((faq, index) => {
+          const isOpen = openIndex === index;
+          return (
+            <div
+              key={faq.question}
+              className={`w-full overflow-hidden border-b border-[#343A33] transition-all ${
+                isOpen ? "pt-[24px] pb-[28px]" : "py-[26px]"
+              }`}
+            >
+              <button
+                onClick={() => setOpenIndex(isOpen ? null : index)}
+                className="w-full flex justify-between items-center gap-[24px] text-left cursor-pointer group overflow-hidden"
+              >
+                <span className="flex-1 text-[#F2F4EC] text-[20px] font-medium font-sans">
+                  {faq.question}
+                </span>
+
+                {/* Toggle Icon */}
+                <div className="w-[20px] h-[20px] relative overflow-hidden shrink-0">
+                  {isOpen ? (
+                    <div className="w-[11.67px] h-[1.5px] left-[4.17px] top-[9.25px] absolute bg-[#CEFF69]" />
+                  ) : (
+                    <div className="w-[11.67px] h-[11.67px] left-[4.17px] top-[4.17px] absolute outline outline-1 outline-[#A4ADA0] -outline-offset-[0.5px] group-hover:outline-[#CEFF69]" />
+                  )}
+                </div>
+              </button>
+
+              {isOpen && (
+                <div className="w-full pt-[20px]">
+                  <p className="w-full text-[#A4ADA0] text-[16px] font-normal font-sans leading-[26.40px]">
+                    {faq.answer}
+                  </p>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </section>
   );
 }
-
-export default FAQSection;

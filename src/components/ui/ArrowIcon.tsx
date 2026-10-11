@@ -1,11 +1,38 @@
 import React from "react";
 
-function ArrowIcon({ className = "" }: { className?: string }) {
+interface ArrowIconProps {
+  color?: "dark" | "lime" | "light";
+  size?: "md" | "lg";
+  className?: string;
+}
+
+export default function ArrowIcon({
+  color = "lime",
+  size = "md",
+  className = "",
+}: ArrowIconProps) {
+  const outlineColor =
+    color === "dark"
+      ? "outline-[#11150E]"
+      : color === "light"
+      ? "outline-[#F2F4EC]"
+      : "outline-[#CEFF69]";
+
+  if (size === "lg") {
+    return (
+      <div className={`w-[22px] h-[22px] relative overflow-hidden shrink-0 ${className}`}>
+        <div
+          className={`w-[9.17px] h-[9.17px] left-[6.42px] top-[6.42px] absolute outline outline-1 ${outlineColor} -outline-offset-[0.5px]`}
+        />
+      </div>
+    );
+  }
+
   return (
-    <div className={`size-4 relative overflow-hidden shrink-0 ${className}`}>
-      <div className="size-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 outline outline-[1.5px] outline-current" />
+    <div className={`w-[18px] h-[18px] relative overflow-hidden shrink-0 ${className}`}>
+      <div
+        className={`w-[7.5px] h-[7.5px] left-[5.25px] top-[5.25px] absolute outline outline-[1.5px] ${outlineColor} -outline-offset-[0.75px]`}
+      />
     </div>
   );
 }
-
-export default ArrowIcon;

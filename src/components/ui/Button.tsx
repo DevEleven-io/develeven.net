@@ -1,65 +1,59 @@
 import React from "react";
 import ArrowIcon from "./ArrowIcon";
 
-type Variant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "dark";
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: Variant;
+  variant?: ButtonVariant;
   className?: string;
   onClick?: () => void;
   href?: string;
-  size?: "sm" | "md" | "lg";
+  fullWidth?: boolean;
 }
 
-const variantClasses: Record<Variant, string> = {
-  primary:
-    "bg-lime-300 text-neutral-900 outline outline-1 outline-lime-300 hover:bg-lime-200 transition-colors",
-  secondary:
-    "bg-transparent text-stone-100 outline outline-1 outline-neutral-700 hover:outline-neutral-500 transition-colors",
-  ghost:
-    "bg-neutral-900 text-stone-100 outline outline-1 outline-neutral-700 hover:outline-neutral-500 transition-colors",
-};
-
-const sizeClasses = {
-  sm: "h-10 px-4 text-xs",
-  md: "h-14 px-5 text-sm",
-  lg: "h-16 px-6 text-base",
-};
-
-function Button({
+export default function Button({
   children,
   variant = "primary",
   className = "",
   onClick,
   href,
-  size = "md",
+  fullWidth = false,
 }: ButtonProps) {
-  const base = `rounded-sm inline-flex items-center gap-7 font-semibold font-sans shrink-0 ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  const variantStyles = {
+    primary:
+      "bg-[#CEFF69] outline outline-1 outline-[#CEFF69] -outline-offset-1 text-[#11150E] hover:bg-[#b8f050] transition-colors",
+    secondary:
+      "bg-transparent outline outline-1 outline-[#343A33] -outline-offset-1 text-[#F2F4EC] hover:outline-[#A4ADA0] transition-colors",
+    dark:
+      "bg-[#101211] outline outline-1 outline-[#343A33] -outline-offset-1 text-[#F2F4EC] hover:outline-[#A4ADA0] transition-colors",
+  };
 
   const arrowColor =
-    variant === "primary" ? "text-neutral-900" : "text-lime-300";
+    variant === "primary" ? "dark" : variant === "secondary" ? "light" : "lime";
+
+  const baseClasses = `h-[54px] px-[22px] rounded-[4px] overflow-hidden justify-start items-center gap-[28px] inline-flex font-sans text-[14px] font-semibold cursor-pointer shrink-0 ${
+    fullWidth ? "w-full justify-between" : ""
+  } ${variantStyles[variant]} ${className}`;
 
   const content = (
     <>
-      <span>{children}</span>
-      <ArrowIcon className={arrowColor} />
+      <span className={fullWidth ? "flex-1 text-left" : ""}>{children}</span>
+      <ArrowIcon color={arrowColor} />
     </>
   );
 
   if (href) {
     return (
-      <a href={href} className={base}>
+      <a href={href} className={baseClasses}>
         {content}
       </a>
     );
   }
 
   return (
-    <button onClick={onClick} className={base}>
+    <button onClick={onClick} className={baseClasses}>
       {content}
     </button>
   );
 }
-
-export default Button;

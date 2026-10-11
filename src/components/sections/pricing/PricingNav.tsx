@@ -1,4 +1,6 @@
-const anchors = [
+import React from "react";
+
+const links = [
   { label: "01 / WEBSITES ↓", href: "#websites" },
   { label: "02 / MAINTENANCE ↓", href: "#maintenance" },
   { label: "03 / SOFTWARE & GAMES ↓", href: "#software" },
@@ -6,20 +8,18 @@ const anchors = [
   { label: "05 / PRICING FAQ ↓", href: "#pricing-faq" },
 ];
 
-function PricingNav() {
+export default function PricingNav() {
   return (
-    <div className="w-full max-w-[1440px] mx-auto px-16 h-16 border-t border-b border-neutral-700 flex items-center justify-between">
-      {anchors.map((a) => (
+    <div className="w-full max-w-[1440px] mx-auto h-[72px] px-[64px] border-t border-b border-[#343A33] flex justify-between items-center overflow-hidden">
+      {links.map((link) => (
         <a
-          key={a.href}
-          href={a.href}
-          className="font-mono text-xs text-stone-100 hover:text-lime-300 transition-colors"
+          key={link.label}
+          href={link.href}
+          className="text-[#F2F4EC] text-[11px] font-normal font-mono hover:text-[#CEFF69] transition-colors"
         >
-          {a.label}
+          {link.label}
         </a>
       ))}
     </div>
   );
 }
-
-export default PricingNav;

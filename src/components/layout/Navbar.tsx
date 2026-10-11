@@ -1,7 +1,9 @@
 "use client";
 
+import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ArrowIcon from "@/components/ui/ArrowIcon";
 
 const navLinks = [
   { label: "Services", href: "/#services" },
@@ -11,40 +13,40 @@ const navLinks = [
   { label: "Pricing", href: "/pricing" },
 ];
 
-function Navbar() {
+export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header
-      className="w-full sticky top-0 z-50"
-      style={{ background: "#101211", borderBottom: "1px solid #343A33" }}
-    >
-      <div className="max-w-[1440px] mx-auto px-16 flex items-center justify-between" style={{ height: "100px" }}>
+    <header className="w-full sticky top-0 z-50 bg-[#101211] border-b border-[#343A33]">
+      <div className="w-full max-w-[1440px] mx-auto h-[100px] px-[64px] flex justify-between items-center overflow-hidden">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 overflow-hidden">
-          <div className="flex items-start gap-[5px]">
-            <div className="w-[6px] h-[25px]" style={{ background: "#CEFF69" }} />
-            <div className="w-[6px] h-[25px]" style={{ background: "#CEFF69" }} />
+        <Link
+          href="/"
+          className="flex items-center gap-[12px] overflow-hidden group"
+        >
+          <div className="flex items-start gap-[5px] overflow-hidden">
+            <div className="w-[6px] h-[25px] bg-[#CEFF69]" />
+            <div className="w-[6px] h-[25px] bg-[#CEFF69]" />
           </div>
-          <span style={{ color: "#F2F4EC", fontSize: "26px", fontFamily: "Inter", fontWeight: 400 }}>
+          <span className="text-[#F2F4EC] text-[26px] font-normal font-sans tracking-tight">
             DevEleven
           </span>
         </Link>
 
-        {/* Nav links */}
-        <nav className="flex items-center gap-8">
+        {/* Navigation links */}
+        <nav className="flex items-center gap-[32px] overflow-hidden">
           {navLinks.map((link) => {
-            const isActive = pathname === "/pricing" && link.href === "/pricing";
+            const isPricing = link.href === "/pricing";
+            const isActive = isPricing && pathname === "/pricing";
             return (
               <Link
                 key={link.label}
                 href={link.href}
-                style={{
-                  color: isActive ? "#CEFF69" : "#F2F4EC",
-                  fontSize: "14px",
-                  fontFamily: "Inter",
-                  fontWeight: 400,
-                }}
+                className={`text-[14px] font-normal font-sans transition-colors ${
+                  isActive
+                    ? "text-[#CEFF69]"
+                    : "text-[#F2F4EC] hover:text-[#CEFF69]"
+                }`}
               >
                 {link.label}
               </Link>
@@ -52,41 +54,17 @@ function Navbar() {
           })}
         </nav>
 
-        {/* CTA button */}
+        {/* CTA Button */}
         <Link
           href="/#contact"
-          className="flex items-center gap-7 overflow-hidden"
-          style={{
-            height: "54px",
-            paddingLeft: "22px",
-            paddingRight: "22px",
-            background: "#CEFF69",
-            borderRadius: "4px",
-            outline: "1px solid #CEFF69",
-            outlineOffset: "-1px",
-          }}
+          className="h-[54px] px-[22px] bg-[#CEFF69] rounded-[4px] outline outline-1 outline-[#CEFF69] -outline-offset-1 flex items-center gap-[28px] overflow-hidden hover:bg-[#b8f050] transition-colors"
         >
-          <span style={{ color: "#11150E", fontSize: "14px", fontFamily: "Inter", fontWeight: 600 }}>
-            Let&apos;s talk
+          <span className="text-[#11150E] text-[14px] font-semibold font-sans">
+            Let’s talk
           </span>
-          {/* Arrow icon */}
-          <div className="w-[18px] h-[18px] relative overflow-hidden shrink-0">
-            <div
-              className="absolute"
-              style={{
-                width: "7.5px",
-                height: "7.5px",
-                left: "5.25px",
-                top: "5.25px",
-                outline: "1.5px solid #11150E",
-                outlineOffset: "-0.75px",
-              }}
-            />
-          </div>
+          <ArrowIcon color="dark" />
         </Link>
       </div>
     </header>
   );
 }
-
-export default Navbar;

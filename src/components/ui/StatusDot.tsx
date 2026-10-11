@@ -1,18 +1,25 @@
+import React from "react";
+
 interface StatusDotProps {
   label: string;
-  color?: "lime" | "neutral";
+  theme?: "lime" | "dark";
+  className?: string;
 }
 
-function StatusDot({ label, color = "lime" }: StatusDotProps) {
-  const dotColor = color === "lime" ? "bg-lime-300" : "bg-neutral-900";
-  const textColor = color === "lime" ? "text-neutral-400" : "text-neutral-900";
+export default function StatusDot({
+  label,
+  theme = "lime",
+  className = "",
+}: StatusDotProps) {
+  const dotColor = theme === "lime" ? "bg-[#CEFF69]" : "bg-[#11150E]";
+  const textColor = theme === "lime" ? "text-[#A4ADA0]" : "text-[#11150E]";
 
   return (
-    <div className="inline-flex items-center gap-2">
-      <div className={`size-1.5 rounded-full shrink-0 ${dotColor}`} />
-      <span className={`font-mono text-xs ${textColor}`}>{label}</span>
+    <div className={`justify-start items-center gap-[8px] inline-flex overflow-hidden ${className}`}>
+      <div className={`w-[6px] h-[6px] rounded-full shrink-0 ${dotColor}`} />
+      <span className={`font-mono text-[11px] font-normal leading-normal tracking-normal ${textColor}`}>
+        {label}
+      </span>
     </div>
   );
 }
-
-export default StatusDot;

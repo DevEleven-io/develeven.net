@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Link from "next/link";
 
 const expertiseLinks = [
@@ -18,103 +19,108 @@ const exploreLinks = [
   { label: "Contact", href: "/#contact" },
 ];
 
-function Footer() {
+export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <footer className="w-full bg-neutral-900">
-      <div className="max-w-[1440px] mx-auto px-16 pt-16 pb-8 flex flex-col gap-12">
-        {/* Top row */}
-        <div className="flex justify-between items-start">
-          {/* Brand */}
-          <div className="w-96 flex flex-col gap-5">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="flex items-start gap-[5px]">
-                <div className="w-1.5 h-6 bg-lime-300" />
-                <div className="w-1.5 h-6 bg-lime-300" />
+    <footer className="w-full bg-[#101211]">
+      <div className="w-full max-w-[1440px] mx-auto pt-[64px] pb-[32px] px-[64px] flex flex-col gap-[48px] overflow-hidden">
+        {/* Top Row */}
+        <div className="w-full flex justify-between items-start overflow-hidden">
+          {/* Brand Column */}
+          <div className="w-[390px] flex flex-col gap-[22px] overflow-hidden">
+            <Link href="/" className="flex items-center gap-[12px] overflow-hidden">
+              <div className="flex items-start gap-[5px] overflow-hidden">
+                <div className="w-[6px] h-[25px] bg-[#CEFF69]" />
+                <div className="w-[6px] h-[25px] bg-[#CEFF69]" />
               </div>
-              <span className="text-stone-100 text-2xl font-sans">
+              <span className="text-[#F2F4EC] text-[26px] font-normal font-sans">
                 DevEleven
               </span>
             </Link>
-            <p className="text-neutral-400 text-base leading-6 font-sans">
-              Independent thinking. Precise engineering. Digital products built
-              for the long run.
+            <p className="text-[#A4ADA0] text-[16px] font-normal font-sans leading-[25.60px]">
+              Independent thinking. Precise engineering. Digital products built for the long run.
             </p>
             <Link
               href="/#contact"
-              className="text-lime-300 text-sm font-sans hover:text-lime-200 transition-colors"
+              className="text-[#CEFF69] text-[14px] font-normal font-sans hover:underline"
             >
               Start a conversation ↗
             </Link>
           </div>
 
-          {/* Expertise column */}
-          <div className="flex flex-col gap-3.5">
-            <span className="font-mono text-[10px] text-neutral-400">
+          {/* Expertise Column */}
+          <div className="flex flex-col gap-[14px] overflow-hidden">
+            <span className="text-[#A4ADA0] text-[10px] font-normal font-mono">
               EXPERTISE
             </span>
             {expertiseLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-stone-100 text-sm font-sans hover:text-lime-300 transition-colors"
+                className="text-[#F2F4EC] text-[14px] font-normal font-sans hover:text-[#CEFF69] transition-colors"
               >
                 {link.label}
               </Link>
             ))}
           </div>
 
-          {/* Explore column */}
-          <div className="flex flex-col gap-3.5">
-            <span className="font-mono text-[10px] text-neutral-400">
+          {/* Explore Column */}
+          <div className="flex flex-col gap-[14px] overflow-hidden">
+            <span className="text-[#A4ADA0] text-[10px] font-normal font-mono">
               EXPLORE
             </span>
             {exploreLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-stone-100 text-sm font-sans hover:text-lime-300 transition-colors"
+                className="text-[#F2F4EC] text-[14px] font-normal font-sans hover:text-[#CEFF69] transition-colors"
               >
                 {link.label}
               </Link>
             ))}
           </div>
 
-          {/* Brand mark */}
-          <div className="flex flex-col items-end gap-3.5">
-            <span className="text-lime-300 text-8xl font-medium font-sans leading-[81px]">
+          {/* /11 Mark */}
+          <div className="flex flex-col items-end gap-[14px] overflow-hidden">
+            <span className="text-[#CEFF69] text-[90px] font-medium font-sans leading-[81px]">
               /11
             </span>
-            <span className="font-mono text-[10px] text-neutral-400">
+            <span className="text-[#A4ADA0] text-[10px] font-normal font-mono">
               BUILT WITH INTENT.
             </span>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="w-full h-px bg-neutral-700" />
+        <div className="w-full h-[1px] bg-[#343A33]" />
 
-        {/* Legal bar */}
-        <div className="flex justify-between items-center">
-          <span className="font-mono text-[10px] text-neutral-400">
+        {/* Bottom Legal Bar */}
+        <div className="w-full flex justify-between items-center overflow-hidden">
+          <span className="text-[#A4ADA0] text-[10px] font-normal font-mono">
             © 2026 DEVELEVEN. ALL RIGHTS RESERVED.
           </span>
-          <div className="flex gap-7">
+
+          <div className="flex items-center gap-[28px] overflow-hidden">
             <Link
               href="/privacy"
-              className="text-neutral-400 text-xs font-sans hover:text-stone-100 transition-colors"
+              className="text-[#A4ADA0] text-[12px] font-normal font-sans hover:text-[#F2F4EC] transition-colors"
             >
               Privacy policy
             </Link>
             <Link
               href="/terms"
-              className="text-neutral-400 text-xs font-sans hover:text-stone-100 transition-colors"
+              className="text-[#A4ADA0] text-[12px] font-normal font-sans hover:text-[#F2F4EC] transition-colors"
             >
               Terms of use
             </Link>
           </div>
+
           <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="font-mono text-[10px] text-stone-100 hover:text-lime-300 transition-colors cursor-pointer"
+            onClick={scrollToTop}
+            className="text-[#F2F4EC] text-[10px] font-normal font-mono hover:text-[#CEFF69] transition-colors cursor-pointer"
           >
             BACK TO TOP ↑
           </button>
@@ -123,5 +129,3 @@ function Footer() {
     </footer>
   );
 }
-
-export default Footer;

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import React from "react";
 import PricingHero from "@/components/sections/pricing/PricingHero";
 import DisclaimerBanner from "@/components/sections/pricing/DisclaimerBanner";
 import PricingNav from "@/components/sections/pricing/PricingNav";
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function PricingPage() {
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center bg-[#101211]">
       <PricingHero />
       <DisclaimerBanner />
       <PricingNav />
@@ -28,9 +29,20 @@ export default function PricingPage() {
       <PricingFAQ />
       <CTABanner
         sectionTag="07 / YOUR PROJECT, CLEARLY SCOPED"
-        headline={<>Bring the ambition.<br />Let&apos;s define the build.</>}
+        topRightText="LET’S FIND THE RIGHT STARTING POINT"
+        hasDot={false}
+        headline={
+          <>
+            Bring the ambition.
+            <br />
+            Let’s define the build.
+          </>
+        }
+        headlineSize="80px"
+        description="Tell us your goals, the service you need, your budget range and your ideal launch date. We’ll work out a practical next step."
+        buttonHeight="54px"
+        buttonText="Discuss your project"
         note="NO SALES SCRIPT. JUST A GOOD CONVERSATION."
-        ctaLabel="Discuss your project"
       />
     </div>
   );

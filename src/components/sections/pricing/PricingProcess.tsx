@@ -1,3 +1,6 @@
+import React from "react";
+import SectionLabel from "@/components/ui/SectionLabel";
+
 const steps = [
   {
     number: "01",
@@ -23,66 +26,74 @@ const steps = [
 ];
 
 const proposalItems = [
-  "Deliverables & exclusions",
-  "Milestones & payment terms",
-  "Ownership & support",
+  "+ Deliverables & exclusions",
+  "+ Milestones & payment terms",
+  "+ Ownership & support",
 ];
 
-function PricingProcess() {
+export default function PricingProcess() {
   return (
-    <section className="w-full max-w-[1440px] mx-auto px-16 py-20 bg-stone-200 flex flex-col gap-12">
+    <section className="w-full max-w-[1440px] mx-auto px-[64px] py-[80px] bg-[#E8EDE1] flex flex-col items-start gap-[48px] overflow-hidden">
       {/* Header */}
-      <div className="flex justify-between items-end">
-        <div className="w-[740px] flex flex-col gap-5">
-          <span className="font-mono text-xs text-stone-600">
-            05 / FROM EXAMPLE TO ESTIMATE
-          </span>
-          <h2 className="text-neutral-900 text-5xl font-sans leading-[1.02]">
+      <div className="w-full flex justify-between items-end overflow-hidden">
+        <div className="w-[740px] flex flex-col items-start gap-[20px] overflow-hidden">
+          <SectionLabel theme="light">05 / FROM EXAMPLE TO ESTIMATE</SectionLabel>
+          <h2 className="w-full text-[#11150E] text-[52px] font-normal font-sans leading-[56.16px]">
             The price follows the plan.
             <br />
             Not the other way around.
           </h2>
         </div>
-        <div className="w-96">
-          <p className="text-stone-600 text-base leading-7 font-sans">
+        <div className="w-[380px] flex flex-col items-start overflow-hidden">
+          <p className="w-full text-[#596151] text-[16px] font-normal font-sans leading-[26.40px]">
             Complexity, integrations, content readiness and delivery constraints
             shape your investment. We make those trade-offs visible.
           </p>
         </div>
       </div>
 
-      {/* Steps */}
-      <div className="flex gap-10">
+      {/* Steps Row */}
+      <div className="w-full flex items-start gap-[40px] overflow-hidden">
         {steps.map((step) => (
-          <div key={step.number} className="flex-1 flex flex-col gap-5">
-            <div className="flex items-center gap-4">
-              <span className="font-mono text-xs text-stone-600">{step.number}</span>
-              <div className="flex-1 h-px bg-stone-300" />
+          <div
+            key={step.number}
+            className="flex-1 flex flex-col items-start gap-[20px] overflow-hidden"
+          >
+            <div className="w-full flex items-center gap-[16px] overflow-hidden">
+              <span className="text-[#596151] text-[12px] font-normal font-mono">
+                {step.number}
+              </span>
+              <div className="flex-1 h-[1px] bg-[#BCC5B3]" />
             </div>
-            <h3 className="text-neutral-900 text-2xl font-sans">{step.title}</h3>
-            <p className="text-stone-600 text-base leading-6 font-sans">
+            <h3 className="w-full text-[#11150E] text-[26px] font-normal font-sans">
+              {step.title}
+            </h3>
+            <p className="w-full text-[#596151] text-[15px] font-normal font-sans leading-[24.75px]">
               {step.description}
             </p>
-            <span className="font-mono text-[10px] text-neutral-900 leading-4">
+            <span className="text-[#11150E] text-[10px] font-normal font-mono leading-[15px]">
               {step.output}
             </span>
           </div>
         ))}
       </div>
 
-      {/* Proposal checklist footer */}
-      <div className="pt-7 border-t border-stone-300 flex justify-between items-center">
-        <span className="font-mono text-xs text-stone-600">
+      {/* Checklist Footer */}
+      <div className="w-full pt-[28px] border-t border-[#BCC5B3] flex justify-between items-center overflow-hidden">
+        <span className="text-[#596151] text-[11px] font-normal font-mono">
           EVERY PROPOSAL SHOULD MAKE CLEAR
         </span>
-        {proposalItems.map((item) => (
-          <span key={item} className="text-neutral-900 text-sm font-sans">
-            + {item}
-          </span>
-        ))}
+        <div className="flex items-center gap-[32px] overflow-hidden">
+          {proposalItems.map((item) => (
+            <span
+              key={item}
+              className="text-[#11150E] text-[14px] font-normal font-sans"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
-
-export default PricingProcess;

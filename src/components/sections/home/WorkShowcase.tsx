@@ -1,137 +1,185 @@
+import React from "react";
 import SectionLabel from "@/components/ui/SectionLabel";
-import ArrowIcon from "@/components/ui/ArrowIcon";
 
-function WorkShowcase() {
+export default function WorkShowcase() {
+  const chartHeights = [28, 42, 34, 54, 44, 61, 53, 68, 64, 74, 70, 83];
+
   return (
-    <section id="work" className="w-full max-w-[1440px] mx-auto px-16 py-24 bg-stone-200 flex flex-col gap-12">
+    <section
+      id="work"
+      className="w-full max-w-[1440px] mx-auto px-[64px] py-[96px] bg-[#E8EDE1] flex flex-col items-start gap-[48px] overflow-hidden"
+    >
       {/* Header */}
-      <div className="flex justify-between items-end">
-        <div className="w-[820px] flex flex-col gap-6">
+      <div className="w-full flex justify-between items-end overflow-hidden">
+        <div className="w-[820px] flex flex-col items-start gap-[24px] overflow-hidden">
           <SectionLabel theme="light">02 / ENGINEERING IN PRACTICE</SectionLabel>
-          <h2 className="text-neutral-900 text-6xl font-sans leading-[1.02]">
+          <h2 className="w-full text-[#11150E] text-[56px] font-normal font-sans leading-[59.36px]">
             Different challenges. Same rigor.
           </h2>
         </div>
-        <div className="w-72">
-          <p className="font-mono text-xs text-stone-600 leading-4">
-            ILLUSTRATIVE BUILD CONCEPTS
-            <br />A LOOK AT WHAT WE CAN CREATE
-          </p>
+        <div className="w-[300px] text-[#596151] text-[11px] font-normal font-mono leading-[17.60px]">
+          ILLUSTRATIVE BUILD CONCEPTS
+          <br />
+          A LOOK AT WHAT WE CAN CREATE
         </div>
       </div>
 
-      {/* Projects */}
-      <div className="flex gap-6">
-        {/* Project 1 — Custom Software */}
-        <div className="flex-1 flex flex-col gap-5">
-          <div className="h-96 p-8 bg-stone-400 flex flex-col justify-center">
-            {/* Mock dashboard UI */}
-            <div className="h-80 bg-stone-100 rounded-md flex flex-col overflow-hidden">
-              {/* Browser chrome */}
-              <div className="h-9 px-4 bg-stone-200 flex justify-between items-center shrink-0">
-                <div className="flex gap-1">
-                  {[0, 1, 2].map((i) => (
-                    <div key={i} className="size-[5px] bg-stone-400 rounded-full" />
-                  ))}
+      {/* Projects Row */}
+      <div className="w-full flex items-start gap-[24px] overflow-hidden">
+        {/* Project 1 — Orbit Platform */}
+        <div className="flex-1 flex flex-col items-start gap-[20px] overflow-hidden">
+          <div className="w-full h-[382px] p-[32px] bg-[#B8C8A2] flex flex-col justify-center items-start overflow-hidden">
+            <div className="w-full h-[310px] bg-[#F5F7F0] rounded-[6px] flex flex-col items-start overflow-hidden shadow-sm">
+              {/* Browser Chrome */}
+              <div className="w-full h-[38px] px-[16px] bg-[#E5EADD] flex justify-between items-center overflow-hidden shrink-0">
+                <div className="flex items-center gap-[4px] overflow-hidden">
+                  <div className="w-[5px] h-[5px] bg-[#A1AD95] rounded-full" />
+                  <div className="w-[5px] h-[5px] bg-[#A1AD95] rounded-full" />
+                  <div className="w-[5px] h-[5px] bg-[#A1AD95] rounded-full" />
                 </div>
-                <span className="font-mono text-[8px] text-stone-600">
+                <span className="text-[#596151] text-[8px] font-normal font-mono">
                   console.orbit / overview
                 </span>
-                <span className="text-stone-600 text-[8px]">↗</span>
+                <span className="text-[#596151] text-[8px] font-normal font-sans">
+                  ↗
+                </span>
               </div>
-              {/* App layout */}
-              <div className="flex flex-1 overflow-hidden">
+
+              {/* App Body */}
+              <div className="w-full flex-1 flex items-start overflow-hidden">
                 {/* Sidebar */}
-                <div className="w-28 p-3.5 bg-neutral-900 flex flex-col gap-4 shrink-0">
-                  <span className="text-stone-100 text-base font-bold font-sans">orbit.</span>
-                  <span className="text-lime-300 text-[9px] font-sans">Overview</span>
+                <div className="w-[108px] h-full p-[14px] bg-[#11150E] flex flex-col items-start gap-[17px] overflow-hidden shrink-0">
+                  <span className="text-[#F2F4EC] text-[15px] font-bold font-sans">
+                    orbit.
+                  </span>
+                  <span className="text-[#CEFF69] text-[9px] font-normal font-sans">
+                    Overview
+                  </span>
                   {["Projects", "Resources", "Reports", "Settings"].map((item) => (
-                    <span key={item} className="text-neutral-400 text-[9px] font-sans">{item}</span>
+                    <span
+                      key={item}
+                      className="text-[#A4ADA0] text-[9px] font-normal font-sans"
+                    >
+                      {item}
+                    </span>
                   ))}
                 </div>
-                {/* Content */}
-                <div className="flex-1 p-4 flex flex-col gap-3">
-                  <div className="flex justify-between items-start">
-                    <span className="text-neutral-900 text-lg font-semibold font-sans">Operations overview</span>
-                    <span className="font-mono text-[8px] text-stone-600">THIS MONTH ↓</span>
+
+                {/* Dashboard Content */}
+                <div className="flex-1 h-full p-[16px] flex flex-col items-start gap-[12px] overflow-hidden">
+                  <div className="w-full flex justify-between items-start overflow-hidden">
+                    <span className="text-[#11150E] text-[18px] font-semibold font-sans">
+                      Operations overview
+                    </span>
+                    <span className="text-[#596151] text-[8px] font-normal font-mono">
+                      THIS MONTH ↓
+                    </span>
                   </div>
-                  {/* Stats */}
-                  <div className="flex gap-2.5">
+
+                  {/* Stat Cards */}
+                  <div className="w-full flex items-start gap-[10px] overflow-hidden">
                     {[
                       { label: "Active projects", value: "24" },
                       { label: "Tasks completed", value: "1,284" },
                       { label: "Team capacity", value: "86%" },
                     ].map((stat) => (
-                      <div key={stat.label} className="flex-1 p-3 bg-stone-200 rounded-[3px] flex flex-col gap-1.5">
-                        <span className="text-stone-600 text-[8px] font-sans">{stat.label}</span>
-                        <span className="text-neutral-900 text-xl font-semibold font-sans">{stat.value}</span>
+                      <div
+                        key={stat.label}
+                        className="flex-1 p-[12px] bg-[#E9EEDF] rounded-[3px] flex flex-col items-start gap-[6px] overflow-hidden"
+                      >
+                        <span className="text-[#596151] text-[8px] font-normal font-sans">
+                          {stat.label}
+                        </span>
+                        <span className="text-[#11150E] text-[22px] font-semibold font-sans">
+                          {stat.value}
+                        </span>
                       </div>
                     ))}
                   </div>
-                  {/* Chart */}
-                  <div className="flex flex-col gap-2">
-                    <span className="text-neutral-900 text-[10px] font-semibold font-sans">Delivery velocity</span>
-                    <div className="h-20 flex items-end gap-2">
-                      {[28, 40, 32, 56, 44, 64, 56, 64, 64, 80, 64, 80].map((h, i) => (
+
+                  {/* Delivery Velocity Chart */}
+                  <div className="w-full flex flex-col items-start gap-[9px] overflow-hidden">
+                    <span className="text-[#11150E] text-[10px] font-semibold font-sans">
+                      Delivery velocity
+                    </span>
+                    <div className="w-full h-[84px] flex items-end gap-[9px] overflow-hidden">
+                      {chartHeights.map((h, i) => (
                         <div
                           key={i}
-                          className={`flex-1 rounded-tl-sm rounded-tr-sm ${i >= 9 ? "bg-stone-600" : "bg-stone-400"}`}
                           style={{ height: `${h}px` }}
+                          className={`flex-1 rounded-t-[2px] ${
+                            i >= 9 ? "bg-[#527237]" : "bg-[#B2C498]"
+                          }`}
                         />
                       ))}
                     </div>
-                    <span className="font-mono text-[7px] text-stone-600">
-                      W01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;W04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;W08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;W12
-                    </span>
+                    <div className="w-full flex justify-between items-center text-[#596151] text-[7px] font-normal font-mono">
+                      <span>W01</span>
+                      <span>W04</span>
+                      <span>W08</span>
+                      <span>W12</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex justify-between items-center">
-            <div className="flex flex-col gap-2">
-              <span className="font-mono text-[10px] text-stone-600">CUSTOM SOFTWARE / OPERATIONS</span>
-              <h3 className="text-neutral-900 text-3xl font-sans">Complex workflows. One clear view.</h3>
+
+          {/* Title Row */}
+          <div className="w-full flex justify-between items-center overflow-hidden">
+            <div className="flex flex-col items-start gap-[8px] overflow-hidden">
+              <span className="text-[#596151] text-[10px] font-normal font-mono">
+                CUSTOM SOFTWARE / OPERATIONS
+              </span>
+              <h3 className="text-[#11150E] text-[28px] font-normal font-sans">
+                Complex workflows. One clear view.
+              </h3>
             </div>
-            <button className="size-6 relative overflow-hidden group">
-              <ArrowIcon className="text-neutral-900 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-            </button>
+            <div className="w-[26px] h-[26px] relative overflow-hidden shrink-0">
+              <div className="w-[10.83px] h-[10.83px] left-[7.58px] top-[7.58px] absolute outline outline-1 outline-[#11150E] -outline-offset-[0.5px]" />
+            </div>
           </div>
-          <p className="text-stone-600 text-base leading-6 font-sans">
+          <p className="w-full text-[#596151] text-[15px] font-normal font-sans leading-[24px]">
             A connected operations platform with real-time reporting, role-based
             access, and fewer manual handoffs.
           </p>
         </div>
 
-        {/* Project 2 — Game */}
-        <div className="flex-1 flex flex-col gap-5">
-          <div className="h-96 relative bg-neutral-900 overflow-hidden">
+        {/* Project 2 — Afterlight Game */}
+        <div className="flex-1 flex flex-col items-start gap-[20px] overflow-hidden">
+          <div className="w-full h-[382px] relative bg-[#101211] flex flex-col items-start overflow-hidden">
             <img
-              src="https://placehold.co/644x382/171717/404040?text=."
-              alt="Afterlight game concept"
-              className="w-full h-full object-cover"
+              src="https://placehold.co/644x382"
+              alt="Afterlight game"
+              className="w-full flex-1 object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/40 via-transparent to-neutral-900/50" />
-            <span className="absolute top-6 left-6 text-stone-100 text-xl font-medium font-sans">
+            <div className="w-full h-full left-0 top-0 absolute bg-gradient-to-b from-[#101211]/[0.38] via-transparent to-[#101211]/[0.50] pointer-events-none" />
+            <span className="left-[26px] top-[24px] absolute text-[#F2F4EC] text-[20px] font-medium font-sans">
               AFTERLIGHT
             </span>
-            <div className="absolute bottom-[18px] left-6 flex items-center gap-2.5">
-              <div className="size-[5px] bg-lime-300 rounded-full" />
-              <span className="font-mono text-[9px] text-stone-100">
+            <div className="left-[26px] top-[346px] absolute flex items-center gap-[10px] overflow-hidden">
+              <div className="w-[5px] h-[5px] bg-[#CEFF69] rounded-full" />
+              <span className="text-[#F2F4EC] text-[9px] font-normal font-mono">
                 WORLD EXPLORATION / CONCEPT 01
               </span>
             </div>
           </div>
-          <div className="flex justify-between items-center">
-            <div className="flex flex-col gap-2">
-              <span className="font-mono text-[10px] text-stone-600">GAME DEVELOPMENT / INTERACTIVE</span>
-              <h3 className="text-neutral-900 text-3xl font-sans">A world worth getting lost in.</h3>
+
+          {/* Title Row */}
+          <div className="w-full flex justify-between items-center overflow-hidden">
+            <div className="flex flex-col items-start gap-[8px] overflow-hidden">
+              <span className="text-[#596151] text-[10px] font-normal font-mono">
+                GAME DEVELOPMENT / INTERACTIVE
+              </span>
+              <h3 className="text-[#11150E] text-[28px] font-normal font-sans">
+                A world worth getting lost in.
+              </h3>
             </div>
-            <button className="size-6 relative overflow-hidden">
-              <ArrowIcon className="text-neutral-900 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-            </button>
+            <div className="w-[26px] h-[26px] relative overflow-hidden shrink-0">
+              <div className="w-[10.83px] h-[10.83px] left-[7.58px] top-[7.58px] absolute outline outline-1 outline-[#11150E] -outline-offset-[0.5px]" />
+            </div>
           </div>
-          <p className="text-stone-600 text-base leading-6 font-sans">
+          <p className="w-full text-[#596151] text-[15px] font-normal font-sans leading-[24px]">
             An atmospheric exploration experience combining immersive
             environments, responsive gameplay, and scalable systems.
           </p>
@@ -140,5 +188,3 @@ function WorkShowcase() {
     </section>
   );
 }
-
-export default WorkShowcase;

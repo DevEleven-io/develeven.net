@@ -1,16 +1,30 @@
+import React from "react";
+import Link from "next/link";
 import SectionLabel from "@/components/ui/SectionLabel";
 import CheckItem from "@/components/ui/CheckItem";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 
-const services = [
+interface ServiceTier {
+  code: string;
+  title: string;
+  subtitle: string;
+  price: string;
+  priceTag: string;
+  scope: string;
+  features: string[];
+  note: string;
+  buttonText: string;
+  iconShape: React.ReactNode;
+}
+
+const services: ServiceTier[] = [
   {
     code: "SW / 01",
     title: "Custom software",
     subtitle: "SaaS, internal tools and connected systems.",
     price: "$15,000–30,000",
-    priceNote: "EXAMPLE USD / FOCUSED MVP",
-    scope:
-      "Example scope: one core workflow, two user roles and one integration.",
+    priceTag: "EXAMPLE USD / FOCUSED MVP",
+    scope: "Example scope: one core workflow, two user roles and one integration.",
     features: [
       "Discovery + system architecture",
       "UX flows & working prototype",
@@ -18,14 +32,17 @@ const services = [
       "Deployment, documentation & handover",
     ],
     note: "Multi-product platforms, complex migrations and regulated workflows need a tailored estimate.",
-    ctaLabel: "Scope your software",
+    buttonText: "Scope your software",
+    iconShape: (
+      <div className="w-[19.50px] h-[19.50px] left-[3.25px] top-[3.25px] absolute outline outline-[1.5px] outline-[#CEFF69] -outline-offset-[0.75px]" />
+    ),
   },
   {
     code: "GM / 02",
     title: "Game development",
     subtitle: "Validate the experience before a full production.",
     price: "$8,000–15,000",
-    priceNote: "EXAMPLE USD / PLAYABLE PROTOTYPE",
+    priceTag: "EXAMPLE USD / PLAYABLE PROTOTYPE",
     scope: "Example scope: one core mechanic, one level and one target platform.",
     features: [
       "Gameplay systems & interaction design",
@@ -34,16 +51,18 @@ const services = [
       "Playtesting + technical handover",
     ],
     note: "Full games, original art, multiplayer, console certification and live operations are quoted separately.",
-    ctaLabel: "Scope your game",
+    buttonText: "Scope your game",
+    iconShape: (
+      <div className="w-[21.67px] h-[15.17px] left-[2.17px] top-[5.42px] absolute outline outline-[1.5px] outline-[#CEFF69] -outline-offset-[0.75px]" />
+    ),
   },
   {
     code: "EN / 03",
     title: "Engineering services",
     subtitle: "Specialist expertise for a specific challenge.",
     price: "$2,000–5,000",
-    priceNote: "EXAMPLE USD / FOCUSED SPRINT",
-    scope:
-      "Example scope: one bounded technical problem with agreed deliverables.",
+    priceTag: "EXAMPLE USD / FOCUSED SPRINT",
+    scope: "Example scope: one bounded technical problem with agreed deliverables.",
     features: [
       "Architecture or codebase assessment",
       "API, integration or automation work",
@@ -51,100 +70,118 @@ const services = [
       "Findings, implementation notes + next steps",
     ],
     note: "Ongoing team extension, infrastructure rebuilds and larger integrations use a tailored engagement.",
-    ctaLabel: "Discuss engineering",
+    buttonText: "Discuss engineering",
+    iconShape: (
+      <div className="w-[21.67px] h-[21.67px] left-[2.17px] top-[2.17px] absolute outline outline-[1.5px] outline-[#CEFF69] -outline-offset-[0.75px]" />
+    ),
   },
 ];
 
-function SoftwareGamesPricing() {
+export default function SoftwareGamesPricing() {
   return (
-    <section id="software" className="w-full max-w-[1440px] mx-auto px-16 py-20 flex flex-col gap-10">
+    <section
+      id="software"
+      className="w-full max-w-[1440px] mx-auto px-[64px] py-[88px] flex flex-col items-start gap-[40px] overflow-hidden"
+    >
       {/* Header */}
-      <div className="flex justify-between items-end">
-        <div className="w-[740px] flex flex-col gap-5">
-          <SectionLabel>03–04 / SOFTWARE, GAMES &amp; ENGINEERING</SectionLabel>
-          <h2 className="text-stone-100 text-5xl font-sans leading-[1.02]">
+      <div className="w-full flex justify-between items-end overflow-hidden">
+        <div className="w-[740px] flex flex-col items-start gap-[20px] overflow-hidden">
+          <SectionLabel>03–04 / SOFTWARE, GAMES & ENGINEERING</SectionLabel>
+          <h2 className="w-full text-[#F2F4EC] text-[52px] font-normal font-sans leading-[56.16px]">
             Not every build
             <br />
             fits in a package.
           </h2>
         </div>
-        <div className="w-96">
-          <p className="text-neutral-400 text-base leading-7 font-sans">
+        <div className="w-[380px] flex flex-col items-start overflow-hidden">
+          <p className="w-full text-[#A4ADA0] text-[16px] font-normal font-sans leading-[26.40px]">
             Start with a useful, bounded outcome. These example budgets help
             frame the conversation, not define your final quote.
           </p>
         </div>
       </div>
 
-      {/* Cards */}
-      <div className="flex gap-4">
+      {/* Cards Row */}
+      <div className="w-full flex items-start gap-[16px] overflow-hidden">
         {services.map((svc) => (
           <div
             key={svc.code}
-            className="flex-1 p-7 bg-zinc-900 rounded-sm outline outline-1 outline-neutral-700 flex flex-col gap-5"
+            className="flex-1 p-[28px] bg-[#191C19] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col items-start gap-[22px] overflow-hidden"
           >
-            {/* Icon + code */}
-            <div className="flex justify-between items-start">
-              <div className="size-6 relative overflow-hidden">
-                <div className="size-5 absolute top-[3.25px] left-[3.25px] outline outline-[1.5px] outline-lime-300" />
+            <div className="w-full flex justify-between items-start overflow-hidden">
+              <div className="w-[26px] h-[26px] relative overflow-hidden shrink-0">
+                {svc.iconShape}
               </div>
-              <span className="font-mono text-[10px] text-neutral-400">{svc.code}</span>
+              <span className="text-[#A4ADA0] text-[10px] font-normal font-mono">
+                {svc.code}
+              </span>
             </div>
 
-            <h3 className="text-stone-100 text-3xl font-sans">{svc.title}</h3>
+            <h3 className="w-full text-[#F2F4EC] text-[28px] font-normal font-sans">
+              {svc.title}
+            </h3>
 
-            <p className="h-11 text-neutral-400 text-base leading-6 font-sans">
+            <p className="w-full h-[46px] text-[#A4ADA0] text-[15px] font-normal font-sans leading-[22.50px]">
               {svc.subtitle}
             </p>
 
-            {/* Price */}
-            <div className="flex flex-col gap-2.5">
-              <span className="text-stone-100 text-4xl font-sans">{svc.price}</span>
-              <span className="font-mono text-[10px] text-lime-300">{svc.priceNote}</span>
+            <div className="w-full flex flex-col items-start gap-[10px] overflow-hidden">
+              <span className="text-[#F2F4EC] text-[36px] font-normal font-sans">
+                {svc.price}
+              </span>
+              <span className="text-[#CEFF69] text-[10px] font-normal font-mono">
+                {svc.priceTag}
+              </span>
             </div>
 
-            <div className="w-full h-px bg-neutral-700" />
+            <div className="w-full h-[1px] bg-[#343A33]" />
 
-            <p className="h-16 text-neutral-400 text-sm leading-6 font-sans">{svc.scope}</p>
+            <p className="w-full h-[70px] text-[#A4ADA0] text-[14px] font-normal font-sans leading-[22.40px]">
+              {svc.scope}
+            </p>
 
-            {/* Features */}
-            <div className="flex flex-col gap-3">
-              {svc.features.map((f) => (
-                <CheckItem key={f}>{f}</CheckItem>
+            <div className="w-full flex flex-col items-start gap-[12px] overflow-hidden">
+              {svc.features.map((feature) => (
+                <CheckItem key={feature}>{feature}</CheckItem>
               ))}
             </div>
 
-            <p className="h-16 font-mono text-[10px] text-neutral-400 leading-4">{svc.note}</p>
+            <p className="w-full h-[72px] text-[#A4ADA0] text-[10px] font-normal font-mono leading-[16.50px]">
+              {svc.note}
+            </p>
 
-            {/* CTA */}
-            <a
+            {/* CTA Button */}
+            <Link
               href="/#contact"
-              className="h-14 px-5 bg-neutral-900 rounded-sm outline outline-1 outline-neutral-700 flex items-center gap-7 hover:outline-neutral-500 transition-colors"
+              className="w-full h-[54px] px-[22px] bg-[#101211] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex items-center justify-between overflow-hidden hover:outline-[#A4ADA0] transition-colors"
             >
-              <span className="flex-1 text-stone-100 text-sm font-semibold font-sans">{svc.ctaLabel}</span>
-              <ArrowIcon className="text-lime-300" />
-            </a>
+              <span className="text-[#F2F4EC] text-[14px] font-semibold font-sans">
+                {svc.buttonText}
+              </span>
+              <ArrowIcon color="lime" />
+            </Link>
           </div>
         ))}
       </div>
 
-      {/* Partnership CTA banner */}
-      <div className="p-6 outline outline-1 outline-neutral-700 flex justify-between items-center">
-        <div className="w-[920px] flex flex-col gap-2">
-          <p className="text-stone-100 text-xl font-sans">
+      {/* Partnership Banner */}
+      <div className="w-full p-[24px] outline outline-1 outline-[#343A33] -outline-offset-1 flex justify-between items-center overflow-hidden">
+        <div className="w-[920px] flex flex-col items-start gap-[8px] overflow-hidden">
+          <h4 className="text-[#F2F4EC] text-[20px] font-normal font-sans">
             Need engineering capacity, not a standalone project?
-          </p>
-          <p className="text-neutral-400 text-sm leading-6 font-sans">
+          </h4>
+          <p className="w-full text-[#A4ADA0] text-[14px] font-normal font-sans leading-[22.40px]">
             A dedicated partnership can flex around your roadmap. Team size,
             allocation and monthly budget are agreed after discovery.
           </p>
         </div>
-        <a href="/#contact" className="text-lime-300 text-sm font-sans hover:text-lime-200 transition-colors whitespace-nowrap">
+        <Link
+          href="/#contact"
+          className="text-[#CEFF69] text-[14px] font-normal font-sans hover:underline whitespace-nowrap"
+        >
           Discuss a partnership ↗
-        </a>
+        </Link>
       </div>
     </section>
   );
 }
-
-export default SoftwareGamesPricing;

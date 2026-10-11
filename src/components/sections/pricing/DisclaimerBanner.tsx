@@ -1,16 +1,17 @@
-function DisclaimerBanner() {
+import React from "react";
+
+export default function DisclaimerBanner() {
   return (
-    <div className="w-full max-w-[1440px] mx-auto px-16 pb-8">
-      <div className="p-5 bg-zinc-900 outline outline-1 outline-neutral-700 flex gap-4">
-        {/* Icon */}
-        <div className="size-5 relative shrink-0 overflow-hidden">
-          <div className="size-4 absolute top-[1.67px] left-[1.67px] outline outline-1 outline-lime-300" />
+    <div className="w-full max-w-[1440px] mx-auto pb-[32px] px-[64px] flex justify-start items-start overflow-hidden">
+      <div className="flex-1 p-[20px] bg-[#191C19] outline outline-1 outline-[#343A33] -outline-offset-1 flex items-start gap-[16px] overflow-hidden">
+        <div className="w-[20px] h-[20px] relative overflow-hidden shrink-0">
+          <div className="w-[16.67px] h-[16.67px] left-[1.67px] top-[1.67px] absolute outline outline-1 outline-[#CEFF69] -outline-offset-[0.5px]" />
         </div>
-        <div className="flex flex-col gap-1.5">
-          <span className="font-sans text-xs font-semibold text-lime-300">
+        <div className="flex-1 flex flex-col items-start gap-[6px] overflow-hidden">
+          <span className="text-[#CEFF69] text-[13px] font-semibold font-sans">
             INDICATIVE EXAMPLES — NOT A QUOTE
           </span>
-          <p className="text-neutral-400 text-xs leading-5 font-sans">
+          <p className="w-full text-[#A4ADA0] text-[13px] font-normal font-sans leading-[19.50px]">
             All amounts below are illustrative USD budgets, pending DevEleven
             confirmation. Rates, currency, taxes, timelines and commercial terms
             are not approved. Your proposal will define the actual price and
@@ -21,5 +22,3 @@ function DisclaimerBanner() {
     </div>
   );
 }
-
-export default DisclaimerBanner;

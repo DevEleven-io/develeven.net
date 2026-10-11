@@ -1,3 +1,4 @@
+import React from "react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import TechPill from "@/components/ui/TechPill";
 
@@ -6,42 +7,55 @@ const principles = [
     title: "Quality you can inspect",
     description:
       "Readable code, meaningful tests, and thoughtful reviews. No black boxes. No shortcuts you inherit later.",
+    icon: (
+      <div className="w-[19.50px] h-[19.50px] left-[3.25px] top-[3.25px] absolute outline outline-[1.5px] outline-[#CEFF69] -outline-offset-[0.75px]" />
+    ),
   },
   {
     title: "Resilience by design",
     description:
       "Security, accessibility, and performance considered from day one — not added at the finish line.",
+    icon: (
+      <div className="w-[17.33px] h-[21.67px] left-[4.33px] top-[2.17px] absolute outline outline-[1.5px] outline-[#CEFF69] -outline-offset-[0.75px]" />
+    ),
   },
   {
     title: "Built for the next chapter",
     description:
       "Practical architecture, clear documentation, and a codebase your team can confidently take forward.",
+    icon: (
+      <div className="w-[19.50px] h-[19.50px] left-[3.25px] top-[3.25px] absolute outline outline-[1.5px] outline-[#CEFF69] -outline-offset-[0.75px]" />
+    ),
   },
 ];
 
 const techStack = ["React", "Node.js", "Python", "Unity", "AWS"];
 
-function ApproachSection() {
+export default function ApproachSection() {
   return (
-    <section id="approach" className="w-full max-w-[1440px] mx-auto px-16 py-24 flex gap-20">
-      {/* Left: philosophy */}
-      <div className="w-[580px] flex flex-col gap-7">
+    <section
+      id="approach"
+      className="w-full max-w-[1440px] mx-auto px-[64px] py-[96px] flex justify-start items-start gap-[80px] overflow-hidden"
+    >
+      {/* Left Column */}
+      <div className="w-[580px] flex flex-col items-start gap-[28px] overflow-hidden shrink-0">
         <SectionLabel>03 / HOW WE THINK</SectionLabel>
-        <h2 className="text-stone-100 text-6xl font-sans leading-[1.02]">
+        <h2 className="w-full text-[#F2F4EC] text-[56px] font-normal font-sans leading-[59.36px]">
           Good software
           <br />
           is more than
           <br />a good launch.
         </h2>
-        <p className="text-neutral-400 text-base leading-7 font-sans">
-          It&apos;s what happens after. How it holds up under pressure. How easily
-          it evolves. How confidently your team can rely on it.
+        <p className="w-full text-[#A4ADA0] text-[17px] font-normal font-sans leading-[28.05px]">
+          It’s what happens after. How it holds up under pressure. How easily it
+          evolves. How confidently your team can rely on it.
         </p>
-        <div className="pt-3 flex flex-col gap-3.5">
-          <span className="font-mono text-[10px] text-neutral-400">
+
+        <div className="w-full pt-[12px] flex flex-col items-start gap-[14px] overflow-hidden">
+          <span className="text-[#A4ADA0] text-[10px] font-normal font-mono">
             THE RIGHT TOOL FOR THE JOB, NOT THE TREND.
           </span>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap items-start gap-[8px] overflow-hidden">
             {techStack.map((tech) => (
               <TechPill key={tech} label={tech} />
             ))}
@@ -49,32 +63,35 @@ function ApproachSection() {
         </div>
       </div>
 
-      {/* Right: quality principles */}
-      <div className="flex-1 flex flex-col gap-7">
-        {/* Quality gate header */}
-        <div className="p-4 bg-zinc-900 rounded-sm outline outline-1 outline-neutral-700 flex justify-between items-center">
-          <span className="font-mono text-xs text-neutral-400">
+      {/* Right Column */}
+      <div className="flex-1 flex flex-col items-start gap-[28px] overflow-hidden">
+        {/* Quality Gate Bar */}
+        <div className="w-full p-[16px] bg-[#191C19] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex justify-between items-center overflow-hidden">
+          <span className="text-[#A4ADA0] text-[11px] font-normal font-mono">
             DEVELEVEN / QUALITY GATE
           </span>
-          <div className="flex items-center gap-2">
-            <div className="size-1.5 bg-lime-300 rounded-full" />
-            <span className="font-mono text-xs text-lime-300">
+          <div className="flex items-center gap-[8px] overflow-hidden">
+            <div className="w-[6px] h-[6px] bg-[#CEFF69] rounded-full" />
+            <span className="text-[#CEFF69] text-[11px] font-normal font-mono">
               BUILT INTO EVERY RELEASE
             </span>
           </div>
         </div>
 
+        {/* Principles List */}
         {principles.map((p) => (
           <div
             key={p.title}
-            className="pb-6 border-b border-neutral-700 flex gap-5"
+            className="w-full pb-[24px] border-b border-[#343A33] flex items-start gap-[20px] overflow-hidden"
           >
-            <div className="size-6 relative overflow-hidden shrink-0">
-              <div className="size-5 absolute top-[3.25px] left-[3.25px] outline outline-[1.5px] outline-lime-300" />
+            <div className="w-[26px] h-[26px] relative overflow-hidden shrink-0">
+              {p.icon}
             </div>
-            <div className="flex flex-col gap-2.5">
-              <h3 className="text-stone-100 text-2xl font-sans">{p.title}</h3>
-              <p className="text-neutral-400 text-base leading-6 font-sans">
+            <div className="flex-1 flex flex-col items-start gap-[10px] overflow-hidden">
+              <h3 className="w-full text-[#F2F4EC] text-[24px] font-normal font-sans">
+                {p.title}
+              </h3>
+              <p className="w-full text-[#A4ADA0] text-[15px] font-normal font-sans leading-[24px]">
                 {p.description}
               </p>
             </div>
@@ -84,5 +101,3 @@ function ApproachSection() {
     </section>
   );
 }
-
-export default ApproachSection;

@@ -1,3 +1,7 @@
+import React from "react";
+import Link from "next/link";
+import SectionLabel from "@/components/ui/SectionLabel";
+
 const faqs = [
   {
     question: "Are these your final prices?",
@@ -26,40 +30,43 @@ const faqs = [
   },
 ];
 
-function PricingFAQ() {
+export default function PricingFAQ() {
   return (
-    <section id="pricing-faq" className="w-full max-w-[1440px] mx-auto px-16 py-20 flex gap-24">
-      {/* Left sidebar */}
-      <div className="w-96 flex flex-col gap-6 shrink-0">
-        <span className="font-mono text-xs text-lime-300">06 / PRICING FAQ</span>
-        <h2 className="text-stone-100 text-5xl font-sans leading-[1.02]">
+    <section
+      id="pricing-faq"
+      className="w-full max-w-[1440px] mx-auto px-[64px] py-[88px] flex justify-start items-start gap-[96px] overflow-hidden"
+    >
+      {/* Left Column */}
+      <div className="w-[430px] flex flex-col items-start gap-[24px] overflow-hidden shrink-0">
+        <SectionLabel>06 / PRICING FAQ</SectionLabel>
+        <h2 className="w-full text-[#F2F4EC] text-[52px] font-normal font-sans leading-[56.16px]">
           A little clarity.
           <br />
           Before you commit.
         </h2>
-        <p className="text-neutral-400 text-base leading-7 font-sans">
-          Budget questions are good questions. Here&apos;s what to know before we
-          put a proposal together.
+        <p className="w-full text-[#A4ADA0] text-[16px] font-normal font-sans leading-[26.40px]">
+          Budget questions are good questions. Here’s what to know before we put a
+          proposal together.
         </p>
-        <a
+        <Link
           href="/#contact"
-          className="text-lime-300 text-base font-sans hover:text-lime-200 transition-colors"
+          className="text-[#CEFF69] text-[15px] font-normal font-sans hover:underline"
         >
           Talk to our team ↗
-        </a>
+        </Link>
       </div>
 
-      {/* FAQ items — always expanded (no accordion on pricing page) */}
-      <div className="flex-1 flex flex-col">
+      {/* Right List */}
+      <div className="flex-1 flex flex-col items-start overflow-hidden">
         {faqs.map((faq) => (
           <div
             key={faq.question}
-            className="py-6 border-t border-neutral-700 flex flex-col gap-3"
+            className="w-full py-[24px] border-t border-[#343A33] flex flex-col items-start gap-[12px] overflow-hidden"
           >
-            <h3 className="text-stone-100 text-xl font-medium font-sans">
+            <h3 className="w-full text-[#F2F4EC] text-[20px] font-medium font-sans">
               {faq.question}
             </h3>
-            <p className="text-neutral-400 text-base leading-6 font-sans">
+            <p className="w-full text-[#A4ADA0] text-[15px] font-normal font-sans leading-[24.75px]">
               {faq.answer}
             </p>
           </div>
@@ -68,5 +75,3 @@ function PricingFAQ() {
     </section>
   );
 }
-
-export default PricingFAQ;

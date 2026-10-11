@@ -1,3 +1,4 @@
+import React from "react";
 import HeroSection from "@/components/sections/home/HeroSection";
 import ServicesBar from "@/components/sections/home/ServicesBar";
 import ServicesGrid from "@/components/sections/home/ServicesGrid";
@@ -11,7 +12,7 @@ import CTABanner from "@/components/sections/home/CTABanner";
 
 export default function HomePage() {
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center bg-[#101211]">
       <HeroSection />
       <ServicesBar />
       <ServicesGrid />
@@ -23,9 +24,20 @@ export default function HomePage() {
       <FAQSection />
       <CTABanner
         sectionTag="08 / YOUR NEXT CHAPTER"
-        headline={<>Big idea?<br />Let&apos;s make it real.</>}
+        topRightText="LET’S BUILD SOMETHING THAT MATTERS"
+        hasDot={true}
+        headline={
+          <>
+            Big idea?
+            <br />
+            Let’s make it real.
+          </>
+        }
+        headlineSize="88px"
+        description="Tell us what you’re thinking. We’ll bring the questions, the expertise, and a clear way forward."
+        buttonHeight="62px"
+        buttonText="Discuss your project"
         note="NO SALES SCRIPT. JUST A GOOD CONVERSATION."
-        ctaLabel="Discuss your project"
       />
     </div>
   );

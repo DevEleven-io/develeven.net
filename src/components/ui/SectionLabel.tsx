@@ -1,14 +1,22 @@
+import React from "react";
+
 interface SectionLabelProps {
   children: React.ReactNode;
-  /** "dark" = lime text (default, on dark bg), "light" = stone-600 text (on stone-200 bg) */
   theme?: "dark" | "light";
+  className?: string;
 }
 
-function SectionLabel({ children, theme = "dark" }: SectionLabelProps) {
-  const color = theme === "dark" ? "text-lime-300" : "text-stone-600";
+export default function SectionLabel({
+  children,
+  theme = "dark",
+  className = "",
+}: SectionLabelProps) {
+  const textColor = theme === "dark" ? "text-[#CEFF69]" : "text-[#596151]";
   return (
-    <span className={`font-mono text-xs ${color}`}>{children}</span>
+    <div
+      className={`font-mono text-[11px] font-normal leading-normal tracking-normal ${textColor} ${className}`}
+    >
+      {children}
+    </div>
   );
 }
-
-export default SectionLabel;
