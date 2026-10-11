@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-ibm-plex-mono);
+
+  /* === DevEleven Design Tokens (from raw Figma export) === */
+
+  /* Backgrounds */
+  --color-dv-bg:        #101211;   /* page background */
+  --color-dv-card:      #191C19;   /* card / section dark bg */
+  --color-dv-dark:      #101211;   /* button / deep dark bg (same as page bg) */
+
+  /* Borders */
+  --color-dv-border:    #343A33;   /* all outlines and dividers */
+
+  /* Accent */
+  --color-dv-lime:      #CEFF69;   /* primary accent green */
+
+  /* Text */
+  --color-dv-text:      #F2F4EC;   /* primary text */
+  --color-dv-muted:     #A4ADA0;   /* secondary/muted text */
+
+  /* Light section (work showcase, pricing process) */
+  --color-dv-light-bg:  #E8EDE1;   /* light section background */
+  --color-dv-light-text:#11150E;   /* dark text on light bg */
+  --color-dv-light-muted:#596151;  /* muted text on light bg */
+  --color-dv-light-border:#BCC5B3; /* dividers on light bg */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #101211;
+  color: #F2F4EC;
+  font-family: var(--font-inter), Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
