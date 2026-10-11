@@ -1,5 +1,6 @@
 import React from "react";
 import SectionLabel from "@/components/ui/SectionLabel";
+import { ArrowUpRight } from "@/components/ui/Icons";
 
 export default function WorkShowcase() {
   const chartHeights = [28, 42, 34, 54, 44, 61, 53, 68, 64, 74, 70, 83];
@@ -126,17 +127,17 @@ export default function WorkShowcase() {
           </div>
 
           {/* Title Row */}
-          <div className="w-full flex justify-between items-center overflow-hidden">
+          <div className="w-full flex justify-between items-center overflow-hidden group cursor-pointer">
             <div className="flex flex-col items-start gap-[8px] overflow-hidden">
               <span className="text-[#596151] text-[10px] font-normal font-mono">
                 CUSTOM SOFTWARE / OPERATIONS
               </span>
-              <h3 className="text-[#11150E] text-[28px] font-normal font-sans">
+              <h3 className="text-[#11150E] text-[28px] font-normal font-sans group-hover:underline">
                 Complex workflows. One clear view.
               </h3>
             </div>
-            <div className="w-[26px] h-[26px] relative overflow-hidden shrink-0">
-              <div className="w-[10.83px] h-[10.83px] left-[7.58px] top-[7.58px] absolute outline outline-1 outline-[#11150E] -outline-offset-[0.5px]" />
+            <div className="w-[26px] h-[26px] flex items-center justify-center shrink-0 rounded-full border border-[#11150E]/20 group-hover:border-[#11150E] transition-colors">
+              <ArrowUpRight size={14} color="#11150E" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </div>
           </div>
           <p className="w-full text-[#596151] text-[15px] font-normal font-sans leading-[24px]">
@@ -149,7 +150,7 @@ export default function WorkShowcase() {
         <div className="flex-1 flex flex-col items-start gap-[20px] overflow-hidden">
           <div className="w-full h-[382px] relative bg-[#101211] flex flex-col items-start overflow-hidden">
             <img
-              src="https://placehold.co/644x382"
+              src="/images/exploration-game.png"
               alt="Afterlight game"
               className="w-full flex-1 object-cover"
             />
@@ -166,17 +167,17 @@ export default function WorkShowcase() {
           </div>
 
           {/* Title Row */}
-          <div className="w-full flex justify-between items-center overflow-hidden">
+          <div className="w-full flex justify-between items-center overflow-hidden group cursor-pointer">
             <div className="flex flex-col items-start gap-[8px] overflow-hidden">
               <span className="text-[#596151] text-[10px] font-normal font-mono">
                 GAME DEVELOPMENT / INTERACTIVE
               </span>
-              <h3 className="text-[#11150E] text-[28px] font-normal font-sans">
+              <h3 className="text-[#11150E] text-[28px] font-normal font-sans group-hover:underline">
                 A world worth getting lost in.
               </h3>
             </div>
-            <div className="w-[26px] h-[26px] relative overflow-hidden shrink-0">
-              <div className="w-[10.83px] h-[10.83px] left-[7.58px] top-[7.58px] absolute outline outline-1 outline-[#11150E] -outline-offset-[0.5px]" />
+            <div className="w-[26px] h-[26px] flex items-center justify-center shrink-0 rounded-full border border-[#11150E]/20 group-hover:border-[#11150E] transition-colors">
+              <ArrowUpRight size={14} color="#11150E" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </div>
           </div>
           <p className="w-full text-[#596151] text-[15px] font-normal font-sans leading-[24px]">

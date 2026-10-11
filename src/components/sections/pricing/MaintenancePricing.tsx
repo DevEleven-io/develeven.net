@@ -100,7 +100,7 @@ export default function MaintenancePricing() {
             {/* CTA Button */}
             <Link
               href="/#contact"
-              className="w-full h-[54px] px-[22px] bg-[#101211] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex items-center justify-between overflow-hidden hover:outline-[#A4ADA0] transition-colors"
+              className="w-full h-[54px] px-[22px] bg-[#101211] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex items-center justify-between overflow-hidden hover:outline-[#A4ADA0] transition-colors group cursor-pointer"
             >
               <span className="text-[#F2F4EC] text-[14px] font-semibold font-sans">
                 Discuss a care plan

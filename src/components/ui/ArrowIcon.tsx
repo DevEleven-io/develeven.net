@@ -1,4 +1,5 @@
 import React from "react";
+import { ArrowUpRight } from "./Icons";
 
 interface ArrowIconProps {
   color?: "dark" | "lime" | "light";
@@ -11,28 +12,20 @@ export default function ArrowIcon({
   size = "md",
   className = "",
 }: ArrowIconProps) {
-  const outlineColor =
+  const strokeColor =
     color === "dark"
-      ? "outline-[#11150E]"
+      ? "#11150E"
       : color === "light"
-      ? "outline-[#F2F4EC]"
-      : "outline-[#CEFF69]";
+      ? "#F2F4EC"
+      : "#CEFF69";
 
-  if (size === "lg") {
-    return (
-      <div className={`w-[22px] h-[22px] relative overflow-hidden shrink-0 ${className}`}>
-        <div
-          className={`w-[9.17px] h-[9.17px] left-[6.42px] top-[6.42px] absolute outline outline-1 ${outlineColor} -outline-offset-[0.5px]`}
-        />
-      </div>
-    );
-  }
+  const dimension = size === "lg" ? 22 : 18;
 
   return (
-    <div className={`w-[18px] h-[18px] relative overflow-hidden shrink-0 ${className}`}>
-      <div
-        className={`w-[7.5px] h-[7.5px] left-[5.25px] top-[5.25px] absolute outline outline-[1.5px] ${outlineColor} -outline-offset-[0.75px]`}
-      />
-    </div>
+    <ArrowUpRight
+      size={dimension}
+      color={strokeColor}
+      className={`transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${className}`}
+    />
   );
 }

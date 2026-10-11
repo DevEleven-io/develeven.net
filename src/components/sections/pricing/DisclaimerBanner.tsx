@@ -1,11 +1,12 @@
 import React from "react";
+import { InfoIcon } from "@/components/ui/Icons";
 
 export default function DisclaimerBanner() {
   return (
     <div className="w-full max-w-[1440px] mx-auto pb-[32px] px-[64px] flex justify-start items-start overflow-hidden">
       <div className="flex-1 p-[20px] bg-[#191C19] outline outline-1 outline-[#343A33] -outline-offset-1 flex items-start gap-[16px] overflow-hidden">
-        <div className="w-[20px] h-[20px] relative overflow-hidden shrink-0">
-          <div className="w-[16.67px] h-[16.67px] left-[1.67px] top-[1.67px] absolute outline outline-1 outline-[#CEFF69] -outline-offset-[0.5px]" />
+        <div className="w-[20px] h-[20px] flex items-center justify-center shrink-0 mt-[1px]">
+          <InfoIcon size={18} color="#CEFF69" />
         </div>
         <div className="flex-1 flex flex-col items-start gap-[6px] overflow-hidden">
           <span className="text-[#CEFF69] text-[13px] font-semibold font-sans">

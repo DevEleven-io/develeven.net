@@ -1,31 +1,26 @@
 import React from "react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import TechPill from "@/components/ui/TechPill";
+import { InspectIcon, ResilienceIcon, FoundationIcon } from "@/components/ui/Icons";
 
 const principles = [
   {
     title: "Quality you can inspect",
     description:
       "Readable code, meaningful tests, and thoughtful reviews. No black boxes. No shortcuts you inherit later.",
-    icon: (
-      <div className="w-[19.50px] h-[19.50px] left-[3.25px] top-[3.25px] absolute outline outline-[1.5px] outline-[#CEFF69] -outline-offset-[0.75px]" />
-    ),
+    icon: <InspectIcon size={24} color="#CEFF69" />,
   },
   {
     title: "Resilience by design",
     description:
       "Security, accessibility, and performance considered from day one — not added at the finish line.",
-    icon: (
-      <div className="w-[17.33px] h-[21.67px] left-[4.33px] top-[2.17px] absolute outline outline-[1.5px] outline-[#CEFF69] -outline-offset-[0.75px]" />
-    ),
+    icon: <ResilienceIcon size={24} color="#CEFF69" />,
   },
   {
     title: "Built for the next chapter",
     description:
       "Practical architecture, clear documentation, and a codebase your team can confidently take forward.",
-    icon: (
-      <div className="w-[19.50px] h-[19.50px] left-[3.25px] top-[3.25px] absolute outline outline-[1.5px] outline-[#CEFF69] -outline-offset-[0.75px]" />
-    ),
+    icon: <FoundationIcon size={24} color="#CEFF69" />,
   },
 ];
 
@@ -84,7 +79,7 @@ export default function ApproachSection() {
             key={p.title}
             className="w-full pb-[24px] border-b border-[#343A33] flex items-start gap-[20px] overflow-hidden"
           >
-            <div className="w-[26px] h-[26px] relative overflow-hidden shrink-0">
+            <div className="w-[26px] h-[26px] flex items-center justify-center shrink-0 mt-[2px]">
               {p.icon}
             </div>
             <div className="flex-1 flex flex-col items-start gap-[10px] overflow-hidden">

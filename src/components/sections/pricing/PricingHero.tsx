@@ -24,8 +24,8 @@ export default function PricingHero() {
         </div>
 
         <div className="flex items-start gap-[12px] overflow-hidden">
-          <Button href="#websites" variant="primary">
-            Explore pricing ↓
+          <Button href="#websites" variant="primary" arrowDirection="down">
+            Explore pricing
           </Button>
           <Button href="/#contact" variant="dark">
             Discuss your project
@@ -36,7 +36,7 @@ export default function PricingHero() {
       {/* Right Image Box */}
       <div className="w-[350px] h-[304px] relative overflow-hidden outline outline-1 outline-[#343A33] -outline-offset-1 shrink-0">
         <img
-          src="https://placehold.co/350x304"
+          src="/images/dollar-sign-sculpture.png"
           alt="Built with intent"
           className="w-[350px] h-[304px] left-0 top-0 absolute object-cover"
         />

@@ -3,6 +3,11 @@ import Link from "next/link";
 import SectionLabel from "@/components/ui/SectionLabel";
 import CheckItem from "@/components/ui/CheckItem";
 import ArrowIcon from "@/components/ui/ArrowIcon";
+import {
+  BracesIcon,
+  GameDevIcon,
+  EngineeringIcon,
+} from "@/components/ui/Icons";
 
 interface ServiceTier {
   code: string;
@@ -14,7 +19,7 @@ interface ServiceTier {
   features: string[];
   note: string;
   buttonText: string;
-  iconShape: React.ReactNode;
+  icon: React.ReactNode;
 }
 
 const services: ServiceTier[] = [
@@ -33,9 +38,7 @@ const services: ServiceTier[] = [
     ],
     note: "Multi-product platforms, complex migrations and regulated workflows need a tailored estimate.",
     buttonText: "Scope your software",
-    iconShape: (
-      <div className="w-[19.50px] h-[19.50px] left-[3.25px] top-[3.25px] absolute outline outline-[1.5px] outline-[#CEFF69] -outline-offset-[0.75px]" />
-    ),
+    icon: <BracesIcon size={24} color="#CEFF69" />,
   },
   {
     code: "GM / 02",
@@ -52,9 +55,7 @@ const services: ServiceTier[] = [
     ],
     note: "Full games, original art, multiplayer, console certification and live operations are quoted separately.",
     buttonText: "Scope your game",
-    iconShape: (
-      <div className="w-[21.67px] h-[15.17px] left-[2.17px] top-[5.42px] absolute outline outline-[1.5px] outline-[#CEFF69] -outline-offset-[0.75px]" />
-    ),
+    icon: <GameDevIcon size={24} color="#CEFF69" />,
   },
   {
     code: "EN / 03",
@@ -71,9 +72,7 @@ const services: ServiceTier[] = [
     ],
     note: "Ongoing team extension, infrastructure rebuilds and larger integrations use a tailored engagement.",
     buttonText: "Discuss engineering",
-    iconShape: (
-      <div className="w-[21.67px] h-[21.67px] left-[2.17px] top-[2.17px] absolute outline outline-[1.5px] outline-[#CEFF69] -outline-offset-[0.75px]" />
-    ),
+    icon: <EngineeringIcon size={24} color="#CEFF69" />,
   },
 ];
 
@@ -109,8 +108,8 @@ export default function SoftwareGamesPricing() {
             className="flex-1 p-[28px] bg-[#191C19] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col items-start gap-[22px] overflow-hidden"
           >
             <div className="w-full flex justify-between items-start overflow-hidden">
-              <div className="w-[26px] h-[26px] relative overflow-hidden shrink-0">
-                {svc.iconShape}
+              <div className="w-[26px] h-[26px] flex items-center justify-center shrink-0">
+                {svc.icon}
               </div>
               <span className="text-[#A4ADA0] text-[10px] font-normal font-mono">
                 {svc.code}
@@ -153,7 +152,7 @@ export default function SoftwareGamesPricing() {
             {/* CTA Button */}
             <Link
               href="/#contact"
-              className="w-full h-[54px] px-[22px] bg-[#101211] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex items-center justify-between overflow-hidden hover:outline-[#A4ADA0] transition-colors"
+              className="w-full h-[54px] px-[22px] bg-[#101211] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex items-center justify-between overflow-hidden hover:outline-[#A4ADA0] transition-colors group cursor-pointer"
             >
               <span className="text-[#F2F4EC] text-[14px] font-semibold font-sans">
                 {svc.buttonText}
@@ -177,9 +176,10 @@ export default function SoftwareGamesPricing() {
         </div>
         <Link
           href="/#contact"
-          className="text-[#CEFF69] text-[14px] font-normal font-sans hover:underline whitespace-nowrap"
+          className="text-[#CEFF69] text-[14px] font-normal font-sans hover:underline whitespace-nowrap flex items-center gap-[8px] group"
         >
-          Discuss a partnership ↗
+          <span>Discuss a partnership</span>
+          <ArrowIcon color="lime" size="md" />
         </Link>
       </div>
     </section>

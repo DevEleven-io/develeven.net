@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import SectionLabel from "@/components/ui/SectionLabel";
+import ArrowIcon from "@/components/ui/ArrowIcon";
 
 const engagements = [
   {
@@ -75,9 +76,7 @@ export default function EngagementSection() {
               <span className="text-[#CEFF69] text-[14px] font-normal font-sans group-hover:underline">
                 Let’s talk about it
               </span>
-              <div className="w-[20px] h-[20px] relative overflow-hidden shrink-0">
-                <div className="w-[8.33px] h-[8.33px] left-[5.83px] top-[5.83px] absolute outline outline-1 outline-[#CEFF69] -outline-offset-[0.5px]" />
-              </div>
+              <ArrowIcon color="lime" size="md" />
             </Link>
           </div>
         ))}

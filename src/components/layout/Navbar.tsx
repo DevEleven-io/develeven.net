@@ -57,7 +57,7 @@ export default function Navbar() {
         {/* CTA Button */}
         <Link
           href="/#contact"
-          className="h-[54px] px-[22px] bg-[#CEFF69] rounded-[4px] outline outline-1 outline-[#CEFF69] -outline-offset-1 flex items-center gap-[28px] overflow-hidden hover:bg-[#b8f050] transition-colors"
+          className="h-[54px] px-[22px] bg-[#CEFF69] rounded-[4px] outline outline-1 outline-[#CEFF69] -outline-offset-1 flex items-center gap-[28px] overflow-hidden hover:bg-[#b8f050] transition-colors group cursor-pointer"
         >
           <span className="text-[#11150E] text-[14px] font-semibold font-sans">
             Let’s talk

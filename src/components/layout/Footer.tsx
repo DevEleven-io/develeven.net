@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import ArrowIcon from "@/components/ui/ArrowIcon";
 
 const expertiseLinks = [
   { label: "Website development", href: "/#services" },
@@ -45,9 +46,10 @@ export default function Footer() {
             </p>
             <Link
               href="/#contact"
-              className="text-[#CEFF69] text-[14px] font-normal font-sans hover:underline"
+              className="text-[#CEFF69] text-[14px] font-normal font-sans hover:underline flex items-center gap-[6px] group"
             >
-              Start a conversation ↗
+              <span>Start a conversation</span>
+              <ArrowIcon color="lime" size="md" />
             </Link>
           </div>
 

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import SectionLabel from "@/components/ui/SectionLabel";
+import ArrowIcon from "@/components/ui/ArrowIcon";
 
 const faqs = [
   {
@@ -50,9 +51,10 @@ export default function PricingFAQ() {
         </p>
         <Link
           href="/#contact"
-          className="text-[#CEFF69] text-[15px] font-normal font-sans hover:underline"
+          className="text-[#CEFF69] text-[15px] font-normal font-sans hover:underline flex items-center gap-[6px] group"
         >
-          Talk to our team ↗
+          <span>Talk to our team</span>
+          <ArrowIcon color="lime" size="md" />
         </Link>
       </div>
 

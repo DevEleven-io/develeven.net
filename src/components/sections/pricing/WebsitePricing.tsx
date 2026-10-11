@@ -156,7 +156,7 @@ export default function WebsitePricing() {
             {/* CTA Button */}
             <Link
               href="/#contact"
-              className={`w-full h-[54px] px-[22px] rounded-[4px] flex items-center justify-between overflow-hidden transition-colors ${
+              className={`w-full h-[54px] px-[22px] rounded-[4px] flex items-center justify-between overflow-hidden transition-colors group cursor-pointer ${
                 tier.featured
                   ? "bg-[#CEFF69] text-[#11150E] hover:bg-[#b8f050]"
                   : "bg-[#101211] outline outline-1 outline-[#343A33] -outline-offset-1 text-[#F2F4EC] hover:outline-[#A4ADA0]"

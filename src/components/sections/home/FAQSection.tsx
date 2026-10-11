@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import SectionLabel from "@/components/ui/SectionLabel";
+import ArrowIcon from "@/components/ui/ArrowIcon";
+import { PlusIcon, MinusIcon } from "@/components/ui/Icons";
 
 const faqs = [
   {
@@ -54,9 +56,10 @@ export default function FAQSection() {
         </p>
         <Link
           href="/#contact"
-          className="text-[#CEFF69] text-[15px] font-normal font-sans hover:underline"
+          className="text-[#CEFF69] text-[15px] font-normal font-sans hover:underline flex items-center gap-[6px] group"
         >
-          Talk to our team ↗
+          <span>Talk to our team</span>
+          <ArrowIcon color="lime" size="md" />
         </Link>
       </div>
 
@@ -80,11 +83,11 @@ export default function FAQSection() {
                 </span>
 
                 {/* Toggle Icon */}
-                <div className="w-[20px] h-[20px] relative overflow-hidden shrink-0">
+                <div className="w-[20px] h-[20px] flex items-center justify-center shrink-0">
                   {isOpen ? (
-                    <div className="w-[11.67px] h-[1.5px] left-[4.17px] top-[9.25px] absolute bg-[#CEFF69]" />
+                    <MinusIcon size={18} color="#CEFF69" />
                   ) : (
-                    <div className="w-[11.67px] h-[11.67px] left-[4.17px] top-[4.17px] absolute outline outline-1 outline-[#A4ADA0] -outline-offset-[0.5px] group-hover:outline-[#CEFF69]" />
+                    <PlusIcon size={18} color="#A4ADA0" className="group-hover:stroke-[#CEFF69] transition-colors" />
                   )}
                 </div>
               </button>

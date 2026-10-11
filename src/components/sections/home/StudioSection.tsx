@@ -12,7 +12,7 @@ export default function StudioSection() {
       {/* Left Image Box */}
       <div className="w-[572px] h-[430px] relative overflow-hidden flex flex-col items-start shrink-0">
         <img
-          src="https://placehold.co/572x430"
+          src="/images/engineering-workspace.png"
           alt="The DevEleven studio"
           className="w-full flex-1 object-cover"
         />

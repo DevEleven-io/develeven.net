@@ -42,7 +42,7 @@ export default function HeroSection() {
       {/* Right Column (Fig. 11 Card) */}
       <div className="flex-1 h-[548px] relative bg-[#191C19] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col items-start overflow-hidden">
         <img
-          src="https://placehold.co/560x548"
+          src="/images/eleven-sculpture.png"
           alt="Built with intent"
           className="w-full flex-1 object-cover"
         />

@@ -1,13 +1,21 @@
 import React from "react";
 import Link from "next/link";
 import SectionLabel from "@/components/ui/SectionLabel";
+import ArrowIcon from "@/components/ui/ArrowIcon";
+import {
+  WebDevIcon,
+  MaintenanceIcon,
+  CustomSoftwareIcon,
+  GameDevIcon,
+  EngineeringIcon,
+} from "@/components/ui/Icons";
 
 interface ServiceCardProps {
   number: string;
   title: string;
   description: string;
   tags: string;
-  iconShape: React.ReactNode;
+  icon: React.ReactNode;
 }
 
 function ServiceCard({
@@ -15,13 +23,13 @@ function ServiceCard({
   title,
   description,
   tags,
-  iconShape,
+  icon,
 }: ServiceCardProps) {
   return (
     <div className="flex-1 h-[274px] p-[28px] bg-[#191C19] rounded-[4px] outline outline-1 outline-[#343A33] -outline-offset-1 flex flex-col justify-start items-start gap-[24px] overflow-hidden">
       <div className="w-full flex justify-between items-center overflow-hidden">
-        <div className="w-[26px] h-[26px] relative overflow-hidden shrink-0">
-          {iconShape}
+        <div className="w-[26px] h-[26px] flex items-center justify-center shrink-0">
+          {icon}
         </div>
         <span className="text-[#A4ADA0] text-[11px] font-normal font-mono">
           {number}
@@ -75,27 +83,21 @@ export default function ServicesGrid() {
             title="Website development"
             description="Fast, accessible websites that turn your brand into a better digital experience. Built for people, search, and scale."
             tags="MARKETING SITES / E-COMMERCE / WEB APPS"
-            iconShape={
-              <div className="w-[19.5px] h-[19.5px] left-[3.25px] top-[3.25px] absolute outline outline-[1.5px] outline-[#CEFF69] -outline-offset-[0.75px]" />
-            }
+            icon={<WebDevIcon size={24} color="#CEFF69" />}
           />
           <ServiceCard
             number="SVC / 02"
             title="Website maintenance"
             description="Keep your website secure, current, and performing at its best. Proactive care, without the technical overhead."
             tags="UPDATES / SECURITY / PERFORMANCE"
-            iconShape={
-              <div className="w-[21.67px] h-[21.67px] left-[2.17px] top-[2.16px] absolute outline outline-[1.5px] outline-[#CEFF69] -outline-offset-[0.75px]" />
-            }
+            icon={<MaintenanceIcon size={24} color="#CEFF69" />}
           />
           <ServiceCard
             number="SVC / 03"
             title="Custom software"
             description="Purpose-built tools for the way your business actually works. From customer platforms to complex internal systems."
             tags="SAAS / BUSINESS TOOLS / INTEGRATIONS"
-            iconShape={
-              <div className="w-[21.67px] h-[17.33px] left-[2.17px] top-[4.33px] absolute outline outline-[1.5px] outline-[#CEFF69] -outline-offset-[0.75px]" />
-            }
+            icon={<CustomSoftwareIcon size={24} color="#CEFF69" />}
           />
         </div>
 
@@ -106,18 +108,14 @@ export default function ServicesGrid() {
             title="Game development"
             description="Compelling worlds, responsive mechanics, and solid technical foundations. From playable prototype to polished release."
             tags="UNITY / UNREAL / INTERACTIVE EXPERIENCES"
-            iconShape={
-              <div className="w-[21.67px] h-[15.17px] left-[2.17px] top-[5.42px] absolute outline outline-[1.5px] outline-[#CEFF69] -outline-offset-[0.75px]" />
-            }
+            icon={<GameDevIcon size={24} color="#CEFF69" />}
           />
           <ServiceCard
             number="SVC / 05"
             title="Engineering & infrastructure"
             description="Connect systems, modernize your stack, and make your infrastructure ready for what comes next."
             tags="APIS / CLOUD / DEVOPS / MODERNIZATION"
-            iconShape={
-              <div className="w-[21.67px] h-[21.67px] left-[2.17px] top-[2.17px] absolute outline outline-[1.5px] outline-[#CEFF69] -outline-offset-[0.75px]" />
-            }
+            icon={<EngineeringIcon size={24} color="#CEFF69" />}
           />
 
           {/* CTA Card */}
@@ -130,14 +128,12 @@ export default function ServicesGrid() {
             </p>
             <Link
               href="/#contact"
-              className="flex items-center gap-[16px] overflow-hidden group"
+              className="flex items-center gap-[16px] overflow-hidden group cursor-pointer"
             >
               <span className="text-[#CEFF69] text-[14px] font-semibold font-sans group-hover:underline">
                 Let’s figure it out
               </span>
-              <div className="w-[18px] h-[18px] relative overflow-hidden shrink-0">
-                <div className="w-[7.5px] h-[7.5px] left-[5.25px] top-[5.25px] absolute outline outline-1 outline-[#CEFF69] -outline-offset-[0.5px]" />
-              </div>
+              <ArrowIcon color="lime" size="md" />
             </Link>
           </div>
         </div>
