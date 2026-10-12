@@ -55,16 +55,16 @@ export default function ServicesGrid() {
     <section id="services" className="w-full bg-[#101211]">
       <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col items-start gap-12 overflow-hidden">
         {/* Header */}
-        <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 overflow-hidden">
-          <div className="flex-1 max-w-2xl flex flex-col items-start gap-[24px] overflow-hidden">
+        <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6">
+          <div className="flex-1 max-w-2xl flex flex-col items-start gap-[24px]">
             <SectionLabel>01 / What we build</SectionLabel>
-            <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.08]">
+            <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.12] pb-2">
               The right expertise.
               <br />
               From the ground up.
             </h2>
           </div>
-          <div className="lg:max-w-md flex flex-col items-start overflow-hidden">
+          <div className="lg:max-w-md flex flex-col items-start pb-2">
             <p className="w-full text-[#C5CDC1] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
               One engineering partner for your digital ecosystem. Start with a
               single challenge, stay for the bigger picture.
@@ -84,7 +84,7 @@ export default function ServicesGrid() {
           <ServiceCard
             number="SVC / 02"
             title="Website maintenance"
-            description="Keep your website secure, current, and performing at its best. Proactive care, without the technical overhead."
+            description="Keep your website secure, current, and performing at its best. Proactive maintenance, without the technical overhead."
             tags="Updates / Security / Performance"
             icon={<MaintenanceIcon size={24} color="#CEFF69" />}
           />

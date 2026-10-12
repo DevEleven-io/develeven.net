@@ -22,9 +22,9 @@ export default function StudioSection() {
         </div>
 
         {/* Right Column */}
-        <div className="flex-1 w-full flex flex-col items-start gap-6 overflow-hidden">
+        <div className="flex-1 w-full flex flex-col items-start gap-6">
           <SectionLabel>05 / The people behind the code</SectionLabel>
-          <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.08]">
+          <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.12] pb-2">
             Engineers by trade.
             <br />
             Partners by nature.

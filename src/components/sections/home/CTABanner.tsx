@@ -47,18 +47,18 @@ export default function CTABanner({
         </div>
 
         {/* Bottom Row */}
-        <div className="w-full flex flex-col lg:flex-row justify-start items-start lg:items-end gap-10 lg:gap-14 xl:gap-16 overflow-hidden">
+        <div className="w-full flex flex-col lg:flex-row justify-start items-start lg:items-end gap-10 lg:gap-14 xl:gap-16">
           <h2
-            className={`text-[#11150E] font-bold font-sans tracking-tight flex-1 ${
+            className={`text-[#11150E] font-bold font-sans tracking-tight flex-1 pb-2 ${
               isLarge
-                ? "text-5xl sm:text-7xl lg:text-8xl leading-tight lg:leading-[0.98]"
-                : "text-4xl sm:text-6xl lg:text-7xl leading-tight lg:leading-[1.02]"
+                ? "text-5xl sm:text-7xl lg:text-8xl leading-tight lg:leading-[1.02]"
+                : "text-4xl sm:text-6xl lg:text-7xl leading-tight lg:leading-[1.05]"
             }`}
           >
             {headline}
           </h2>
 
-          <div className="w-full lg:max-w-sm xl:max-w-md shrink-0 flex flex-col items-start gap-7 overflow-hidden">
+          <div className="w-full lg:max-w-sm xl:max-w-md shrink-0 flex flex-col items-start gap-7 pb-2">
             <p className="w-full text-[#11150E] text-base sm:text-lg lg:text-xl font-medium font-sans leading-relaxed">
               {description}
             </p>

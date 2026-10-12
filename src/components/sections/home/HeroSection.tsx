@@ -7,12 +7,12 @@ export default function HeroSection() {
     <section className="w-full bg-[#101211]">
       <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-16 lg:py-20 flex flex-col lg:flex-row items-center gap-12 lg:gap-8 overflow-hidden">
         {/* Left Column */}
-        <div className="flex-1 w-full flex flex-col items-start gap-[30px] overflow-hidden">
+        <div className="flex-1 w-full flex flex-col items-start gap-[30px]">
           <span className="text-[#CEFF69] text-sm sm:text-base font-bold font-sans tracking-wider">
             Independent engineering studio / DevEleven
           </span>
 
-          <h1 className="w-full text-[#F2F4EC] text-5xl sm:text-7xl lg:text-8xl font-bold font-sans leading-[0.98] tracking-tight">
+          <h1 className="w-full text-[#F2F4EC] text-5xl sm:text-7xl lg:text-8xl font-bold font-sans leading-[1.02] tracking-tight pb-2">
             Ambitious ideas.
             <br />
             Precisely
@@ -20,7 +20,7 @@ export default function HeroSection() {
             engineered.
           </h1>
 
-          <div className="w-full max-w-[550px] overflow-hidden flex flex-col items-start">
+          <div className="w-full max-w-[550px] flex flex-col items-start">
             <p className="w-full text-[#C5CDC1] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
               Websites, software, and games built to work beautifully. We turn complex
               challenges into reliable digital products — from first sketch to the next
@@ -28,7 +28,7 @@ export default function HeroSection() {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-start gap-[12px] overflow-hidden">
+          <div className="flex flex-wrap items-start gap-[12px]">
             <Button href="/#contact" variant="primary">
               Discuss your project
             </Button>

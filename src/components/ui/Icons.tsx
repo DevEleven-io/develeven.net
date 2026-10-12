@@ -13,6 +13,7 @@ import {
   ShieldCheck,
   GitBranch,
   Braces,
+  CircleHelp,
   Plus as LucidePlus,
   Minus as LucideMinus,
   Menu as LucideMenu,
@@ -239,6 +240,23 @@ export function FoundationIcon({
 }: IconProps) {
   return (
     <GitBranch
+      size={size}
+      color={color}
+      strokeWidth={strokeWidth}
+      className={`shrink-0 ${className}`}
+    />
+  );
+}
+
+/** FAQ / Question icon (CircleHelp) */
+export function FaqIcon({
+  className = "",
+  size = 18,
+  color = "#CEFF69",
+  strokeWidth = 1.5,
+}: IconProps) {
+  return (
+    <CircleHelp
       size={size}
       color={color}
       strokeWidth={strokeWidth}

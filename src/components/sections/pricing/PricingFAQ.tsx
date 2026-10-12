@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "Can you maintain an existing site or codebase?",
     answer:
-      "Bring it to the conversation. A technical review helps establish the condition of the code, dependencies and infrastructure before we agree the right care or engineering scope.",
+      "Bring it to the conversation. A technical review helps establish the condition of the code, dependencies and infrastructure before we agree the right maintenance or engineering scope.",
   },
 ];
 
@@ -36,9 +36,9 @@ export default function PricingFAQ() {
     <section id="pricing-faq" className="w-full bg-[#101211]">
       <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col lg:flex-row justify-start items-start gap-12 lg:gap-20 overflow-hidden">
         {/* Left Column */}
-        <div className="w-full lg:w-[400px] xl:w-[430px] flex flex-col items-start gap-6 overflow-hidden shrink-0">
+        <div className="w-full lg:w-[400px] xl:w-[430px] flex flex-col items-start gap-6 shrink-0">
           <SectionLabel>04 / Pricing FAQ</SectionLabel>
-          <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.08]">
+          <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.12] pb-2">
             A little clarity.
             <br />
             Before you commit.

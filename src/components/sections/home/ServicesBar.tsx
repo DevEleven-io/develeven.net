@@ -20,7 +20,7 @@ const services = [
     icon: <GameDevIcon size={18} color="#CEFF69" />,
   },
   {
-    label: "Continuous care",
+    label: "Website maintenance",
     icon: <MaintenanceIcon size={18} color="#CEFF69" />,
   },
 ];

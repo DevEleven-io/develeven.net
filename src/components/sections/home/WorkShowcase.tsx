@@ -7,14 +7,14 @@ export default function WorkShowcase() {
     <section id="work" className="w-full bg-[#E8EDE1]">
       <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col items-start gap-12 overflow-hidden">
         {/* Header */}
-        <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 overflow-hidden">
-          <div className="flex-1 max-w-2xl flex flex-col items-start gap-[24px] overflow-hidden">
+        <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6">
+          <div className="flex-1 max-w-2xl flex flex-col items-start gap-[24px]">
             <SectionLabel theme="light">02 / Engineering in practice</SectionLabel>
-            <h2 className="w-full text-[#11150E] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.08]">
+            <h2 className="w-full text-[#11150E] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.12] pb-2">
               Different challenges. Same rigor.
             </h2>
           </div>
-          <div className="lg:max-w-md flex flex-col items-start overflow-hidden">
+          <div className="lg:max-w-md flex flex-col items-start pb-2">
             <p className="w-full text-[#384031] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
               Illustrative build concepts. A look at what we can create.
             </p>

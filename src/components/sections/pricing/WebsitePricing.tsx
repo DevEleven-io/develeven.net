@@ -37,7 +37,7 @@ const tiers: Tier[] = [
   {
     name: "Growth",
     tag: "Built to evolve",
-    badge: "CMS + Care included",
+    badge: "CMS + Maintenance included",
     featured: true,
     priceTag: "Example USD / One-time project",
     price: "$6,000–10,000",
@@ -47,9 +47,9 @@ const tiers: Tier[] = [
       "Custom UI + reusable components",
       "CMS setup & editor training",
       "Blog, case studies + content migration",
-      "3 months included care & updates",
+      "3 months included maintenance & updates",
     ],
-    note: "Includes 3 months of care. Complex integrations scoped separately.",
+    note: "Includes 3 months of maintenance. Complex integrations scoped separately.",
     buttonText: "Discuss growth",
   },
   {
@@ -63,9 +63,9 @@ const tiers: Tier[] = [
       "Cart, checkout & payment setup",
       "Shipping + product catalog configuration",
       "Purchase analytics & handover training",
-      "6 months included store care & updates",
+      "6 months included store maintenance & updates",
     ],
-    note: "Includes 6 months of store care. Platform fees excluded.",
+    note: "Includes 6 months of store maintenance. Platform fees excluded.",
     buttonText: "Discuss commerce",
   },
 ];
@@ -73,21 +73,13 @@ const tiers: Tier[] = [
 export default function WebsitePricing() {
   return (
     <section id="websites" className="w-full bg-[#101211]">
-      <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col items-start gap-12 overflow-hidden">
+      <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 pt-8 pb-20 lg:pt-10 lg:pb-24 flex flex-col items-start gap-6 sm:gap-8 overflow-hidden">
         {/* Header */}
-        <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 overflow-hidden">
-          <div className="max-w-2xl flex flex-col items-start gap-5 overflow-hidden">
-            <SectionLabel>01 / Website development</SectionLabel>
-            <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.08]">
-              A website that earns its place.
-            </h2>
-          </div>
-          <div className="lg:max-w-md flex flex-col items-start overflow-hidden">
-            <p className="w-full text-[#C5CDC1] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
-              Three example scopes with post-launch engineering care included. Choose
-              the closest fit; we’ll tailor the details together.
-            </p>
-          </div>
+        <div className="w-full flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+          <SectionLabel>01 / Website development & maintenance</SectionLabel>
+          <span className="text-[#A4ADA0] text-xs sm:text-sm font-medium font-sans">
+            Three example scopes · Post-launch maintenance included
+          </span>
         </div>
 
         {/* Cards Row */}

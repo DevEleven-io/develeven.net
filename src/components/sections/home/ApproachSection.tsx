@@ -31,9 +31,9 @@ export default function ApproachSection() {
     <section id="approach" className="w-full bg-[#101211]">
       <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col lg:flex-row justify-start items-start gap-12 lg:gap-20 overflow-hidden">
         {/* Left Column */}
-        <div className="flex-1 max-w-xl flex flex-col items-start gap-[28px] overflow-hidden">
+        <div className="flex-1 max-w-xl flex flex-col items-start gap-[28px]">
           <SectionLabel>03 / How we think</SectionLabel>
-          <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.08]">
+          <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.12] pb-2">
             Good software
             <br />
             is more than
