@@ -6,9 +6,9 @@ interface CTABannerProps {
   topRightText: string;
   hasDot?: boolean;
   headline: React.ReactNode;
-  headlineSize?: "88px" | "80px";
+  headlineSize?: "8xl" | "7xl" | "88px" | "80px";
   description: string;
-  buttonHeight?: "62px" | "54px";
+  buttonHeight?: string;
   buttonText?: string;
   note?: string;
   ctaHref?: string;
@@ -19,14 +19,14 @@ export default function CTABanner({
   topRightText,
   hasDot = false,
   headline,
-  headlineSize = "88px",
+  headlineSize = "8xl",
   description,
-  buttonHeight = "62px",
+  buttonHeight = "h-14",
   buttonText = "Discuss your project",
   note = "No sales script. Just a good conversation.",
   ctaHref = "/#contact",
 }: CTABannerProps) {
-  const isLarge = headlineSize === "88px";
+  const isLarge = headlineSize === "8xl" || headlineSize === "88px";
 
   return (
     <section id="contact" className="w-full bg-[#CEFF69]">
@@ -36,9 +36,9 @@ export default function CTABanner({
           <span className="text-[#11150E] text-xs sm:text-sm font-bold font-sans tracking-wider">
             {sectionTag}
           </span>
-          <div className="flex items-center gap-[8px] overflow-hidden">
+          <div className="flex items-center gap-2 overflow-hidden">
             {hasDot && (
-              <div className="w-[6px] h-[6px] bg-[#11150E] rounded-full shrink-0" />
+              <div className="w-1.5 h-1.5 bg-[#11150E] rounded-full shrink-0" />
             )}
             <span className="text-[#11150E] text-xs sm:text-sm font-bold font-sans tracking-wider">
               {topRightText}
@@ -58,27 +58,21 @@ export default function CTABanner({
             {headline}
           </h2>
 
-          <div className="w-full lg:w-[380px] xl:w-[420px] shrink-0 flex flex-col items-start gap-7 overflow-hidden">
-            <p
-              className={`w-full text-[#11150E] font-medium font-sans leading-relaxed ${
-                isLarge ? "text-base sm:text-lg lg:text-xl" : "text-base sm:text-lg"
-              }`}
-            >
+          <div className="w-full lg:max-w-sm xl:max-w-md shrink-0 flex flex-col items-start gap-7 overflow-hidden">
+            <p className="w-full text-[#11150E] text-base sm:text-lg lg:text-xl font-medium font-sans leading-relaxed">
               {description}
             </p>
 
             <a
               href={ctaHref}
-              className={`w-full rounded-lg bg-[#11150E] flex items-center justify-between overflow-hidden hover:bg-[#1a1f16] transition-colors group cursor-pointer ${
-                buttonHeight === "62px" ? "h-[62px] px-[24px]" : "h-[54px] px-[22px]"
-              }`}
+              className={`w-full ${buttonHeight} px-6 rounded-lg bg-[#11150E] flex items-center justify-between overflow-hidden hover:bg-[#1a1f16] transition-colors group cursor-pointer`}
             >
               <span className="text-[#F2F4EC] text-sm font-semibold font-sans">
                 {buttonText}
               </span>
               <ArrowIcon
                 color="lime"
-                size={buttonHeight === "62px" ? "lg" : "md"}
+                size="md"
               />
             </a>
 

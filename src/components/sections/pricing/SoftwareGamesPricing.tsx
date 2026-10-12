@@ -83,7 +83,7 @@ export default function SoftwareGamesPricing() {
         {/* Header */}
         <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 overflow-hidden">
           <div className="max-w-2xl flex flex-col items-start gap-5 overflow-hidden">
-            <SectionLabel>03–04 / Software, games & engineering</SectionLabel>
+            <SectionLabel>02 / Custom software, games & engineering</SectionLabel>
             <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.08]">
               Not every build
               <br />

@@ -1,11 +1,10 @@
 import React from "react";
 
 const links = [
-  { label: "01 / Websites ↓", href: "#websites" },
-  { label: "02 / Maintenance ↓", href: "#maintenance" },
-  { label: "03 / Software & games ↓", href: "#software" },
-  { label: "04 / Engineering ↓", href: "#engineering" },
-  { label: "05 / Pricing FAQ ↓", href: "#pricing-faq" },
+  { label: "01 / Websites & care ↓", href: "#websites" },
+  { label: "02 / Software & games ↓", href: "#software" },
+  { label: "03 / Process ↓", href: "#process" },
+  { label: "04 / Pricing FAQ ↓", href: "#pricing-faq" },
 ];
 
 export default function PricingNav() {

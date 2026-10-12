@@ -8,7 +8,6 @@ interface Tier {
   name: string;
   tag: string;
   badge?: string;
-  description: string;
   priceTag: string;
   price: string;
   scope: string;
@@ -22,8 +21,6 @@ const tiers: Tier[] = [
   {
     name: "Launch",
     tag: "A focused first impression",
-    description:
-      "For a new business, campaign or focused service that needs a confident presence.",
     priceTag: "Example USD / One-time project",
     price: "$3,000–5,000",
     scope: "Up to 5 core pages",
@@ -32,6 +29,7 @@ const tiers: Tier[] = [
       "Contact form + basic analytics",
       "On-page SEO foundations",
       "Browser testing & launch handover",
+      "30-day post-launch warranty & fixes",
     ],
     note: "Static content. No CMS or commerce.",
     buttonText: "Discuss launch",
@@ -39,10 +37,8 @@ const tiers: Tier[] = [
   {
     name: "Growth",
     tag: "Built to evolve",
-    badge: "CMS included",
+    badge: "CMS + Care included",
     featured: true,
-    description:
-      "For teams publishing content and building a richer, more flexible brand experience.",
     priceTag: "Example USD / One-time project",
     price: "$6,000–10,000",
     scope: "Up to 12 pages + CMS",
@@ -51,15 +47,14 @@ const tiers: Tier[] = [
       "Custom UI + reusable components",
       "CMS setup & editor training",
       "Blog, case studies + content migration",
+      "3 months included care & updates",
     ],
-    note: "One CMS. Complex integrations scoped separately.",
+    note: "Includes 3 months of care. Complex integrations scoped separately.",
     buttonText: "Discuss growth",
   },
   {
     name: "Commerce",
     tag: "Turn visits into business",
-    description:
-      "For brands that need a considered storefront and a smooth buying journey.",
     priceTag: "Example USD / One-time project",
     price: "$10,000–18,000",
     scope: "Storefront + up to 50 products",
@@ -68,8 +63,9 @@ const tiers: Tier[] = [
       "Cart, checkout & payment setup",
       "Shipping + product catalog configuration",
       "Purchase analytics & handover training",
+      "6 months included store care & updates",
     ],
-    note: "One store. Platform fees and subscriptions excluded.",
+    note: "Includes 6 months of store care. Platform fees excluded.",
     buttonText: "Discuss commerce",
   },
 ];
@@ -88,8 +84,8 @@ export default function WebsitePricing() {
           </div>
           <div className="lg:max-w-md flex flex-col items-start overflow-hidden">
             <p className="w-full text-[#C5CDC1] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
-              Three example scopes. One standard of engineering. Choose the closest
-              fit; we’ll tailor the details together.
+              Three example scopes with post-launch engineering care included. Choose
+              the closest fit; we’ll tailor the details together.
             </p>
           </div>
         </div>
@@ -122,10 +118,6 @@ export default function WebsitePricing() {
                 <span className="text-[#CEFF69] text-sm font-bold font-sans tracking-wide">
                   {tier.tag}
                 </span>
-
-                <p className="w-full min-h-[48px] text-[#A4ADA0] text-sm sm:text-base font-normal font-sans leading-relaxed">
-                  {tier.description}
-                </p>
 
                 <div className="w-full flex flex-col items-start gap-2 overflow-hidden">
                   <span className="text-[#A4ADA0] text-xs sm:text-sm font-bold font-sans tracking-wide">

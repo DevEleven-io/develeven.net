@@ -33,9 +33,8 @@ export default function HomePage() {
             Let’s make it real.
           </>
         }
-        headlineSize="88px"
+        headlineSize="8xl"
         description="Tell us what you’re thinking. We’ll bring the questions, the expertise, and a clear way forward."
-        buttonHeight="62px"
         buttonText="Discuss your project"
         note="No sales script. Just a good conversation."
       />
