@@ -15,8 +15,8 @@ export default function StatusDot({
   const textColor = theme === "lime" ? "text-[#F2F4EC]" : "text-[#11150E]";
 
   return (
-    <div className={`justify-start items-center gap-[8px] inline-flex overflow-hidden ${className}`}>
-      <div className={`w-[6px] h-[6px] rounded-full shrink-0 ${dotColor}`} />
+    <div className={`justify-start items-center gap-2 inline-flex overflow-hidden ${className}`}>
+      <div className={`w-1.5 h-1.5 rounded-full shrink-0 ${dotColor}`} />
       <span className={`font-sans text-xs sm:text-sm font-semibold leading-normal tracking-wide ${textColor}`}>
         {label}
       </span>

@@ -36,7 +36,7 @@ export default function PricingFAQ() {
     <section id="pricing-faq" className="w-full bg-[#101211]">
       <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col lg:flex-row justify-start items-start gap-12 lg:gap-20 overflow-hidden">
         {/* Left Column */}
-        <div className="w-full lg:w-[400px] xl:w-[430px] flex flex-col items-start gap-6 shrink-0">
+        <div className="w-full lg:w-100 xl:w-108 flex flex-col items-start gap-6 shrink-0">
           <SectionLabel>04 / Pricing FAQ</SectionLabel>
           <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.12] pb-2">
             A little clarity.
@@ -49,7 +49,7 @@ export default function PricingFAQ() {
           </p>
           <Link
             href="/#contact"
-            className="text-[#CEFF69] text-sm sm:text-base font-semibold font-sans hover:underline flex items-center gap-[6px] group"
+            className="text-[#CEFF69] text-sm sm:text-base font-semibold font-sans hover:underline flex items-center gap-1.5 group"
           >
             <span>Talk to our team</span>
             <ArrowIcon color="lime" size="md" />
@@ -61,7 +61,7 @@ export default function PricingFAQ() {
         {faqs.map((faq) => (
           <div
             key={faq.question}
-            className="w-full py-[24px] border-t border-[#2A3029] flex flex-col items-start gap-[12px] overflow-hidden"
+            className="w-full py-6 border-t border-[#2A3029] flex flex-col items-start gap-3 overflow-hidden"
           >
             <h3 className="w-full text-[#F2F4EC] text-lg sm:text-xl font-bold font-sans">
               {faq.question}

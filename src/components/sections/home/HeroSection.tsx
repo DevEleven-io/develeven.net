@@ -7,7 +7,7 @@ export default function HeroSection() {
     <section className="w-full bg-[#101211]">
       <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-16 lg:py-20 flex flex-col lg:flex-row items-center gap-12 lg:gap-8 overflow-hidden">
         {/* Left Column */}
-        <div className="flex-1 w-full flex flex-col items-start gap-[30px]">
+        <div className="flex-1 w-full flex flex-col items-start gap-7">
           <span className="text-[#CEFF69] text-sm sm:text-base font-bold font-sans tracking-wider">
             Independent engineering studio / DevEleven
           </span>
@@ -20,7 +20,7 @@ export default function HeroSection() {
             engineered.
           </h1>
 
-          <div className="w-full max-w-[550px] flex flex-col items-start">
+          <div className="w-full max-w-xl flex flex-col items-start">
             <p className="w-full text-[#C5CDC1] text-base sm:text-lg lg:text-xl font-normal font-sans leading-relaxed">
               Websites, software, and games built to work beautifully. We turn complex
               challenges into reliable digital products — from first sketch to the next
@@ -28,7 +28,7 @@ export default function HeroSection() {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-start gap-[12px]">
+          <div className="flex flex-wrap items-start gap-3">
             <Button href="/#contact" variant="primary">
               Discuss your project
             </Button>
@@ -39,7 +39,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right Column (Fig. 11 Card) */}
-        <div className="w-full lg:w-[480px] xl:w-[540px] h-[480px] lg:h-[548px] relative bg-[#191C19] rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex flex-col items-start overflow-hidden shrink-0">
+        <div className="w-full lg:w-120 xl:w-135 h-120 lg:h-137 relative bg-[#191C19] rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex flex-col items-start overflow-hidden shrink-0">
           <img
             src="/images/eleven-sculpture.png"
             alt="Built with intent"
@@ -47,7 +47,7 @@ export default function HeroSection() {
           />
 
           {/* Top Overlay */}
-          <div className="w-[calc(100%-40px)] left-[20px] top-[20px] absolute flex justify-between items-start overflow-hidden">
+          <div className="left-5 right-5 top-5 absolute flex justify-between items-start overflow-hidden">
             <span className="text-[#A4ADA0] text-xs sm:text-sm font-semibold font-sans tracking-wider">
               Fig. 11 — Built with intent
             </span>
@@ -57,8 +57,8 @@ export default function HeroSection() {
           </div>
 
           {/* Bottom Overlay */}
-          <div className="left-[20px] bottom-[20px] absolute flex items-center gap-[10px] overflow-hidden">
-            <div className="w-[20px] h-[2px] bg-[#CEFF69]" />
+          <div className="left-5 bottom-5 absolute flex items-center gap-2.5 overflow-hidden">
+            <div className="w-5 h-0.5 bg-[#CEFF69]" />
             <span className="text-[#F2F4EC] text-xs sm:text-sm font-semibold font-sans tracking-wide">
               Precision is a mindset, not a feature.
             </span>

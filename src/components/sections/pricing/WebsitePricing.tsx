@@ -14,9 +14,8 @@ const websiteTiers: PricingCardProps[] = [
   {
     name: "Launch",
     tag: "A focused first impression",
-    code: "WB / 01",
     icon: <WebDevIcon size={24} color="#CEFF69" />,
-    price: "$3k to $5k",
+    price: "$300 - $500",
     period: "/ project",
     scope: "Up to 5 core pages",
     features: [
@@ -26,16 +25,15 @@ const websiteTiers: PricingCardProps[] = [
       "Browser testing & launch handover",
       "30-day post-launch warranty & fixes",
     ],
-    note: "Static content. No CMS or commerce.",
     buttonText: "Discuss launch",
   },
   {
     name: "Growth",
     tag: "Built to evolve",
-    badge: "CMS + Maintenance included",
+    badge: "Most popular",
     featured: true,
     icon: <LayersIcon size={24} color="#CEFF69" />,
-    price: "$6k to $10k",
+    price: "$600 - $1,000",
     period: "/ project",
     scope: "Up to 12 pages + CMS",
     features: [
@@ -45,15 +43,13 @@ const websiteTiers: PricingCardProps[] = [
       "Blog, case studies + content migration",
       "3 months included maintenance & updates",
     ],
-    note: "Includes 3 months of maintenance. Complex integrations scoped separately.",
     buttonText: "Discuss growth",
   },
   {
     name: "Commerce",
     tag: "Turn visits into business",
-    code: "WB / 03",
     icon: <CommerceIcon size={24} color="#CEFF69" />,
-    price: "$10k to $18k",
+    price: "$1,000 - $1,800",
     period: "/ project",
     scope: "Storefront + up to 50 products",
     features: [
@@ -63,7 +59,6 @@ const websiteTiers: PricingCardProps[] = [
       "Purchase analytics & handover training",
       "6 months included store maintenance & updates",
     ],
-    note: "Includes 6 months of store maintenance. Platform fees excluded.",
     buttonText: "Discuss commerce",
   },
 ];
@@ -72,9 +67,8 @@ const softwareTiers: PricingCardProps[] = [
   {
     name: "Custom software",
     tag: "SaaS, internal tools & platforms",
-    code: "SW / 01",
     icon: <BracesIcon size={24} color="#CEFF69" />,
-    price: "$15k to $30k",
+    price: "$1,500 - $3,000",
     period: "/ project",
     scope: "One core workflow, two roles & integration",
     features: [
@@ -84,15 +78,13 @@ const softwareTiers: PricingCardProps[] = [
       "Deployment, documentation & handover",
       "Post-launch warranty & handover support",
     ],
-    note: "Multi-product platforms, complex migrations and regulated workflows need a tailored estimate.",
     buttonText: "Scope your software",
   },
   {
     name: "Game development",
     tag: "Playable prototypes & production",
-    code: "GM / 02",
     icon: <GameDevIcon size={24} color="#CEFF69" />,
-    price: "$8k to $15k",
+    price: "$800 - $1,500",
     period: "/ project",
     scope: "One core mechanic, one level & platform",
     features: [
@@ -102,15 +94,13 @@ const softwareTiers: PricingCardProps[] = [
       "Playtesting + performance validation",
       "Technical handover & architecture notes",
     ],
-    note: "Full games, original art, multiplayer, console certification and live operations are quoted separately.",
     buttonText: "Scope your game",
   },
   {
     name: "Engineering services",
     tag: "Targeted architecture & sprints",
-    code: "EN / 03",
     icon: <EngineeringIcon size={24} color="#CEFF69" />,
-    price: "$2k to $5k",
+    price: "$200 - $500",
     period: "/ project",
     scope: "One bounded technical problem",
     features: [
@@ -120,7 +110,6 @@ const softwareTiers: PricingCardProps[] = [
       "Refactoring, benchmarks & testing",
       "Findings, implementation notes + handover",
     ],
-    note: "Ongoing team extension, infrastructure rebuilds and larger integrations use a tailored engagement.",
     buttonText: "Discuss engineering",
   },
 ];

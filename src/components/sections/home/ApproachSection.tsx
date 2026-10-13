@@ -31,7 +31,7 @@ export default function ApproachSection() {
     <section id="approach" className="w-full bg-[#101211]">
       <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col lg:flex-row justify-start items-start gap-12 lg:gap-20 overflow-hidden">
         {/* Left Column */}
-        <div className="flex-1 max-w-xl flex flex-col items-start gap-[28px]">
+        <div className="flex-1 max-w-xl flex flex-col items-start gap-7">
           <SectionLabel>03 / How we think</SectionLabel>
           <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.12] pb-2">
             Good software
@@ -44,11 +44,11 @@ export default function ApproachSection() {
             evolves. How confidently your team can rely on it.
           </p>
 
-          <div className="w-full pt-[12px] flex flex-col items-start gap-[14px] overflow-hidden">
+          <div className="w-full pt-3 flex flex-col items-start gap-3.5 overflow-hidden">
             <span className="text-[#A4ADA0] text-sm font-bold font-sans tracking-wider">
               The right tool for the job, not the trend.
             </span>
-            <div className="flex flex-wrap items-start gap-[8px] overflow-hidden">
+            <div className="flex flex-wrap items-start gap-2 overflow-hidden">
               {techStack.map((tech) => (
                 <TechPill key={tech} label={tech} />
               ))}
@@ -57,14 +57,14 @@ export default function ApproachSection() {
         </div>
 
         {/* Right Column */}
-        <div className="flex-1 w-full flex flex-col items-start gap-[28px] overflow-hidden">
+        <div className="flex-1 w-full flex flex-col items-start gap-7 overflow-hidden">
           {/* Quality Gate Bar */}
-          <div className="w-full p-[16px] bg-[#191C19] rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex justify-between items-center overflow-hidden">
+          <div className="w-full p-4 bg-[#191C19] rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex justify-between items-center overflow-hidden">
             <span className="text-[#A4ADA0] text-xs sm:text-sm font-bold font-sans tracking-wider">
               DevEleven / Quality gate
             </span>
-            <div className="flex items-center gap-[8px] overflow-hidden">
-              <div className="w-[6px] h-[6px] bg-[#CEFF69] rounded-full" />
+            <div className="flex items-center gap-2 overflow-hidden">
+              <div className="w-1.5 h-1.5 bg-[#CEFF69] rounded-full" />
               <span className="text-[#CEFF69] text-xs sm:text-sm font-bold font-sans tracking-wider">
                 Built into every release
               </span>
@@ -75,12 +75,12 @@ export default function ApproachSection() {
           {principles.map((p) => (
             <div
               key={p.title}
-              className="w-full pb-[24px] border-b border-[#2A3029] flex items-start gap-[20px] overflow-hidden"
+              className="w-full pb-6 border-b border-[#2A3029] flex items-start gap-5 overflow-hidden"
             >
-              <div className="w-[26px] h-[26px] flex items-center justify-center shrink-0 mt-[2px]">
+              <div className="w-6 h-6 flex items-center justify-center shrink-0 mt-0.5">
                 {p.icon}
               </div>
-              <div className="flex-1 flex flex-col items-start gap-[10px] overflow-hidden">
+              <div className="flex-1 flex flex-col items-start gap-2.5 overflow-hidden">
                 <h3 className="w-full text-[#F2F4EC] text-2xl font-bold font-sans tracking-tight">
                   {p.title}
                 </h3>

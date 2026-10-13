@@ -41,7 +41,7 @@ export default function FAQSection() {
     <section id="faq" className="w-full bg-[#101211]">
       <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col lg:flex-row justify-start items-start gap-12 lg:gap-20 overflow-hidden">
         {/* Left Column */}
-        <div className="w-full lg:w-[400px] xl:w-[430px] flex flex-col items-start gap-6 shrink-0">
+        <div className="w-full lg:w-100 xl:w-108 flex flex-col items-start gap-6 shrink-0">
           <SectionLabel>07 / A few good questions</SectionLabel>
           <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.12] pb-2">
             Before we
@@ -54,7 +54,7 @@ export default function FAQSection() {
           </p>
           <Link
             href="/#contact"
-            className="text-[#CEFF69] text-sm sm:text-base font-semibold font-sans hover:underline flex items-center gap-[6px] group"
+            className="text-[#CEFF69] text-sm sm:text-base font-semibold font-sans hover:underline flex items-center gap-1.5 group"
           >
             <span>Talk to our team</span>
             <ArrowIcon color="lime" size="md" />
@@ -69,19 +69,19 @@ export default function FAQSection() {
             <div
               key={faq.question}
               className={`w-full overflow-hidden border-b border-[#2A3029] transition-all ${
-                isOpen ? "pt-[24px] pb-[28px]" : "py-[26px]"
+                isOpen ? "pt-6 pb-7" : "py-6.5"
               }`}
             >
               <button
                 onClick={() => setOpenIndex(isOpen ? null : index)}
-                className="w-full flex justify-between items-center gap-[24px] text-left cursor-pointer group overflow-hidden"
+                className="w-full flex justify-between items-center gap-6 text-left cursor-pointer group overflow-hidden"
               >
                 <span className="flex-1 text-[#F2F4EC] text-lg sm:text-xl font-bold font-sans">
                   {faq.question}
                 </span>
 
                 {/* Toggle Icon */}
-                <div className="w-[20px] h-[20px] flex items-center justify-center shrink-0">
+                <div className="w-5 h-5 flex items-center justify-center shrink-0">
                   {isOpen ? (
                     <MinusIcon size={18} color="#CEFF69" />
                   ) : (
@@ -91,7 +91,7 @@ export default function FAQSection() {
               </button>
 
               {isOpen && (
-                <div className="w-full pt-[20px]">
+                <div className="w-full pt-5">
                   <p className="w-full text-[#A4ADA0] text-sm sm:text-base font-normal font-sans leading-relaxed">
                     {faq.answer}
                   </p>

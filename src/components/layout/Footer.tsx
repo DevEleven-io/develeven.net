@@ -34,8 +34,8 @@ export default function Footer() {
           <div className="w-full lg:max-w-sm flex flex-col gap-5 overflow-hidden">
             <Link href="/" className="flex items-center gap-3 overflow-hidden">
               <div className="flex items-start gap-1.5 overflow-hidden">
-                <div className="w-[6px] h-[25px] bg-[#CEFF69]" />
-                <div className="w-[6px] h-[25px] bg-[#CEFF69]" />
+                <div className="w-1.5 h-6 bg-[#CEFF69]" />
+                <div className="w-1.5 h-6 bg-[#CEFF69]" />
               </div>
               <span className="text-[#F2F4EC] text-2xl font-bold font-sans tracking-tight">
                 DevEleven
@@ -99,7 +99,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="w-full h-[1px] bg-[#2A3029]" />
+        <div className="w-full h-px bg-[#2A3029]" />
 
         {/* Bottom Legal Bar */}
         <div className="w-full flex flex-col sm:flex-row justify-between items-center gap-4 overflow-hidden">

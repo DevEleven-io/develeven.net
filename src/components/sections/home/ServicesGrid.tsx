@@ -26,16 +26,16 @@ function ServiceCard({
   icon,
 }: ServiceCardProps) {
   return (
-    <div className="h-[274px] p-[28px] bg-[#191C19] rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex flex-col justify-start items-start gap-[24px] overflow-hidden">
+    <div className="h-68 p-7 bg-[#191C19] rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex flex-col justify-start items-start gap-6 overflow-hidden">
       <div className="w-full flex justify-between items-center overflow-hidden">
-        <div className="w-[26px] h-[26px] flex items-center justify-center shrink-0">
+        <div className="w-6 h-6 flex items-center justify-center shrink-0">
           {icon}
         </div>
         <span className="text-[#A4ADA0] text-xs sm:text-sm font-bold font-sans tracking-wider">
           {number}
         </span>
       </div>
-      <div className="w-full flex flex-col items-start gap-[12px] overflow-hidden">
+      <div className="w-full flex flex-col items-start gap-3 overflow-hidden">
         <h3 className="w-full text-[#F2F4EC] text-2xl font-bold font-sans tracking-tight">
           {title}
         </h3>
@@ -56,7 +56,7 @@ export default function ServicesGrid() {
       <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col items-start gap-12 overflow-hidden">
         {/* Header */}
         <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6">
-          <div className="flex-1 max-w-2xl flex flex-col items-start gap-[24px]">
+          <div className="flex-1 max-w-2xl flex flex-col items-start gap-6">
             <SectionLabel>01 / What we build</SectionLabel>
             <h2 className="w-full text-[#F2F4EC] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.12] pb-2">
               The right expertise.
@@ -111,7 +111,7 @@ export default function ServicesGrid() {
           />
 
           {/* CTA Card */}
-          <div className="h-[274px] p-[28px] rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex flex-col justify-between items-start overflow-hidden">
+          <div className="h-68 p-7 rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex flex-col justify-between items-start overflow-hidden">
             <span className="text-[#A4ADA0] text-xs sm:text-sm font-bold font-sans tracking-wider">
               Not sure where to start?
             </span>
@@ -120,7 +120,7 @@ export default function ServicesGrid() {
             </p>
             <Link
               href="/#contact"
-              className="flex items-center gap-[16px] overflow-hidden group cursor-pointer"
+              className="flex items-center gap-4 overflow-hidden group cursor-pointer"
             >
               <span className="text-[#CEFF69] text-sm font-semibold font-sans group-hover:underline">
                 Let’s figure it out

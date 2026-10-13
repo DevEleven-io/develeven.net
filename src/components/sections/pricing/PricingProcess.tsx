@@ -64,7 +64,7 @@ export default function PricingProcess() {
                 <span className="text-[#2D3427] text-base sm:text-lg font-bold font-sans tracking-wide">
                   {step.number}
                 </span>
-                <div className="flex-1 h-[1px] bg-[#BCC5B3]/60" />
+                <div className="flex-1 h-px bg-[#BCC5B3]/60" />
               </div>
               <h3 className="w-full text-[#11150E] text-2xl font-bold font-sans tracking-tight">
                 {step.title}

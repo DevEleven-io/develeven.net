@@ -65,7 +65,7 @@ export default function ProcessSection() {
                 <span className="text-[#CEFF69] text-base sm:text-lg font-bold font-sans tracking-wide">
                   {step.number}
                 </span>
-                <div className="flex-1 h-[1px] bg-[#2A3029]" />
+                <div className="flex-1 h-px bg-[#2A3029]" />
               </div>
               <h3 className="w-full text-[#F2F4EC] text-2xl font-bold font-sans tracking-tight">
                 {step.title}

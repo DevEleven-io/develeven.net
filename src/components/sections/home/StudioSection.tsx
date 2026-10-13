@@ -8,7 +8,7 @@ export default function StudioSection() {
     <section id="studio" className="w-full bg-[#101211]">
       <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col lg:flex-row items-center gap-12 lg:gap-20 overflow-hidden">
         {/* Left Image Box */}
-        <div className="w-full lg:w-[520px] xl:w-[572px] h-[340px] sm:h-[400px] lg:h-[430px] relative rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 overflow-hidden flex flex-col items-start shrink-0">
+        <div className="w-full lg:w-130 xl:w-143 h-85 sm:h-100 lg:h-108 relative rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 overflow-hidden flex flex-col items-start shrink-0">
           <img
             src="/images/engineering-workspace.png"
             alt="The DevEleven studio"
@@ -39,7 +39,7 @@ export default function StudioSection() {
             Better decisions. A closer partnership.
           </p>
 
-          <div className="w-full h-[1px] bg-[#2A3029]" />
+          <div className="w-full h-px bg-[#2A3029]" />
 
           <div className="w-full flex flex-wrap justify-between items-start gap-4 overflow-hidden">
             {traits.map((trait) => (
