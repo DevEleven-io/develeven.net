@@ -4,7 +4,7 @@ import ArrowIcon from "@/components/ui/ArrowIcon";
 
 export default function PartnershipBanner() {
   return (
-    <section className="w-full bg-[#191C19] border-t border-b border-[#2A3029]">
+    <section className="w-full bg-[#191C19]">
       <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-14 lg:py-16 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 lg:gap-12">
         <div className="max-w-3xl flex flex-col items-start gap-3">
           <span className="text-[#CEFF69] text-xs sm:text-sm font-bold font-sans tracking-wider">
@@ -13,10 +13,10 @@ export default function PartnershipBanner() {
           <h3 className="text-[#F2F4EC] text-2xl sm:text-3xl lg:text-4xl font-bold font-sans tracking-tight leading-[1.12]">
             Need engineering capacity, not a standalone project?
           </h3>
-          <p className="w-full text-[#C5CDC1] text-base sm:text-lg font-normal font-sans leading-relaxed">
+          {/* <p className="w-full text-[#C5CDC1] text-base sm:text-lg font-normal font-sans leading-relaxed">
             A dedicated partnership can flex around your roadmap. Team size,
             allocation, and monthly budget are agreed after discovery.
-          </p>
+          </p> */}
         </div>
 
         <Link

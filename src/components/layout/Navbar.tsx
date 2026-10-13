@@ -149,7 +149,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`w-full fixed top-0 left-0 right-0 z-50 bg-[#101211]/95 backdrop-blur-md border-b border-[#2A3029] transition-transform duration-300 ease-in-out ${
+        className={`w-full fixed top-0 left-0 right-0 z-50 bg-[#101211]/90 backdrop-blur-xl border-b border-[#2a302995] transition-transform duration-300 ease-in-out ${
           isVisible || isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >

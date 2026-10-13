@@ -36,8 +36,8 @@ export default function PricingProcess() {
     <section id="process" className="w-full bg-[#E8EDE1]">
       <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-16 py-20 lg:py-24 flex flex-col items-start gap-12 overflow-hidden">
         {/* Header */}
-        <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6">
-          <div className="max-w-2xl flex flex-col items-start gap-5">
+        <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8">
+          <div className="max-w-3xl flex flex-col items-start gap-5">
             <SectionLabel theme="light">03 / From example to estimate</SectionLabel>
             <h2 className="w-full text-[#11150E] text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight leading-[1.12] pb-2">
               The price follows the plan.
@@ -80,7 +80,7 @@ export default function PricingProcess() {
         </div>
 
         {/* Checklist Footer */}
-        <div className="w-full pt-7 border-t border-[#BCC5B3]/60 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 overflow-hidden">
+        {/* <div className="w-full pt-7 border-t border-[#BCC5B3]/60 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 overflow-hidden">
           <span className="text-[#384031] text-xs sm:text-sm font-bold font-sans tracking-wider">
             Every proposal should make clear
           </span>
@@ -94,7 +94,7 @@ export default function PricingProcess() {
               </span>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

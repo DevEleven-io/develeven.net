@@ -30,9 +30,9 @@ export default function PricingCard({
 }: PricingCardProps) {
   return (
     <div
-      className={`p-7 bg-[#191C19] rounded-lg outline outline-1 flex flex-col justify-between items-start gap-8 ${
+      className={`p-7 bg-[#191C19] rounded-lg flex flex-col justify-between items-start gap-8 ${
         featured
-          ? "outline-[#CEFF69] -outline-offset-1"
+          ? "outline outline-1 outline-[#CEFF69] -outline-offset-1"
           : "outline-[#2A3029] -outline-offset-1"
       }`}
     >
@@ -93,7 +93,7 @@ export default function PricingCard({
         className={`w-full h-14 px-6 rounded-lg flex items-center justify-between transition-colors group cursor-pointer ${
           featured
             ? "bg-[#CEFF69] text-[#11150E] hover:bg-[#b8f050]"
-            : "bg-[#101211] outline outline-1 outline-[#2A3029] -outline-offset-1 text-[#F2F4EC] hover:outline-[#A4ADA0]"
+            : "bg-neutral-800/90 hover:bg-neutral-800 text-[#F2F4EC] hover:outline-[#A4ADA0]"
         }`}
       >
         <span className="text-sm font-semibold font-sans">

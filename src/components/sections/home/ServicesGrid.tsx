@@ -26,7 +26,7 @@ function ServiceCard({
   icon,
 }: ServiceCardProps) {
   return (
-    <div className="h-68 p-7 bg-[#191C19] rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex flex-col justify-start items-start gap-6 overflow-hidden">
+    <div className="h-68 p-7 bg-[#191C19] rounded-lg flex flex-col justify-start items-start gap-6 overflow-hidden">
       <div className="w-full flex justify-between items-center overflow-hidden">
         <div className="w-6 h-6 flex items-center justify-center shrink-0">
           {icon}
@@ -111,7 +111,7 @@ export default function ServicesGrid() {
           />
 
           {/* CTA Card */}
-          <div className="h-68 p-7 rounded-lg outline outline-1 outline-[#2A3029] -outline-offset-1 flex flex-col justify-between items-start overflow-hidden">
+          <div className="h-68 p-7 rounded-lg flex flex-col justify-between items-start overflow-hidden">
             <span className="text-[#A4ADA0] text-xs sm:text-sm font-bold font-sans tracking-wider">
               Not sure where to start?
             </span>
