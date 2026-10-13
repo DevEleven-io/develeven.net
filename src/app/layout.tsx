@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${manrope.variable} scroll-smooth`}
+      className={manrope.variable}
     >
       <body className="bg-[#101211] text-[#F2F4EC] antialiased min-h-screen flex flex-col font-sans">
         <Navbar />

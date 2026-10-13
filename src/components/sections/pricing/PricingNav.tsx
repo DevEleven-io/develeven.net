@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   WebDevIcon,
@@ -31,6 +33,15 @@ const links = [
 ];
 
 export default function PricingNav() {
+  const handleJump = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+      window.history.pushState(null, "", href);
+    }
+  };
+
   return (
     <nav className="w-full border-t border-b border-[#2A3029] bg-[#101211]">
       <div className="w-full max-w-screen-2xl mx-auto h-12 lg:h-14 px-6 sm:px-8 lg:px-16 flex justify-between items-center overflow-x-auto gap-6 sm:gap-8">
@@ -38,6 +49,7 @@ export default function PricingNav() {
           <a
             key={link.label}
             href={link.href}
+            onClick={(e) => handleJump(e, link.href)}
             className="group flex items-center gap-2 text-[#F2F4EC] text-xs sm:text-sm font-bold font-sans tracking-wide hover:text-[#CEFF69] transition-colors whitespace-nowrap"
           >
             <span className="shrink-0 flex items-center justify-center">

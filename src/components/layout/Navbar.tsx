@@ -2,22 +2,72 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import { MenuIcon, CloseIcon } from "@/components/ui/Icons";
 
-const navLinks = [
-  { label: "Services", href: "/#services" },
-  { label: "Work", href: "/#work" },
-  { label: "Our approach", href: "/#approach" },
-  { label: "Studio", href: "/#studio" },
+interface NavLinkItem {
+  label: string;
+  href: string;
+  targetId?: string;
+}
+
+const navLinks: NavLinkItem[] = [
+  { label: "Services", href: "/#services", targetId: "services" },
+  { label: "Work", href: "/#work", targetId: "work" },
+  { label: "Our approach", href: "/#approach", targetId: "approach" },
+  { label: "Studio", href: "/#studio", targetId: "studio" },
   { label: "Pricing", href: "/pricing" },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+    targetId?: string
+  ) => {
+    setIsMobileMenuOpen(false);
+
+    // If logo or home link
+    if (href === "/") {
+      if (pathname === "/") {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.history.pushState(null, "", "/");
+      }
+      return;
+    }
+
+    // If pricing link
+    if (href === "/pricing") {
+      if (pathname === "/pricing") {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      return;
+    }
+
+    // Anchor-based links (e.g. /#services, /#work, /#approach, /#studio, /#contact)
+    if (targetId) {
+      const element = document.getElementById(targetId);
+      if (element) {
+        // Target element exists on current page: smooth scroll inside the page
+        e.preventDefault();
+        element.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, "", href);
+      } else {
+        // Target element is on a different route:
+        // Do NOT scroll across routes. Navigate cleanly to the target page without scrolling.
+        e.preventDefault();
+        router.push("/");
+      }
+    }
+  };
 
   // Show navbar when scrolling back up; hide when scrolling down
   useEffect(() => {
@@ -107,7 +157,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          onClick={() => setIsMobileMenuOpen(false)}
+          onClick={(e) => handleNavClick(e, "/")}
           className="flex items-center gap-3 overflow-hidden group"
         >
           <div className="flex items-start gap-1 sm:gap-1.5 overflow-hidden">
@@ -128,6 +178,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href, link.targetId)}
                 className={`text-sm sm:text-base font-semibold font-sans transition-colors ${
                   isActive
                     ? "text-[#CEFF69]"
@@ -143,6 +194,7 @@ export default function Navbar() {
         {/* Desktop CTA Button */}
         <Link
           href="/#contact"
+          onClick={(e) => handleNavClick(e, "/#contact", "contact")}
           className="hidden lg:flex h-12 px-6 bg-[#CEFF69] rounded-lg items-center gap-6 overflow-hidden hover:bg-[#b8f050] transition-colors group cursor-pointer"
         >
           <span className="text-[#11150E] text-sm font-semibold font-sans">
@@ -155,7 +207,7 @@ export default function Navbar() {
         <div className="flex lg:hidden items-center gap-3">
           <Link
             href="/#contact"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={(e) => handleNavClick(e, "/#contact", "contact")}
             className="h-10 px-4 bg-[#CEFF69] rounded-lg flex items-center gap-2 hover:bg-[#b8f050] transition-colors cursor-pointer"
           >
             <span className="text-[#11150E] text-xs sm:text-sm font-semibold font-sans">
@@ -206,7 +258,7 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => handleNavClick(e, link.href, link.targetId)}
                   className={`py-3.5 border-b border-[#2A3029]/60 flex items-center justify-between transition-colors group ${
                     isActive ? "text-[#CEFF69]" : "text-[#F2F4EC] hover:text-[#CEFF69]"
                   }`}
@@ -227,7 +279,7 @@ export default function Navbar() {
           <div className="pt-2 flex flex-col gap-3">
             <Link
               href="/#contact"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={(e) => handleNavClick(e, "/#contact", "contact")}
               className="w-full h-12 px-5 bg-[#CEFF69] rounded-lg flex items-center justify-between text-[#11150E] font-semibold text-sm sm:text-base hover:bg-[#b8f050] transition-colors group cursor-pointer"
             >
               <span>Discuss your project</span>

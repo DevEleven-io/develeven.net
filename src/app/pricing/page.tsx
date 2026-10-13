@@ -3,7 +3,7 @@ import React from "react";
 import PricingHero from "@/components/sections/pricing/PricingHero";
 import PricingNav from "@/components/sections/pricing/PricingNav";
 import WebsitePricing from "@/components/sections/pricing/WebsitePricing";
-import SoftwareGamesPricing from "@/components/sections/pricing/SoftwareGamesPricing";
+import PartnershipBanner from "@/components/sections/pricing/PartnershipBanner";
 import PricingProcess from "@/components/sections/pricing/PricingProcess";
 import PricingFAQ from "@/components/sections/pricing/PricingFAQ";
 import CTABanner from "@/components/sections/home/CTABanner";
@@ -20,7 +20,7 @@ export default function PricingPage() {
       <PricingHero />
       <PricingNav />
       <WebsitePricing />
-      <SoftwareGamesPricing />
+      <PartnershipBanner />
       <PricingProcess />
       <PricingFAQ />
       <CTABanner

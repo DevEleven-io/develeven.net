@@ -14,6 +14,8 @@ import {
   GitBranch,
   Braces,
   CircleHelp,
+  Layers as LucideLayers,
+  ShoppingBag as LucideShoppingBag,
   Plus as LucidePlus,
   Minus as LucideMinus,
   Menu as LucideMenu,
@@ -121,6 +123,40 @@ export function MaintenanceIcon({
 }: IconProps) {
   return (
     <Wrench
+      size={size}
+      color={color}
+      strokeWidth={strokeWidth}
+      className={`shrink-0 ${className}`}
+    />
+  );
+}
+
+/** Growth website package icon - Layers */
+export function LayersIcon({
+  className = "",
+  size = 26,
+  color = "#CEFF69",
+  strokeWidth = 1.5,
+}: IconProps) {
+  return (
+    <LucideLayers
+      size={size}
+      color={color}
+      strokeWidth={strokeWidth}
+      className={`shrink-0 ${className}`}
+    />
+  );
+}
+
+/** Commerce website package icon - ShoppingBag */
+export function CommerceIcon({
+  className = "",
+  size = 26,
+  color = "#CEFF69",
+  strokeWidth = 1.5,
+}: IconProps) {
+  return (
+    <LucideShoppingBag
       size={size}
       color={color}
       strokeWidth={strokeWidth}
